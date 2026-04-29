@@ -1,0 +1,33 @@
+[project]
+name = "nrao-archive-fetcher"
+version = "0.1.0"
+description = "Small tools for querying the NRAO archive, building manifests, importing wget commands, and downloading data."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "astropy>=6.0",
+    "pandas>=2.0",
+    "pyvo>=1.5",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+nrao-fetch = "nrao_archive_fetcher.cli.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
