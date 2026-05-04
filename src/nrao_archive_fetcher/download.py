@@ -5,7 +5,7 @@ import shlex
 import subprocess
 from pathlib import Path
 
-from .manifest import read_manifest, write_manifest
+from .manifest import dumps_json, read_manifest, write_manifest
 from .utils import now_iso, print_status
 
 
@@ -56,7 +56,7 @@ def run_download_command(tokens):
 
 def _write_entry_json(entry, folder):
     entry_path = Path(folder) / "manifest_entry.json"
-    entry_path.write_text(json.dumps(entry, indent=2, sort_keys=False))
+    entry_path.write_text(dumps_json(entry))
     print_status("[DOWNLOAD] wrote %s" % (entry_path,))
 
 

@@ -182,7 +182,7 @@ q = (
     NRAOQuery()
     .where_timespan(TIMESPANS.FROM_2016_SEP)
     .where_in_circle((ra_deg, dec_deg), 20 * u.arcsec)
-    .where_instruments(INSTRUMENTS.VLA_VARIANTS())
+    .where_instruments(INSTRUMENTS.VLA_EVLA)
     .where_dataproduct(DATAPRODS.VISIBILITY)
     .where_band(BANDS.C)
     .limit(25)
@@ -665,7 +665,7 @@ from nrao_archive_fetcher import BANDS, DATAPRODS, INSTRUMENTS
 q = (
     NRAOQuery()
     .where_in_circle((ra_deg, dec_deg), 20 * u.arcsec)
-    .where_instruments(INSTRUMENTS.VLA_VARIANTS())
+    .where_instruments(INSTRUMENTS.VLA_EVLA)
     .where_dataproduct(DATAPRODS.VISIBILITY)
     .where_band(BANDS.C)
     .limit(25)

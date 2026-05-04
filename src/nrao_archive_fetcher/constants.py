@@ -26,10 +26,6 @@ class PROPRIETARY:
     PRIVATE = "PRIVATE"
     UNKNOWN = "UNKNOWN"
 
-    @staticmethod
-    def any_public():
-        return ["PUBLIC"]
-
 
 class INSTRUMENTS:
     VLA = "VLA"
@@ -38,10 +34,7 @@ class INSTRUMENTS:
     GBT = "GBT"
     VLBA = "VLBA"
     GMVA = "GMVA"
-
-    @staticmethod
-    def VLA_VARIANTS():
-        return ["VLA", "EVLA"]
+    VLA_EVLA = ["VLA", "EVLA"]
 
 
 class DATAPRODS:

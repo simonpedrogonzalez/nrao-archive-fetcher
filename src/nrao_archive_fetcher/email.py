@@ -165,7 +165,17 @@ end tell
 
 return "<<<DEBUG>>>\\nsource=mail_app\\naccount=%s\\nmailbox=%s\\nsender_filter=%s\\nscanned=" & scannedCount & "\\nincluded=" & includedCount & "\\nerrors=" & errorCount & "\\n<<<ENDDEBUG>>>\\n" & outText
 """ % (int(days_back), mailbox_value, account_value, sender_clause, account_value, mailbox_value, sender_label)
-    proc = subprocess.run(["osascript", "-e", applescript], check=True, text=True, capture_output=True)
+    try:
+        proc = subprocess.run(["osascript", "-e", applescript], check=True, text=True, capture_output=True)
+    except subprocess.CalledProcessError as exc:
+        stderr = (exc.stderr or "").strip()
+        stdout = (exc.stdout or "").strip()
+        detail = stderr or stdout or str(exc)
+        raise RuntimeError(
+            "Failed to read messages from Mail. "
+            "Check the Mail account name, mailbox name, and macOS Automation permissions. "
+            "Mail error: %s" % (detail,)
+        ) from exc
     return parse_applescript_messages(proc.stdout, debug=debug)
 
 

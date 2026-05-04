@@ -108,6 +108,7 @@ class NRAOQuery:
         self._where = []
         self._order_by = None
         self._limit = DEFAULT_QUERY_LIMIT
+        self._unique_on = None
 
     @property
     def table(self):
@@ -143,6 +144,10 @@ class NRAOQuery:
     def order_by(self, expr):
         self._raw_query = None
         self._order_by = expr
+        return self
+
+    def unique_on(self, column):
+        self._unique_on = str(column)
         return self
 
     def where_timespan(self, span):
@@ -255,6 +260,14 @@ class NRAOQuery:
                 table = service.run_sync(query_text).to_table()
                 if as_dataframe:
                     frame = table.to_pandas()
+                    if self._unique_on and self._unique_on in frame.columns:
+                        before = len(frame)
+                        frame = frame.drop_duplicates(subset=[self._unique_on]).reset_index(drop=True)
+                        if verbose:
+                            print_status(
+                                "[QUERY] unique on %s: %d -> %d rows"
+                                % (self._unique_on, before, len(frame))
+                            )
                     print_status("[QUERY] received %d rows" % (len(frame),))
                     return frame
                 print_status("[QUERY] received %d rows" % (len(table),))

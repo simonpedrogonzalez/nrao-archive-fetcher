@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
+
+import pandas as pd
 
 from .constants import TAP_URL
 from .details import build_viewer_url, summarize_details
@@ -113,10 +116,39 @@ def read_manifest(path):
     return json.loads(Path(path).read_text())
 
 
+def make_json_safe(value):
+    if isinstance(value, dict):
+        return {str(key): make_json_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [make_json_safe(item) for item in value]
+    if value is None or isinstance(value, (str, bool, int)):
+        return value
+    if isinstance(value, float):
+        if math.isnan(value) or math.isinf(value):
+            return None
+        return value
+    if hasattr(value, "item"):
+        try:
+            return make_json_safe(value.item())
+        except Exception:
+            pass
+    try:
+        missing = pd.isna(value)
+    except Exception:
+        missing = False
+    if isinstance(missing, bool) and missing:
+        return None
+    return value
+
+
+def dumps_json(data):
+    return json.dumps(make_json_safe(data), indent=2, sort_keys=False, allow_nan=False)
+
+
 def write_manifest(manifest, path):
     destination = Path(path)
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text(json.dumps(manifest, indent=2, sort_keys=False))
+    destination.write_text(dumps_json(manifest))
     print_status("[MANIFEST] wrote %s" % (destination,))
 
 

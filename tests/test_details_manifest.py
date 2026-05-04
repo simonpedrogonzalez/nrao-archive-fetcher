@@ -64,3 +64,28 @@ def test_build_manifest_round_trip(tmp_path):
     entry = loaded["entries"][0]
     assert entry["project_code"] == "24B-465"
     assert entry["viewer_url"].endswith("24B-465.sb47226343.eb47329790.60643.9672167824")
+
+
+def test_manifest_writes_json_null_instead_of_nan(tmp_path):
+    frame = pd.DataFrame(
+        [
+            {
+                "project_code": "24B-465",
+                "access_url": "https://data.nrao.edu/portal/#/productViewer/24B-465.sb47226343.eb47329790.60643.9672167824",
+                "target_name": "J0005+3820",
+                "t_min": 60643.98902488426,
+                "obs_publisher_did": "24B-465.sb47226343.eb47329790.60643.9672167824",
+                "freq_min": float("nan"),
+                "details": None,
+                "detail_summary": {"estimated_size_gb": float("nan")},
+            }
+        ]
+    )
+    manifest = build_manifest(frame, query_text="SELECT TOP 1 * FROM ivoa.obscore")
+    path = tmp_path / "manifest.json"
+    write_manifest(manifest, path)
+    text = path.read_text()
+    assert "NaN" not in text
+    loaded = read_manifest(path)
+    assert loaded["entries"][0]["row"]["freq_min"] is None
+    assert loaded["entries"][0]["estimated_size_gb"] is None

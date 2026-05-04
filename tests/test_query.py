@@ -42,7 +42,14 @@ class FakeService:
                     }
                 )
             )
-        return FakeTableResult(pd.DataFrame({"project_code": ["24B-465"]}))
+        return FakeTableResult(
+            pd.DataFrame(
+                {
+                    "project_code": ["24B-465", "24B-465"],
+                    "obs_publisher_did": ["same-id", "same-id"],
+                }
+            )
+        )
 
 
 def test_query_build_and_get(monkeypatch):
@@ -56,12 +63,14 @@ def test_query_build_and_get(monkeypatch):
         .where_configs(["A"])
         .where_proprietary_status("PUBLIC")
         .limit(5)
+        .unique_on("obs_publisher_did")
     )
     text = query.build()
     assert "SELECT TOP 5" in text
     assert "instrument_name IN ('VLA','EVLA')" in text
     frame = query.get()
     assert list(frame["project_code"]) == ["24B-465"]
+    assert len(frame) == 1
 
 
 def test_query_save_and_load(tmp_path):
