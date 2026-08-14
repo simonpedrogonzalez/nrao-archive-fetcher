@@ -10,7 +10,7 @@ from nrao_archive_fetcher.utils import apply_filter
 
 
 def load_example():
-    path = Path("reference/radioastro_ml_collect/collect/example_details.json")
+    path = Path(__file__).parent / "fixtures" / "example_details.json"
     return ast.literal_eval(path.read_text())
 
 
