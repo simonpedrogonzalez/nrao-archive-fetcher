@@ -111,4 +111,4 @@ download_manifest(
 
 ## Example
 
-See [example.py](/Users/u1528314/repos/nrao-archive-fetcher/example.py).
+See [example.py](example.py).
