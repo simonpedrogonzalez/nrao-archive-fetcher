@@ -4,6 +4,7 @@ from nrao_archive_fetcher.email import (
     MailMessage,
     extract_wget_commands,
     gather_json_messages,
+    import_email_commands,
     update_manifest_from_messages,
 )
 
@@ -70,3 +71,32 @@ def test_ambiguous_email_match_is_not_applied():
     message = MailMessage("1", "24B-465 ready", "", "wget https://dl-dsoc.nrao.edu/u/123/abcdef1234567890/")
     assert update_manifest_from_messages(manifest, [message]) == 0
     assert not any(entry["download_command"] for entry in manifest["entries"])
+
+
+def test_imap_settings_can_come_from_environment(tmp_path, monkeypatch):
+    manifest_path = tmp_path / "manifest.json"
+    manifest_path.write_text('{"entries": []}')
+    captured = {}
+
+    def fake_gather(**kwargs):
+        captured.update(kwargs)
+        return []
+
+    monkeypatch.setenv("NRAO_IMAP_HOST", "imap.example")
+    monkeypatch.setenv("NRAO_IMAP_PORT", "1993")
+    monkeypatch.setenv("NRAO_IMAP_USERNAME", "user")
+    monkeypatch.setenv("NRAO_IMAP_PASSWORD", "secret")
+    monkeypatch.setenv("NRAO_IMAP_MAILBOX", "Archive")
+    monkeypatch.setenv("NRAO_IMAP_SENDER_FILTER", "archive@example")
+    monkeypatch.setenv("NRAO_IMAP_DAYS_BACK", "30")
+    monkeypatch.setattr("nrao_archive_fetcher.email.gather_imap_messages", fake_gather)
+    import_email_commands(manifest_path, gather_mode="imap", dry_run=True)
+    assert captured == {
+        "host": "imap.example",
+        "port": "1993",
+        "username": "user",
+        "password": "secret",
+        "mailbox": "Archive",
+        "sender_filter": "archive@example",
+        "days_back": 30,
+    }

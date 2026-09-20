@@ -304,10 +304,10 @@ def update_manifest_from_messages(manifest, messages):
 def import_email_commands(
     manifest_path,
     gather_mode="mac_mail_app",
-    days_back=14,
+    days_back=None,
     account_name="Google",
-    mailbox_name="INBOX",
-    sender_filter="do-not-reply@nrao.edu",
+    mailbox_name=None,
+    sender_filter=None,
     dry_run=False,
     debug=False,
     messages_json=None,
@@ -317,6 +317,9 @@ def import_email_commands(
     imap_password=None,
 ):
     manifest = read_manifest(manifest_path)
+    default_days_back = int(days_back if days_back is not None else 14)
+    default_mailbox = mailbox_name or "INBOX"
+    default_sender = sender_filter if sender_filter is not None else "do-not-reply@nrao.edu"
     if messages_json:
         messages = gather_json_messages(messages_json)
     elif gather_mode == "imap":
@@ -325,16 +328,24 @@ def import_email_commands(
             port=imap_port or os.environ.get("NRAO_IMAP_PORT", "993"),
             username=imap_username or os.environ.get("NRAO_IMAP_USERNAME"),
             password=imap_password or os.environ.get("NRAO_IMAP_PASSWORD"),
-            mailbox=mailbox_name or os.environ.get("NRAO_IMAP_MAILBOX", "INBOX"),
-            sender_filter=sender_filter,
-            days_back=days_back,
+            mailbox=mailbox_name or os.environ.get("NRAO_IMAP_MAILBOX") or "INBOX",
+            sender_filter=(
+                sender_filter
+                if sender_filter is not None
+                else os.environ.get("NRAO_IMAP_SENDER_FILTER", "do-not-reply@nrao.edu")
+            ),
+            days_back=(
+                days_back
+                if days_back is not None
+                else int(os.environ.get("NRAO_IMAP_DAYS_BACK", "14"))
+            ),
         )
     elif gather_mode in ("mac_mail_app", "mac-mail"):
         messages = gather_mac_mail_messages(
-            days_back=days_back,
+            days_back=default_days_back,
             account_name=account_name,
-            mailbox_name=mailbox_name,
-            sender_filter=sender_filter,
+            mailbox_name=default_mailbox,
+            sender_filter=default_sender,
             debug=debug,
         )
     else:
