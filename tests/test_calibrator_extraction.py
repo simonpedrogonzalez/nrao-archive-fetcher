@@ -1,10 +1,17 @@
 import json
+import runpy
 from pathlib import Path
 
 import numpy as np
 
 from workflows.radioastro_calibrators.extract_entry import extract_entry
 from workflows.radioastro_calibrators.flux_weblog import parse_flux_text
+
+
+def test_extract_script_loads_without_package_context():
+    script = Path(__file__).parents[1] / "workflows/radioastro_calibrators/extract_entry.py"
+    namespace = runpy.run_path(str(script), run_name="casa_script_import_test")
+    assert "extract_entry" in namespace
 
 
 def test_parse_retained_17b078_fluxboot_fixture():
@@ -49,12 +56,14 @@ def test_extract_entry_selects_field_spw_and_updates_metadata(tmp_path):
     download = tmp_path / "downloads"
     source_ms = download / "pipeline" / "source.ms"
     source_ms.mkdir(parents=True)
+    (source_ms / "table.dat").touch()
     output = tmp_path / "extracted"
     calls = {}
 
     def fake_split(**kwargs):
         calls["split"] = kwargs
         Path(kwargs["outputvis"]).mkdir(parents=True)
+        (Path(kwargs["outputvis"]) / "table.dat").touch()
 
     def fake_listobs(**kwargs):
         calls["listobs"] = kwargs

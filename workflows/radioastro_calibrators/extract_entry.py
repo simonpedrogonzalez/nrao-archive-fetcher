@@ -4,6 +4,7 @@ import argparse
 import json
 import math
 import shutil
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -11,6 +12,7 @@ import numpy as np
 try:
     from .flux_weblog import find_flux_estimate, write_flux_estimate
 except ImportError:  # Direct execution by CASA: ``casa -c extract_entry.py ...``
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
     from flux_weblog import find_flux_estimate, write_flux_estimate
 
 
@@ -29,7 +31,10 @@ MIN_BANDWIDTH_HZ = 10e6
 
 
 def find_first_ms(root):
-    candidates = [path for path in Path(root).rglob("*.ms") if path.is_dir()]
+    candidates = [
+        path for path in Path(root).rglob("*.ms")
+        if path.is_dir() and (path / "table.dat").is_file()
+    ]
     return sorted(candidates)[0] if candidates else None
 
 

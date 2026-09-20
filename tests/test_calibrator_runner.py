@@ -21,7 +21,9 @@ def test_runner_accepts_present_ms_and_persists_extraction(tmp_path):
     }
     write_manifest({"entries": [entry]}, manifest_path)
     download = run_root / "downloads" / entry_id
-    (download / "pipeline" / "source.ms").mkdir(parents=True)
+    source_ms = download / "pipeline" / "source.ms"
+    source_ms.mkdir(parents=True)
+    (source_ms / "table.dat").touch()
 
     def fake_download(path, base_download_root=None):
         manifest = read_manifest(path)
@@ -31,6 +33,7 @@ def test_runner_accepts_present_ms_and_persists_extraction(tmp_path):
     def fake_casa(casa, script, entry_json, download_root, output_root, result_json):
         output = Path(output_root) / entry_id
         (output / (entry_id + ".ms")).mkdir(parents=True)
+        (output / (entry_id + ".ms") / "table.dat").touch()
         (output / "listobs.txt").write_text("listobs")
         (output / "flux_estimate.json").write_text('{"status": "unavailable"}')
         metadata = {"selected_spw": "7"}
