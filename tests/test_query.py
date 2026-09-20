@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from nrao_archive_fetcher.query import NRAOQuery, date_to_mjd
+from nrao_archive_fetcher.query import NRAOQuery, _SCHEMA_CACHE, date_to_mjd
 
 
 class FakeTableResult:
@@ -53,6 +53,7 @@ class FakeService:
 
 
 def test_query_build_and_get(monkeypatch):
+    _SCHEMA_CACHE.clear()
     monkeypatch.setattr("nrao_archive_fetcher.query.pyvo.dal.TAPService", lambda url: FakeService())
     query = (
         NRAOQuery()
@@ -71,6 +72,10 @@ def test_query_build_and_get(monkeypatch):
     frame = query.get()
     assert list(frame["project_code"]) == ["24B-465"]
     assert len(frame) == 1
+
+    second = NRAOQuery()
+    second._service = FakeService()
+    assert second.table == "ivoa.obscore"
 
 
 def test_query_save_and_load(tmp_path):

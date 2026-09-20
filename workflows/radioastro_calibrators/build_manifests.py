@@ -211,21 +211,21 @@ def probable_gain_calibrator(details):
 
 
 def archive_candidates(spec, max_candidates=100):
-    position = SkyCoord(spec["ra"], spec["dec"], unit=(u.hourangle, u.deg), frame="icrs")
-    query = (
-        NRAOQuery()
-        .select("obs_publisher_did", "project_code", "t_min", "access_estsize", "access_url", "configuration")
-        .where_in_circle(position, 5 * u.arcsec)
-        .where_instruments(INSTRUMENTS.VLA_EVLA)
-        .where_dataproduct(DATAPRODS.VISIBILITY)
-        .where_configs(spec["usable_configs"])
-        .where_proprietary_status(PROPRIETARY.PUBLIC)
-        .where_band(BANDS.get(spec["band_guess"]))
-        .order_by("access_estsize ASC")
-        .limit(max_candidates)
-        .unique_on("obs_publisher_did")
-    )
     try:
+        position = SkyCoord(spec["ra"], spec["dec"], unit=(u.hourangle, u.deg), frame="icrs")
+        query = (
+            NRAOQuery()
+            .select("obs_publisher_did", "project_code", "t_min", "access_estsize", "access_url", "configuration")
+            .where_in_circle(position, 5 * u.arcsec)
+            .where_instruments(INSTRUMENTS.VLA_EVLA)
+            .where_dataproduct(DATAPRODS.VISIBILITY)
+            .where_configs(spec["usable_configs"])
+            .where_proprietary_status(PROPRIETARY.PUBLIC)
+            .where_band(BANDS.get(spec["band_guess"]))
+            .order_by("access_estsize ASC")
+            .limit(max_candidates)
+            .unique_on("obs_publisher_did")
+        )
         rows = query.get().to_dict(orient="records")
     except Exception as exc:
         raise TransientArchiveError("TAP query failed: %s" % exc) from exc

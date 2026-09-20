@@ -1,6 +1,8 @@
 import csv
 
 from workflows.radioastro_calibrators.build_manifests import (
+    TransientArchiveError,
+    archive_candidates,
     build_all,
     entry_from_values,
     validate_collections,
@@ -93,3 +95,23 @@ def test_four_manifests_are_disjoint_sorted_and_repeated_quota_is_obeyed(tmp_pat
                 "viewer_url", "estimated_size_gb", "band_guess", "usable_configs", "request_status",
                 "download_command", "download_root", "extracted_ms", "selected_spw", "flux_estimate",
             )).issubset(entry)
+
+
+def test_schema_discovery_failure_is_transient(monkeypatch):
+    monkeypatch.setattr(
+        "workflows.radioastro_calibrators.build_manifests.NRAOQuery.where_in_circle",
+        lambda self, center, radius: (_ for _ in ()).throw(RuntimeError("TAP unavailable")),
+    )
+    spec = {
+        "calibrator_id": "cal",
+        "ra": "00:00:00",
+        "dec": "+00:00:00",
+        "band_guess": "C",
+        "usable_configs": ["A"],
+    }
+    try:
+        archive_candidates(spec)
+    except TransientArchiveError as exc:
+        assert "TAP query failed" in str(exc)
+    else:
+        raise AssertionError("schema failure was not classified as transient")

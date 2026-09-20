@@ -15,6 +15,9 @@ from .constants import BANDS, COLS, DATAPRODS, DEFAULT_QUERY_LIMIT, TAP_URL, TIM
 from .utils import print_status
 
 
+_SCHEMA_CACHE = {}
+
+
 def date_to_mjd(date_str):
     return Time(date_str, format="iso", scale="utc").mjd
 
@@ -124,9 +127,15 @@ class NRAOQuery:
         if self._raw_query is not None:
             return
         if self._table is None:
+            cached = _SCHEMA_CACHE.get(self.tap_url)
+            if cached is not None:
+                self._table, columns = cached
+                self.available_cols = set(columns)
+                return
             service = self._ensure_service()
             self._table = find_obscore_table(service)
             self.available_cols = set(get_obscore_columns(service, self._table))
+            _SCHEMA_CACHE[self.tap_url] = (self._table, frozenset(self.available_cols))
 
     def select(self, *cols):
         self._raw_query = None
