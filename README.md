@@ -5,7 +5,7 @@ Small Python tools for:
 - querying the NRAO archive
 - enriching rows with project/viewer details
 - building a JSON manifest
-- importing `wget`/`wget2` commands from macOS Mail
+- importing `wget`/`wget2` commands from macOS Mail, IMAP, or exported JSON
 - downloading data
 
 ## Install
@@ -39,6 +39,22 @@ uv run nrao-fetch show-pending manifest.json
 
 ```bash
 uv run nrao-fetch import-email manifest.json
+```
+
+On Linux, import directly through IMAP (credentials may instead use the
+`NRAO_IMAP_HOST`, `NRAO_IMAP_USERNAME`, and `NRAO_IMAP_PASSWORD` environment
+variables):
+
+```bash
+uv run nrao-fetch import-email manifest.json --backend imap \
+  --host imap.gmail.com --username you@example.com --password APP_PASSWORD
+```
+
+Or import a provider-independent JSON export containing a list of messages
+with `message_id`, `subject`, `received_at`, and `content` fields:
+
+```bash
+uv run nrao-fetch import-email manifest.json --messages-json messages.json
 ```
 
 7. Download the data:

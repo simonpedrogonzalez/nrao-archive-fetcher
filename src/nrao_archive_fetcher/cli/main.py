@@ -14,12 +14,18 @@ def build_parser():
     pending = subparsers.add_parser("show-pending", help="Print project code and viewer URL for pending entries.")
     pending.add_argument("manifest")
 
-    email = subparsers.add_parser("import-email", help="Import wget commands from macOS Mail into a manifest.")
+    email = subparsers.add_parser("import-email", help="Import wget commands from Mail, IMAP, or exported JSON.")
     email.add_argument("manifest")
+    email.add_argument("--backend", choices=("mac-mail", "imap"), default="mac-mail")
+    email.add_argument("--messages-json")
     email.add_argument("--days-back", type=int, default=14)
     email.add_argument("--account-name", default="Google")
     email.add_argument("--mailbox-name", default="INBOX")
     email.add_argument("--sender-filter", default="do-not-reply@nrao.edu")
+    email.add_argument("--host")
+    email.add_argument("--port", type=int)
+    email.add_argument("--username")
+    email.add_argument("--password")
     email.add_argument("--dry-run", action="store_true")
     email.add_argument("--debug", action="store_true")
 
@@ -38,13 +44,18 @@ def main(argv=None):
     if args.command == "import-email":
         import_email_commands(
             args.manifest,
-            gather_mode="mac_mail_app",
+            gather_mode=args.backend,
             days_back=args.days_back,
             account_name=args.account_name,
             mailbox_name=args.mailbox_name,
             sender_filter=args.sender_filter,
             dry_run=args.dry_run,
             debug=args.debug,
+            messages_json=args.messages_json,
+            imap_host=args.host,
+            imap_port=args.port,
+            imap_username=args.username,
+            imap_password=args.password,
         )
         return 0
     if args.command == "download":
