@@ -128,3 +128,11 @@ download_manifest(
 ## Example
 
 See [example.py](example.py).
+
+## Radioastro calibrator extraction
+
+The project-specific workflow under `workflows/radioastro_calibrators` extracts
+one requested gain-calibrator field and one qualifying spectral window from a
+pipeline-calibrated MeasurementSet. It retains the original download and writes
+the compact MS, `listobs.txt`, extraction metadata, and a provenance-backed
+`flux_estimate.json`. Imaging is intentionally outside this workflow.

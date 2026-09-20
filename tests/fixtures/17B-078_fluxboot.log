@@ -1,0 +1,2 @@
+2017-11-23 07:22:25 INFO fluxscale::pipeline.hifv.tasks.fluxscale.fluxboot:: J0012-3954 C fitted spectral index & SNR = -0.0678251099162 3201.53460341
+2017-11-23 07:22:25 INFO fluxscale::pipeline.infrastructure.jobrequest:: Executing setjy(fluxdensity=[0.70096222557855437, 0, 0, 0], scalebychan=True, vis='calibrators.ms', spix=-0.067825109916211879, standard='manual', field='J0012-3954', reffreq='4.68GHz')
