@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import math
+import os
+import tempfile
 from pathlib import Path
 
 import pandas as pd
@@ -148,7 +150,12 @@ def dumps_json(data):
 def write_manifest(manifest, path):
     destination = Path(path)
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text(dumps_json(manifest))
+    with tempfile.NamedTemporaryFile("w", dir=destination.parent, prefix=destination.name + ".", delete=False) as handle:
+        temporary = Path(handle.name)
+        handle.write(dumps_json(manifest))
+        handle.flush()
+        os.fsync(handle.fileno())
+    temporary.replace(destination)
     print_status("[MANIFEST] wrote %s" % (destination,))
 
 

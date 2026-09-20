@@ -75,7 +75,8 @@ def download_manifest(manifest_path, base_download_root=None, before_download=No
         project_code = str(entry.get("project_code") or "").strip()
         if not project_code:
             raise ValueError("Manifest entry is missing project_code.")
-        project_folder = download_root / project_code
+        folder_name = str(entry.get("entry_id") or project_code).strip()
+        project_folder = download_root / folder_name
         project_folder.mkdir(parents=True, exist_ok=True)
         entry["download_root"] = str(project_folder)
         entry["request_status"] = "downloading"
@@ -104,6 +105,8 @@ def download_manifest(manifest_path, base_download_root=None, before_download=No
             write_manifest(manifest, manifest_path)
             if after_download is not None:
                 after_download(entry, str(project_folder))
+                _write_entry_json(entry, project_folder)
+                write_manifest(manifest, manifest_path)
             print_status("[DOWNLOAD] done project=%s" % (project_code,))
         except Exception as exc:
             entry["request_status"] = "error"

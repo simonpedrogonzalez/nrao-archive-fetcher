@@ -1,0 +1,132 @@
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+import subprocess
+from pathlib import Path
+
+from nrao_archive_fetcher.download import download_manifest
+from nrao_archive_fetcher.manifest import read_manifest, write_manifest
+from nrao_archive_fetcher.utils import now_iso, print_status
+from workflows.radioastro_calibrators.extract_entry import find_first_ms
+
+
+def _complete_outputs(output_root, entry_id):
+    folder = Path(output_root) / entry_id
+    expected = {
+        "extracted_ms": folder / (entry_id + ".ms"),
+        "listobs": folder / "listobs.txt",
+        "flux_estimate": folder / "flux_estimate.json",
+        "extraction_metadata": folder / "extraction_metadata.json",
+    }
+    return expected if expected["extracted_ms"].is_dir() and all(
+        path.is_file() for key, path in expected.items() if key != "extracted_ms"
+    ) else None
+
+
+def _run_casa(casa_executable, script_path, entry_json, download_root, output_root, result_json):
+    command = [
+        str(casa_executable), "--nogui", "--nologger", "-c", str(script_path),
+        "--entry-json", str(entry_json),
+        "--download-root", str(download_root),
+        "--output-root", str(output_root),
+        "--result-json", str(result_json),
+    ]
+    return subprocess.run(command, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+
+def _record_success(entry, outputs, result):
+    entry["request_status"] = "extracted"
+    entry["extracted_ms"] = str(outputs["extracted_ms"])
+    entry["selected_spw"] = result.get("selected_spw")
+    entry["flux_estimate"] = str(outputs["flux_estimate"])
+    entry["extraction_metadata"] = str(outputs["extraction_metadata"])
+    entry["extraction_finished_at"] = now_iso()
+    entry["last_error"] = None
+
+
+def run_manifest(
+    manifest_path,
+    casa_executable="casa",
+    delete_original=False,
+    download_fn=download_manifest,
+    casa_runner=_run_casa,
+):
+    manifest_path = Path(manifest_path).resolve()
+    run_root = manifest_path.parent
+    download_root = run_root / "downloads"
+    output_root = run_root / "extracted"
+    output_root.mkdir(parents=True, exist_ok=True)
+    manifest = download_fn(manifest_path, base_download_root=download_root)
+    script_path = Path(__file__).with_name("extract_entry.py").resolve()
+
+    for entry in manifest.get("entries", []):
+        entry_id = str(entry.get("entry_id") or "").strip()
+        if not entry_id:
+            entry["request_status"] = "extraction_error"
+            entry["last_error"] = "Manifest entry is missing entry_id"
+            write_manifest(manifest, manifest_path)
+            continue
+        outputs = _complete_outputs(output_root, entry_id)
+        if outputs is not None:
+            result = json.loads(outputs["extraction_metadata"].read_text())
+            _record_success(entry, outputs, result)
+            write_manifest(manifest, manifest_path)
+            continue
+
+        entry_download_root = Path(entry.get("download_root") or (download_root / entry_id))
+        if find_first_ms(entry_download_root) is None:
+            write_manifest(manifest, manifest_path)
+            continue
+
+        entry["request_status"] = "extracting"
+        entry["last_error"] = None
+        write_manifest(manifest, manifest_path)
+        entry_json = entry_download_root / "manifest_entry.json"
+        entry_json.parent.mkdir(parents=True, exist_ok=True)
+        entry_json.write_text(json.dumps(entry, indent=2) + "\n")
+        result_json = output_root / entry_id / "extraction_result.json"
+        result_json.parent.mkdir(parents=True, exist_ok=True)
+        process = casa_runner(
+            casa_executable,
+            script_path,
+            entry_json,
+            entry_download_root,
+            output_root,
+            result_json,
+        )
+        outputs = _complete_outputs(output_root, entry_id)
+        if outputs is None or process.returncode != 0 or not result_json.is_file():
+            entry["request_status"] = "extraction_error"
+            entry["last_error"] = (process.stdout or "CASA extraction did not produce the expected files")[-4000:]
+            write_manifest(manifest, manifest_path)
+            continue
+        result = json.loads(result_json.read_text())
+        _record_success(entry, outputs, result)
+        write_manifest(manifest, manifest_path)
+        print_status("[EXTRACT] done entry=%s" % entry_id)
+
+        if delete_original:
+            resolved = entry_download_root.resolve()
+            if download_root.resolve() not in resolved.parents:
+                raise ValueError("Refusing to delete download outside %s" % download_root)
+            shutil.rmtree(resolved)
+            entry["download_root"] = None
+            entry["original_download_deleted"] = True
+            write_manifest(manifest, manifest_path)
+    return manifest
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser()
+    parser.add_argument("manifest")
+    parser.add_argument("--casa", default="casa")
+    parser.add_argument("--delete-original", action="store_true")
+    args = parser.parse_args(argv)
+    run_manifest(args.manifest, casa_executable=args.casa, delete_original=args.delete_original)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

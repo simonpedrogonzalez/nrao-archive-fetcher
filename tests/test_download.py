@@ -13,6 +13,7 @@ def test_download_manifest(tmp_path, monkeypatch):
         "source": {},
         "entries": [
             {
+                "entry_id": "0005+383_24B-465",
                 "project_code": "24B-465",
                 "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-465.sb47226343.eb47329790.60643.9672167824",
                 "download_command": "wget https://dl-dsoc.nrao.edu/user/123/abcdef1234567890/",
@@ -32,6 +33,7 @@ def test_download_manifest(tmp_path, monkeypatch):
 
     def after(entry, downloaded_path):
         seen["after"].append((entry["project_code"], downloaded_path))
+        entry["hook_result"] = "persisted"
 
     updated = download_manifest(manifest_path, before_download=before, after_download=after)
     entry = updated["entries"][0]
@@ -39,6 +41,8 @@ def test_download_manifest(tmp_path, monkeypatch):
     assert entry["download_attempts"] == 1
     assert seen["before"] == ["24B-465"]
     assert seen["after"][0][0] == "24B-465"
+    assert Path(entry["download_root"]).name == "0005+383_24B-465"
+    assert json.loads(manifest_path.read_text())["entries"][0]["hook_result"] == "persisted"
     entry_json = Path(entry["download_root"]) / "manifest_entry.json"
     assert entry_json.exists()
     loaded_entry = json.loads(entry_json.read_text())

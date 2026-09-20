@@ -136,3 +136,13 @@ one requested gain-calibrator field and one qualifying spectral window from a
 pipeline-calibrated MeasurementSet. It retains the original download and writes
 the compact MS, `listobs.txt`, extraction metadata, and a provenance-backed
 `flux_estimate.json`. Imaging is intentionally outside this workflow.
+
+Build the four manifests from the immutable historical inputs, then resume one
+manifest's downloads and CASA extraction with:
+
+```bash
+uv run python workflows/radioastro_calibrators/build_manifests.py \
+  --radioastro-root /path/to/radioastro-ml --runs-root runs
+uv run python workflows/radioastro_calibrators/run_manifest.py \
+  runs/small_remaining/manifest.json --casa /path/to/casa
+```
