@@ -24,6 +24,24 @@ class TransientArchiveError(RuntimeError):
     pass
 
 
+class ArchiveUnavailableError(RuntimeError):
+    pass
+
+
+def ensure_archive_available():
+    try:
+        (
+            NRAOQuery()
+            .select("obs_publisher_did")
+            .limit(1)
+            .get(retries=1, verbose=False)
+        )
+    except Exception as exc:
+        raise ArchiveUnavailableError(
+            "NRAO TAP preflight failed; no manifests were changed: %s" % exc
+        ) from exc
+
+
 def read_csv(path):
     with Path(path).open(newline="") as handle:
         return list(csv.DictReader(handle))
@@ -373,7 +391,16 @@ def validate_collections(downloaded_obs_ids, manifests):
             seen.add(entry["obs_id"])
 
 
-def build_all(source_root, runs_root, candidate_finder=archive_candidates, downloaded_obs_ids=None, downloaded_by_obs_id=None):
+def build_all(
+    source_root,
+    runs_root,
+    candidate_finder=archive_candidates,
+    downloaded_obs_ids=None,
+    downloaded_by_obs_id=None,
+    archive_preflight=None,
+):
+    if archive_preflight is not None:
+        archive_preflight()
     source_root = Path(source_root)
     runs_root = Path(runs_root)
     downloaded_obs_ids = set(ALREADY_DOWNLOADED_OBS_IDS if downloaded_obs_ids is None else downloaded_obs_ids)
@@ -446,7 +473,12 @@ def main(argv=None):
     def find(spec):
         return archive_candidates(spec, max_candidates=args.max_candidates)
 
-    manifests = build_all(args.radioastro_root, args.runs_root, candidate_finder=find)
+    manifests = build_all(
+        args.radioastro_root,
+        args.runs_root,
+        candidate_finder=find,
+        archive_preflight=ensure_archive_available,
+    )
     for manifest in manifests:
         print("%s: %d entries" % (manifest["source"]["stage"], len(manifest["entries"])))
     return 0

@@ -1,6 +1,9 @@
 import csv
 
+import pytest
+
 from workflows.radioastro_calibrators.build_manifests import (
+    ArchiveUnavailableError,
     TransientArchiveError,
     archive_candidates,
     build_all,
@@ -120,3 +123,20 @@ def test_schema_discovery_failure_is_transient(monkeypatch):
         assert "TAP query failed" in str(exc)
     else:
         raise AssertionError("schema failure was not classified as transient")
+
+
+def test_archive_preflight_failure_stops_before_manifest_writes(tmp_path):
+    def fail_preflight():
+        raise ArchiveUnavailableError("TAP host is unreachable")
+
+    with pytest.raises(ArchiveUnavailableError, match="unreachable"):
+        build_all(
+            tmp_path / "missing-source",
+            tmp_path / "runs",
+            candidate_finder=lambda spec: [],
+            downloaded_obs_ids=set(),
+            downloaded_by_obs_id={},
+            archive_preflight=fail_preflight,
+        )
+
+    assert not (tmp_path / "runs").exists()
