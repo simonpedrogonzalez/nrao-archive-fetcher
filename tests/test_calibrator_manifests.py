@@ -50,7 +50,12 @@ def candidate(spec, obs_id, size):
 
 def test_four_manifests_are_disjoint_sorted_and_repeated_quota_is_obeyed(tmp_path):
     source = tmp_path / "radioastro"
-    small_rows = [row("downloaded", "P.sb0", "1"), row("small", "P.sb1", "2"), row("z", "", "")]
+    small_rows = [
+        row("downloaded", "P.sb0", "1"),
+        row("small", "P.sb1", "2"),
+        row("same-observation", "P.sb1", "2"),
+        row("z", "", ""),
+    ]
     missing_rows = [row("missing", "", "")]
     one_hit_rows = [row("large", "P.sb3", "20"), row("small", "P.sb1", "2")]
     write_csv(source / "collect/small_subset/small_selection.csv", small_rows)

@@ -151,6 +151,7 @@ def new_manifest(stage, source_path, entries=None):
 
 def build_small_remaining(rows, reserved, config_lookup=None):
     entries = []
+    selected_obs_ids = set(reserved)
     for row in rows:
         entry = entry_from_historical(
             row,
@@ -160,13 +161,15 @@ def build_small_remaining(rows, reserved, config_lookup=None):
             },
             usable_configs=(config_lookup or {}).get((_text(row.get("name")), _text(row.get("band_guess")) or _text(row.get("band_code")))),
         )
-        if entry is not None and entry["obs_id"] not in reserved:
+        if entry is not None and entry["obs_id"] not in selected_obs_ids:
             entries.append(entry)
+            selected_obs_ids.add(entry["obs_id"])
     return sort_entries(entries)
 
 
 def build_large_original(rows, reserved, config_lookup=None):
     entries = []
+    selected_obs_ids = set(reserved)
     for row in rows:
         if (_float(row.get("size_gb")) or 0.0) < 15.0:
             continue
@@ -175,8 +178,9 @@ def build_large_original(rows, reserved, config_lookup=None):
             provenance={"historical_selection": "original_size_ge_15_gb"},
             usable_configs=(config_lookup or {}).get((_text(row.get("name")), _text(row.get("band_guess")) or _text(row.get("band_code")))),
         )
-        if entry is not None and entry["obs_id"] not in reserved:
+        if entry is not None and entry["obs_id"] not in selected_obs_ids:
             entries.append(entry)
+            selected_obs_ids.add(entry["obs_id"])
     return sort_entries(entries)
 
 
