@@ -54,7 +54,7 @@ class FakeService:
 
 def test_query_build_and_get(monkeypatch):
     _SCHEMA_CACHE.clear()
-    monkeypatch.setattr("nrao_archive_fetcher.query.pyvo.dal.TAPService", lambda url: FakeService())
+    monkeypatch.setattr("nrao_archive_fetcher.query.pyvo.dal.TAPService", lambda url, session=None: FakeService())
     query = (
         NRAOQuery()
         .where_dates(start="2016-09-01")

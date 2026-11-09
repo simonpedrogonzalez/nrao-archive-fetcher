@@ -30,11 +30,14 @@ class ArchiveUnavailableError(RuntimeError):
 
 def ensure_archive_available():
     try:
+        # An unfiltered "SELECT TOP 1 ... FROM obscore" stalls on NRAO's side
+        # (full scan), so probe with an indexed lookup that answers in <1 s.
         (
-            NRAOQuery()
-            .select("obs_publisher_did")
+            NRAOQuery(timeout=(15, 60))
+            .select("obs_id")
+            .where_raw("obs_id = '__preflight__'")
             .limit(1)
-            .get(retries=1, verbose=False)
+            .get(retries=2, verbose=False)
         )
     except Exception as exc:
         raise ArchiveUnavailableError(
@@ -248,7 +251,7 @@ def archive_candidates(spec, max_candidates=100):
             .limit(max_candidates)
             .unique_on("obs_publisher_did")
         )
-        rows = query.get().to_dict(orient="records")
+        rows = query.get(retries=2).to_dict(orient="records")
     except Exception as exc:
         raise TransientArchiveError("TAP query failed: %s" % exc) from exc
 

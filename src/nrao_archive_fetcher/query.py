@@ -8,6 +8,7 @@ from typing import Iterable, Optional, Union
 import astropy.units as u
 import pandas as pd
 import pyvo
+import requests
 from astropy.coordinates import SkyCoord
 from astropy.time import Time
 
@@ -16,6 +17,22 @@ from .utils import print_status
 
 
 _SCHEMA_CACHE = {}
+
+# (connect, read) seconds. pyvo's run_sync has no timeout of its own, so a
+# stalled NRAO query would otherwise block forever. Legitimate calibrator
+# cone searches have been observed to take ~4 minutes, so keep read generous.
+DEFAULT_TAP_TIMEOUT = (30, 600)
+
+
+class _TimeoutSession(requests.Session):
+    def __init__(self, timeout):
+        super().__init__()
+        self._default_timeout = timeout
+
+    def request(self, method, url, **kwargs):
+        if kwargs.get("timeout") is None:
+            kwargs["timeout"] = self._default_timeout
+        return super().request(method, url, **kwargs)
 
 
 def date_to_mjd(date_str):
@@ -101,8 +118,9 @@ def _resolve_named_center(name):
 
 
 class NRAOQuery:
-    def __init__(self, tap_url=TAP_URL, raw_query=None):
+    def __init__(self, tap_url=TAP_URL, raw_query=None, timeout=DEFAULT_TAP_TIMEOUT):
         self.tap_url = tap_url
+        self.timeout = timeout
         self._service = None
         self._table = None
         self.available_cols = set()
@@ -120,7 +138,7 @@ class NRAOQuery:
 
     def _ensure_service(self):
         if self._service is None:
-            self._service = pyvo.dal.TAPService(self.tap_url)
+            self._service = pyvo.dal.TAPService(self.tap_url, session=_TimeoutSession(self.timeout))
         return self._service
 
     def _ensure_schema(self):
@@ -227,6 +245,11 @@ class NRAOQuery:
         if "configuration" in self.available_cols:
             values = ",".join("'%s'" % (str(item),) for item in configs)
             self._where.append("(configuration IN (%s))" % (values,))
+        return self
+
+    def where_raw(self, condition):
+        self._raw_query = None
+        self._where.append("(%s)" % (condition,))
         return self
 
     def where_proprietary_status(self, status):
