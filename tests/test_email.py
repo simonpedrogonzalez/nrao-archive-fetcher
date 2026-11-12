@@ -100,3 +100,117 @@ def test_imap_settings_can_come_from_environment(tmp_path, monkeypatch):
         "sender_filter": "archive@example",
         "days_back": 30,
     }
+
+
+def _failure_manifest():
+    return {
+        "entries": [
+            {
+                "calibrator_id": "1051-316",
+                "obs_id": "16B-069_sb32991151_1.57709.66087045139",
+                "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-069_sb32991151_1.57709.66087045139",
+                "download_command": "",
+            },
+            {
+                "calibrator_id": "1051+213",
+                "obs_id": "18B-316.sb37532172.eb37535740_000.58806.759674016204",
+                "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-316.sb37532172.eb37535740_000.58806.759674016204",
+                "download_command": "",
+            },
+        ]
+    }
+
+
+FAILURE_BODY = """Hello,
+Your request for 16B-069_sb32991151_1.57709.66087045139 could not be processed.
+Details: CASA restore failed:
+missing calibration tables
+Best regards,
+NRAO Archive"""
+
+
+def test_failure_email_marks_entry_failed_with_details():
+    manifest = _failure_manifest()
+    message = MailMessage("1", "NRAO request Failure", "", FAILURE_BODY)
+    assert update_manifest_from_messages(manifest, [message]) == 1
+    failed, other = manifest["entries"]
+    assert failed["request_status"] == "request_failed"
+    assert failed["request_error"] == "CASA restore failed: missing calibration tables"
+    assert not failed["download_command"]
+    assert "request_status" not in other
+
+
+def test_repeated_failure_email_is_not_counted_twice():
+    manifest = _failure_manifest()
+    message = MailMessage("1", "NRAO request Failure", "", FAILURE_BODY)
+    update_manifest_from_messages(manifest, [message])
+    assert update_manifest_from_messages(manifest, [message]) == 0
+
+
+def test_completion_after_failure_clears_error():
+    manifest = _failure_manifest()
+    failure = MailMessage("1", "NRAO request Failure", "", FAILURE_BODY)
+    complete = MailMessage(
+        "2",
+        "NRAO request Complete",
+        "",
+        "16B-069_sb32991151_1.57709.66087045139\nwget -r https://dl-dsoc.nrao.edu/u/123/abcdef1234567890/",
+    )
+    assert update_manifest_from_messages(manifest, [failure, complete]) == 2
+    entry = manifest["entries"][0]
+    assert entry["request_status"] == "request_ready"
+    assert entry["download_command"].startswith("wget")
+    assert "request_error" not in entry
+
+
+def test_show_pending_hides_failed_and_failed_option_shows_them(tmp_path, capsys):
+    from nrao_archive_fetcher.manifest import print_pending, write_manifest
+
+    manifest = _failure_manifest()
+    update_manifest_from_messages(manifest, [MailMessage("1", "Failure", "", FAILURE_BODY)])
+    path = tmp_path / "manifest.json"
+    write_manifest(manifest, path)
+    capsys.readouterr()
+
+    print_pending(path)
+    out = capsys.readouterr().out
+    assert "1051+213" in out and "1051-316" not in out
+
+    print_pending(path, failed=True)
+    out = capsys.readouterr().out
+    assert "1051-316" in out and "1051+213" not in out
+    assert "CASA restore failed: missing calibration tables" in out
+
+
+def test_real_nrao_failure_email_matches_by_request_name():
+    manifest = _failure_manifest()
+    body = """Dear Simon Gonzalez:
+
+Thank you for using the NRAO archive.
+
+Unfortunately, there was a problem processing your download request (no. 295701976, 1051+213).
+
+Details:
+No further information found. 
+
+Best regards,
+
+The NRAO Archive"""
+    message = MailMessage("1", "NRAO Archive Request 295701976: Failure", "", body)
+    assert update_manifest_from_messages(manifest, [message]) == 1
+    entry = manifest["entries"][1]
+    assert entry["request_status"] == "request_failed"
+    assert entry["request_error"] == "No further information found."
+    assert "request_status" not in manifest["entries"][0]
+
+
+def test_show_pending_limit(tmp_path, capsys):
+    from nrao_archive_fetcher.manifest import print_pending, write_manifest
+
+    path = tmp_path / "manifest.json"
+    write_manifest(_failure_manifest(), path)
+    capsys.readouterr()
+    print_pending(path, limit=1)
+    out = capsys.readouterr().out
+    assert "1051-316" in out and "1051+213" not in out
+    assert "showing 1 of 2 pending entries" in out

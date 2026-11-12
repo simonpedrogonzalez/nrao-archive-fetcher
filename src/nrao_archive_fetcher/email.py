@@ -21,6 +21,9 @@ SDM_ID_RE = re.compile(r"\b\d{2}[AB]-[A-Za-z0-9_.-]+\b")
 URL_TOKEN_RE = re.compile(r"https?://dl-dsoc\.nrao\.edu/[^/\s]+/(\d+)/([a-f0-9]{16,64})/?", re.IGNORECASE)
 REQUEST_NAME_RE = re.compile(r"your\s+([A-Za-z0-9][A-Za-z0-9+\-_.]*)\s+is\s+complete\b", re.IGNORECASE)
 HTML_TAG_RE = re.compile(r"<[^>]+>")
+FAILURE_REQUEST_NAME_RE = re.compile(r"download\s+request\s+\(no\.\s*\d+,\s*([A-Za-z0-9][A-Za-z0-9+\-_.]*)\s*\)", re.IGNORECASE)
+FAILURE_SUBJECT_RE = re.compile(r"\bfailure\b", re.IGNORECASE)
+FAILURE_DETAILS_RE = re.compile(r"Details:\s*(.*?)\s*(?:\n\s*Best regards\b|\Z)", re.IGNORECASE | re.DOTALL)
 
 
 @dataclass
@@ -83,12 +86,14 @@ def extract_message_tokens(text):
         tokens.add(match.group(2).lower())
     for match in REQUEST_NAME_RE.finditer(text):
         tokens.add(match.group(1).lower())
+    for match in FAILURE_REQUEST_NAME_RE.finditer(text):
+        tokens.add(match.group(1).lower())
     return tokens
 
 
 def _entry_tokens(entry):
     tokens = set()
-    for key in ("entry_id", "request_name", "project_code", "obs_id", "viewer_url"):
+    for key in ("entry_id", "request_name", "calibrator_id", "project_code", "obs_id", "viewer_url"):
         value = str(entry.get(key) or "").strip()
         if not value:
             continue
@@ -280,24 +285,56 @@ return "<<<DEBUG>>>\\nsource=mail_app\\naccount=%s\\nmailbox=%s\\nsender_filter=
     return parse_applescript_messages(proc.stdout, debug=debug)
 
 
+def is_failure_message(message):
+    return bool(FAILURE_SUBJECT_RE.search(message.subject or ""))
+
+
+def extract_failure_details(text):
+    match = FAILURE_DETAILS_RE.search(text or "")
+    if not match:
+        return ""
+    return re.sub(r"\s+", " ", match.group(1)).strip()
+
+
+def _entry_label(entry):
+    return entry.get("calibrator_id") or entry.get("project_code") or entry.get("entry_id") or "<unknown>"
+
+
 def update_manifest_from_messages(manifest, messages):
     entries = manifest.get("entries", [])
     pending = [idx for idx, entry in enumerate(entries) if not str(entry.get("download_command") or "").strip()]
     updates = 0
     for message in messages:
+        body = (message.subject or "") + "\n" + (message.content or "")
+        if is_failure_message(message):
+            best_index = _unique_match(entries, pending, body)
+            if best_index is None:
+                print_status("[EMAIL] unmatched failure email: %s" % (message.subject,))
+                continue
+            entry = entries[best_index]
+            error = extract_failure_details(message.content) or "<no details found>"
+            if entry.get("request_status") == "request_failed" and entry.get("request_error") == error:
+                continue
+            entry["request_status"] = "request_failed"
+            entry["request_error"] = error
+            entry["request_failed_at"] = now_iso()
+            updates += 1
+            print_status("[EMAIL] failed %s: %s" % (_entry_label(entry), error))
+            continue
         commands = extract_wget_commands(message.content)
         if not commands:
             continue
-        body = (message.subject or "") + "\n" + (message.content or "")
         best_index = _unique_match(entries, pending, body)
         if best_index is None:
             continue
-        entries[best_index]["download_command"] = commands[0]
-        entries[best_index]["request_status"] = "request_ready"
-        entries[best_index]["request_finished_at"] = now_iso()
+        entry = entries[best_index]
+        entry["download_command"] = commands[0]
+        entry["request_status"] = "request_ready"
+        entry["request_finished_at"] = now_iso()
+        entry.pop("request_error", None)
         pending = [idx for idx in pending if idx != best_index]
         updates += 1
-        print_status("[EMAIL] matched %s -> %s" % (entries[best_index].get("project_code"), commands[0]))
+        print_status("[EMAIL] matched %s -> %s" % (_entry_label(entry), commands[0]))
     return updates
 
 

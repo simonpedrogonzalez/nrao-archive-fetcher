@@ -1,0 +1,5150 @@
+{
+  "version": 1,
+  "created_at": "2026-09-20T21:55:13Z",
+  "source": {
+    "stage": "large_original",
+    "source_path": "/Users/u1528314/Documents/radioastro-ml/collect/vla_calibrators_one_hit.csv",
+    "completed_calibrator_ids": [],
+    "transient_failures": {}
+  },
+  "entries": [
+    {
+      "entry_id": "0614+607_21A-345.sb39866146.eb40025005.59433.60344792824",
+      "obs_id": "21A-345.sb39866146.eb40025005.59433.60344792824",
+      "project_code": "21A-345",
+      "calibrator_id": "0614+607",
+      "gain_calibrator_name": "J0607+6720",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-345.sb39866146.eb40025005.59433.60344792824",
+      "estimated_size_gb": 15.02913,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:14:23.866195",
+      "dec": "+60:46:21.755380",
+      "date_utc": "2021-08-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0349+461_23A-002.sb43089347.eb43588720.59976.035739687504",
+      "obs_id": "23A-002.sb43089347.eb43588720.59976.035739687504",
+      "project_code": "23A-002",
+      "calibrator_id": "0349+461",
+      "gain_calibrator_name": "J2355+4950",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-002.sb43089347.eb43588720.59976.035739687504",
+      "estimated_size_gb": 15.205819,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:49:18.741557",
+      "dec": "+46:09:59.658150",
+      "date_utc": "2023-02-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2327+096_23A-361.sb44228463.eb44305375.60131.599441921295",
+      "obs_id": "23A-361.sb44228463.eb44305375.60131.599441921295",
+      "project_code": "23A-361",
+      "calibrator_id": "2327+096",
+      "gain_calibrator_name": "J2327+0940",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-361.sb44228463.eb44305375.60131.599441921295",
+      "estimated_size_gb": 15.254334,
+      "band_guess": "KU",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:27:33.580579",
+      "dec": "+9:40:09.462780",
+      "date_utc": "2023-07-06",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0534+194_20A-365.sb37909536.eb37982941.58929.14514921296",
+      "obs_id": "20A-365.sb37909536.eb37982941.58929.14514921296",
+      "project_code": "20A-365",
+      "calibrator_id": "0534+194",
+      "gain_calibrator_name": "J1221+2813",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-365.sb37909536.eb37982941.58929.14514921296",
+      "estimated_size_gb": 15.285195,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:34:44.518300",
+      "dec": "+19:27:21.378000",
+      "date_utc": "2020-03-21",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1316-336_24A-308.sb44879330.eb45290683.60370.377923611115",
+      "obs_id": "24A-308.sb44879330.eb45290683.60370.377923611115",
+      "project_code": "24A-308",
+      "calibrator_id": "1316-336",
+      "gain_calibrator_name": "J1316-3338",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-308.sb44879330.eb45290683.60370.377923611115",
+      "estimated_size_gb": 15.393138,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:16:07.985939",
+      "dec": "-33:38:59.172500",
+      "date_utc": "2024-03-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1626-298_19A-446.sb36865329.eb37113423.58721.00322827546",
+      "obs_id": "19A-446.sb36865329.eb37113423.58721.00322827546",
+      "project_code": "19A-446",
+      "calibrator_id": "1626-298",
+      "gain_calibrator_name": "J1626-2951",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-446.sb36865329.eb37113423.58721.00322827546",
+      "estimated_size_gb": 15.495142,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:26:06.020843",
+      "dec": "-29:51:26.971080",
+      "date_utc": "2019-08-26",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1357+767_16B-376.sb32937470.eb32964324.57684.57664788194",
+      "obs_id": "16B-376.sb32937470.eb32964324.57684.57664788194",
+      "project_code": "16B-376",
+      "calibrator_id": "1357+767",
+      "gain_calibrator_name": "J1357+7643",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-376.sb32937470.eb32964324.57684.57664788194",
+      "estimated_size_gb": 15.656852,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:57:55.371519",
+      "dec": "+76:43:21.051110",
+      "date_utc": "2016-10-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0617-365_19B-238.sb37303140.eb37695661.58861.114391192124",
+      "obs_id": "19B-238.sb37303140.eb37695661.58861.114391192124",
+      "project_code": "19B-238",
+      "calibrator_id": "0617-365",
+      "gain_calibrator_name": "J0617-3634",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19B-238.sb37303140.eb37695661.58861.114391192124",
+      "estimated_size_gb": 15.709635,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:17:32.323928",
+      "dec": "-36:34:14.801892",
+      "date_utc": "2020-01-13",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0215-023_16B-382.sb32531025.eb32889004.57666.230434212965",
+      "obs_id": "16B-382.sb32531025.eb32889004.57666.230434212965",
+      "project_code": "16B-382",
+      "calibrator_id": "0215-023",
+      "gain_calibrator_name": "J0215-0222",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-382.sb32531025.eb32889004.57666.230434212965",
+      "estimated_size_gb": 15.790176,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:15:42.017245",
+      "dec": "-2:22:56.751750",
+      "date_utc": "2016-10-05",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0745+317_18A-373.sb35252073.eb35252224.58207.155733645835",
+      "obs_id": "18A-373.sb35252073.eb35252224.58207.155733645835",
+      "project_code": "18A-373",
+      "calibrator_id": "0745+317",
+      "gain_calibrator_name": "J0745+3142",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-373.sb35252073.eb35252224.58207.155733645835",
+      "estimated_size_gb": 15.835783,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:45:41.671522",
+      "dec": "+31:42:56.615620",
+      "date_utc": "2018-03-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1311-222_17A-083.sb33453912.eb33531975.57799.361509236114",
+      "obs_id": "17A-083.sb33453912.eb33531975.57799.361509236114",
+      "project_code": "17A-083",
+      "calibrator_id": "1311-222",
+      "gain_calibrator_name": "J1146-2447",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-083.sb33453912.eb33531975.57799.361509236114",
+      "estimated_size_gb": 15.941742,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:11:39.334700",
+      "dec": "-22:16:41.748000",
+      "date_utc": "2017-02-15",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1158+248_16B-104.sb32746265.eb33346103.57771.53339534722",
+      "obs_id": "16B-104.sb32746265.eb33346103.57771.53339534722",
+      "project_code": "16B-104",
+      "calibrator_id": "1158+248",
+      "gain_calibrator_name": "J1158+2450",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-104.sb32746265.eb33346103.57771.53339534722",
+      "estimated_size_gb": 16.059951,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:58:25.787505",
+      "dec": "+24:50:17.963690",
+      "date_utc": "2017-01-18",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0141-094_24A-138.sb45493240.eb46118526.60454.73741081019",
+      "obs_id": "24A-138.sb45493240.eb46118526.60454.73741081019",
+      "project_code": "24A-138",
+      "calibrator_id": "0141-094",
+      "gain_calibrator_name": "J0141-0928",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-138.sb45493240.eb46118526.60454.73741081019",
+      "estimated_size_gb": 16.124466,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:41:25.832025",
+      "dec": "-9:28:43.673810",
+      "date_utc": "2024-05-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0118-216_20A-239.sb37934331.eb37949308.58906.984111087964",
+      "obs_id": "20A-239.sb37934331.eb37949308.58906.984111087964",
+      "project_code": "20A-239",
+      "calibrator_id": "0118-216",
+      "gain_calibrator_name": "J0118-2141",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-239.sb37934331.eb37949308.58906.984111087964",
+      "estimated_size_gb": 16.126799,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:18:57.262140",
+      "dec": "-21:41:30.139550",
+      "date_utc": "2020-02-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2320+052_22A-378.sb41931539.eb42469037.59790.51493641204",
+      "obs_id": "22A-378.sb41931539.eb42469037.59790.51493641204",
+      "project_code": "22A-378",
+      "calibrator_id": "2320+052",
+      "gain_calibrator_name": "J2346+0930",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb41931539.eb42469037.59790.51493641204",
+      "estimated_size_gb": 16.270054,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:20:44.856598",
+      "dec": "+5:13:49.952660",
+      "date_utc": "2022-07-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1257-319_22A-198.sb42432232.eb42469807.59791.969904537036",
+      "obs_id": "22A-198.sb42432232.eb42469807.59791.969904537036",
+      "project_code": "22A-198",
+      "calibrator_id": "1257-319",
+      "gain_calibrator_name": "J1257-3155",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-198.sb42432232.eb42469807.59791.969904537036",
+      "estimated_size_gb": 16.290836,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "12:57:59.060804",
+      "dec": "-31:55:16.851850",
+      "date_utc": "2022-07-31",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1745-078_19A-323.sb36265665.eb37275378.58746.9592505787",
+      "obs_id": "19A-323.sb36265665.eb37275378.58746.9592505787",
+      "project_code": "19A-323",
+      "calibrator_id": "1745-078",
+      "gain_calibrator_name": "J1745-0753",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-323.sb36265665.eb37275378.58746.9592505787",
+      "estimated_size_gb": 16.350923,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:45:27.104000",
+      "dec": "-7:53:03.600000",
+      "date_utc": "2019-09-20",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2147+094_21A-213.sb39868363.eb39966573.59389.341867696756",
+      "obs_id": "21A-213.sb39868363.eb39966573.59389.341867696756",
+      "project_code": "21A-213",
+      "calibrator_id": "2147+094",
+      "gain_calibrator_name": "J2152+1734",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-213.sb39868363.eb39966573.59389.341867696756",
+      "estimated_size_gb": 16.386325,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:47:10.162971",
+      "dec": "+9:29:46.672450",
+      "date_utc": "2021-06-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0702+445_20A-123.sb37724219.eb37873710.58884.05251392361",
+      "obs_id": "20A-123.sb37724219.eb37873710.58884.05251392361",
+      "project_code": "20A-123",
+      "calibrator_id": "0702+445",
+      "gain_calibrator_name": "J0702+4431",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-123.sb37724219.eb37873710.58884.05251392361",
+      "estimated_size_gb": 16.42258,
+      "band_guess": "L",
+      "usable_configs": [
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:02:53.679000",
+      "dec": "+44:31:11.940000",
+      "date_utc": "2020-02-05",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0309+104_16B-376.sb32987847.eb33046593.57723.13622295139",
+      "obs_id": "16B-376.sb32987847.eb33046593.57723.13622295139",
+      "project_code": "16B-376",
+      "calibrator_id": "0309+104",
+      "gain_calibrator_name": "J0309+1029",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-376.sb32987847.eb33046593.57723.13622295139",
+      "estimated_size_gb": 16.471274,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:09:03.623523",
+      "dec": "+10:29:16.340820",
+      "date_utc": "2016-12-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0348-278_21A-036.sb39613345.eb40042388.59443.490272083334",
+      "obs_id": "21A-036.sb39613345.eb40042388.59443.490272083334",
+      "project_code": "21A-036",
+      "calibrator_id": "0348-278",
+      "gain_calibrator_name": "J0348-2749",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-036.sb39613345.eb40042388.59443.490272083334",
+      "estimated_size_gb": 16.529755,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:48:38.144561",
+      "dec": "-27:49:13.565300",
+      "date_utc": "2021-08-17",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0726+791_22A-378.sb41918233.eb42482006.59798.68980806713",
+      "obs_id": "22A-378.sb41918233.eb42482006.59798.68980806713",
+      "project_code": "22A-378",
+      "calibrator_id": "0726+791",
+      "gain_calibrator_name": "J0650+6001",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb41918233.eb42482006.59798.68980806713",
+      "estimated_size_gb": 16.713581,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:26:11.735177",
+      "dec": "+79:11:31.016240",
+      "date_utc": "2022-08-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0459+024_19A-380.sb37107931.eb37213025.58734.59946233797",
+      "obs_id": "19A-380.sb37107931.eb37213025.58734.59946233797",
+      "project_code": "19A-380",
+      "calibrator_id": "0459+024",
+      "gain_calibrator_name": "J0459+0229",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-380.sb37107931.eb37213025.58734.59946233797",
+      "estimated_size_gb": 16.746816,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:59:52.050664",
+      "dec": "+2:29:31.176310",
+      "date_utc": "2019-09-08",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1804+010_20B-122.sb38982808.eb39181234.59198.69495096065",
+      "obs_id": "20B-122.sb38982808.eb39181234.59198.69495096065",
+      "project_code": "20B-122",
+      "calibrator_id": "1804+010",
+      "gain_calibrator_name": "J1804+0101 (po",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-122.sb38982808.eb39181234.59198.69495096065",
+      "estimated_size_gb": 16.865518,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:04:15.984606",
+      "dec": "+1:01:32.407340",
+      "date_utc": "2020-12-15",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1516+002_16B-353.sb32868399.eb32970942.57687.946495324075",
+      "obs_id": "16B-353.sb32868399.eb32970942.57687.946495324075",
+      "project_code": "16B-353",
+      "calibrator_id": "1516+002",
+      "gain_calibrator_name": "J1516+0015",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-353.sb32868399.eb32970942.57687.946495324075",
+      "estimated_size_gb": 16.926745,
+      "band_guess": "KU",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:16:40.219072",
+      "dec": "+0:15:01.908960",
+      "date_utc": "2016-10-26",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0513-219_16B-376.sb32924679.eb32962866.57682.44879466435",
+      "obs_id": "16B-376.sb32924679.eb32962866.57682.44879466435",
+      "project_code": "16B-376",
+      "calibrator_id": "0513-219",
+      "gain_calibrator_name": "J0513-2159",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-376.sb32924679.eb32962866.57682.44879466435",
+      "estimated_size_gb": 16.961096,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:13:49.114326",
+      "dec": "-21:59:16.092020",
+      "date_utc": "2016-10-21",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0409+122_24B-418.sb47304112.eb47329826.60645.13034002315",
+      "obs_id": "24B-418.sb47304112.eb47329826.60645.13034002315",
+      "project_code": "24B-418",
+      "calibrator_id": "0409+122",
+      "gain_calibrator_name": "J0409+1217",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-418.sb47304112.eb47329826.60645.13034002315",
+      "estimated_size_gb": 17.127085,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:09:22.008740",
+      "dec": "+12:17:39.847500",
+      "date_utc": "2024-12-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2323-032_24B-169.sb46708871.eb47172718.60618.15048674769",
+      "obs_id": "24B-169.sb46708871.eb47172718.60618.15048674769",
+      "project_code": "24B-169",
+      "calibrator_id": "2323-032",
+      "gain_calibrator_name": "J2323-0317",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-169.sb46708871.eb47172718.60618.15048674769",
+      "estimated_size_gb": 17.410832,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:23:31.953757",
+      "dec": "-3:17:05.023800",
+      "date_utc": "2024-11-04",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0019+734_19A-323.sb37229893.eb37257505.58740.53863625",
+      "obs_id": "19A-323.sb37229893.eb37257505.58740.53863625",
+      "project_code": "19A-323",
+      "calibrator_id": "0019+734",
+      "gain_calibrator_name": "J0019+7327",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-323.sb37229893.eb37257505.58740.53863625",
+      "estimated_size_gb": 17.446075,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:19:45.786427",
+      "dec": "+73:27:30.017450",
+      "date_utc": "2019-09-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0721+713_22A-378.sb42365096.eb42479746.59797.7373046412",
+      "obs_id": "22A-378.sb42365096.eb42479746.59797.7373046412",
+      "project_code": "22A-378",
+      "calibrator_id": "0721+713",
+      "gain_calibrator_name": "J0721+7120",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb42365096.eb42479746.59797.7373046412",
+      "estimated_size_gb": 17.446703,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:21:53.448459",
+      "dec": "+71:20:36.363390",
+      "date_utc": "2022-08-06",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0116-208_24A-050.sb45130044.eb45528571.60421.72947091435",
+      "obs_id": "24A-050.sb45130044.eb45528571.60421.72947091435",
+      "project_code": "24A-050",
+      "calibrator_id": "0116-208",
+      "gain_calibrator_name": "J0116-2052",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-050.sb45130044.eb45528571.60421.72947091435",
+      "estimated_size_gb": 17.588164,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:16:51.404300",
+      "dec": "-20:52:06.813000",
+      "date_utc": "2024-04-21",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1435+760_19A-323.sb37229054.eb37257511.58740.5729549074",
+      "obs_id": "19A-323.sb37229054.eb37257511.58740.5729549074",
+      "project_code": "19A-323",
+      "calibrator_id": "1435+760",
+      "gain_calibrator_name": "J1435+7605",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-323.sb37229054.eb37257511.58740.5729549074",
+      "estimated_size_gb": 17.683607,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:35:47.104180",
+      "dec": "+76:05:25.860910",
+      "date_utc": "2019-09-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1154-350_24A-228.sb46037008.eb46418865.60547.90824392361",
+      "obs_id": "24A-228.sb46037008.eb46418865.60547.90824392361",
+      "project_code": "24A-228",
+      "calibrator_id": "1154-350",
+      "gain_calibrator_name": "J1154-3505",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-228.sb46037008.eb46418865.60547.90824392361",
+      "estimated_size_gb": 17.784607,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:54:21.794900",
+      "dec": "-35:05:28.992000",
+      "date_utc": "2024-08-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2344+824_17B-370.sb34664219.eb34692898_000.58073.18390297454",
+      "obs_id": "17B-370.sb34664219.eb34692898_000.58073.18390297454",
+      "project_code": "17B-370",
+      "calibrator_id": "2344+824",
+      "gain_calibrator_name": "J2344+8226",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-370.sb34664219.eb34692898_000.58073.18390297454",
+      "estimated_size_gb": 17.790258,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:44:03.771800",
+      "dec": "+82:26:40.401000",
+      "date_utc": "2017-11-16",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2213-254_24A-309.sb45096315.eb45217048.60339.834893113424",
+      "obs_id": "24A-309.sb45096315.eb45217048.60339.834893113424",
+      "project_code": "24A-309",
+      "calibrator_id": "2213-254",
+      "gain_calibrator_name": "J2158-1501",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-309.sb45096315.eb45217048.60339.834893113424",
+      "estimated_size_gb": 17.794372,
+      "band_guess": "X",
+      "usable_configs": [
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:13:02.497951",
+      "dec": "-25:29:30.079710",
+      "date_utc": "2024-01-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1335+457_19A-160.sb36887481.eb37257513.58740.61971653935",
+      "obs_id": "19A-160.sb36887481.eb37257513.58740.61971653935",
+      "project_code": "19A-160",
+      "calibrator_id": "1335+457",
+      "gain_calibrator_name": "J1335+5844",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-160.sb36887481.eb37257513.58740.61971653935",
+      "estimated_size_gb": 17.809628,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:35:21.962238",
+      "dec": "+45:42:38.231340",
+      "date_utc": "2019-09-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0414+343_23A-221.sb43107748.eb43832923.60063.75538043982",
+      "obs_id": "23A-221.sb43107748.eb43832923.60063.75538043982",
+      "project_code": "23A-221",
+      "calibrator_id": "0414+343",
+      "gain_calibrator_name": "J0414+3418",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-221.sb43107748.eb43832923.60063.75538043982",
+      "estimated_size_gb": 17.812692,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:14:37.255748",
+      "dec": "+34:18:51.207380",
+      "date_utc": "2023-04-29",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0629-199_16B-376.sb32991657.eb33144360.57756.21302466435",
+      "obs_id": "16B-376.sb32991657.eb33144360.57756.21302466435",
+      "project_code": "16B-376",
+      "calibrator_id": "0629-199",
+      "gain_calibrator_name": "J0629-1959",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-376.sb32991657.eb33144360.57756.21302466435",
+      "estimated_size_gb": 17.865278,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:29:23.761851",
+      "dec": "-19:59:19.723450",
+      "date_utc": "2017-01-03",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2123+055_22A-384.sb41330074.eb41625799.59645.71860008102",
+      "obs_id": "22A-384.sb41330074.eb41625799.59645.71860008102",
+      "project_code": "22A-384",
+      "calibrator_id": "2123+055",
+      "gain_calibrator_name": "J2123+0535",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-384.sb41330074.eb41625799.59645.71860008102",
+      "estimated_size_gb": 18.118674,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:23:44.517391",
+      "dec": "+5:35:22.093210",
+      "date_utc": "2022-03-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2129-183_18A-489.sb35477182.eb35478049.58278.48595515046",
+      "obs_id": "18A-489.sb35477182.eb35478049.58278.48595515046",
+      "project_code": "18A-489",
+      "calibrator_id": "2129-183",
+      "gain_calibrator_name": "J2129-1821",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-489.sb35477182.eb35478049.58278.48595515046",
+      "estimated_size_gb": 18.141744,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:29:21.419099",
+      "dec": "-18:21:22.790190",
+      "date_utc": "2018-06-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2109+355_21A-241.sb39968379.eb40006147.59420.36311155093",
+      "obs_id": "21A-241.sb39968379.eb40006147.59420.36311155093",
+      "project_code": "21A-241",
+      "calibrator_id": "2109+355",
+      "gain_calibrator_name": "J2109+3532",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-241.sb39968379.eb40006147.59420.36311155093",
+      "estimated_size_gb": 18.473454,
+      "band_guess": "KU",
+      "usable_configs": [
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:09:31.878732",
+      "dec": "+35:32:57.597420",
+      "date_utc": "2021-07-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1845+401_24B-418.sb47304202.eb47522849.60698.606708182866",
+      "obs_id": "24B-418.sb47304202.eb47522849.60698.606708182866",
+      "project_code": "24B-418",
+      "calibrator_id": "1845+401",
+      "gain_calibrator_name": "J1845+4007",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-418.sb47304202.eb47522849.60698.606708182866",
+      "estimated_size_gb": 18.485776,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:45:11.131495",
+      "dec": "+40:07:51.577050",
+      "date_utc": "2025-01-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1937-399_16B-306.sb33325016.eb33343439.57770.78770149306",
+      "obs_id": "16B-306.sb33325016.eb33343439.57770.78770149306",
+      "project_code": "16B-306",
+      "calibrator_id": "1937-399",
+      "gain_calibrator_name": "2148+069",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-306.sb33325016.eb33343439.57770.78770149306",
+      "estimated_size_gb": 18.493975,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "19:37:16.217362",
+      "dec": "-39:58:01.553060",
+      "date_utc": "2017-01-17",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0710+475_21A-263.sb39550910.eb39566736.59315.010009432866",
+      "obs_id": "21A-263.sb39550910.eb39566736.59315.010009432866",
+      "project_code": "21A-263",
+      "calibrator_id": "0710+475",
+      "gain_calibrator_name": "J0927+3902",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-263.sb39550910.eb39566736.59315.010009432866",
+      "estimated_size_gb": 18.658208,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:10:46.104900",
+      "dec": "+47:32:11.142670",
+      "date_utc": "2021-04-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0115-014_24B-307.sb47036639.eb47340251.60647.01659290509",
+      "obs_id": "24B-307.sb47036639.eb47340251.60647.01659290509",
+      "project_code": "24B-307",
+      "calibrator_id": "0115-014",
+      "gain_calibrator_name": "J0115-0127",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-307.sb47036639.eb47340251.60647.01659290509",
+      "estimated_size_gb": 18.715702,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:15:17.099972",
+      "dec": "-1:27:04.577370",
+      "date_utc": "2024-12-03",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2314-316_24B-220.sb46798914.eb47329822.60645.04723513889",
+      "obs_id": "24B-220.sb46798914.eb47329822.60645.04723513889",
+      "project_code": "24B-220",
+      "calibrator_id": "2314-316",
+      "gain_calibrator_name": "J2314-3138",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-220.sb46798914.eb47329822.60645.04723513889",
+      "estimated_size_gb": 18.895862,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:14:48.500631",
+      "dec": "-31:38:39.526510",
+      "date_utc": "2024-12-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0808+408_20A-459.sb38110088.eb38217387.58992.83369413194",
+      "obs_id": "20A-459.sb38110088.eb38217387.58992.83369413194",
+      "project_code": "20A-459",
+      "calibrator_id": "0808+408",
+      "gain_calibrator_name": "J0808+4052",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-459.sb38110088.eb38217387.58992.83369413194",
+      "estimated_size_gb": 18.971688,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:08:56.652038",
+      "dec": "+40:52:44.888890",
+      "date_utc": "2020-05-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1351-148_20A-123.sb37868013.eb38044547.58962.25089949074",
+      "obs_id": "20A-123.sb37868013.eb38044547.58962.25089949074",
+      "project_code": "20A-123",
+      "calibrator_id": "1351-148",
+      "gain_calibrator_name": "J1351-1449",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-123.sb37868013.eb38044547.58962.25089949074",
+      "estimated_size_gb": 19.045941,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:51:52.649611",
+      "dec": "-14:49:14.555740",
+      "date_utc": "2020-04-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1313+549_23A-324.sb44160061.eb44415030.60170.04249369213",
+      "obs_id": "23A-324.sb44160061.eb44415030.60170.04249369213",
+      "project_code": "23A-324",
+      "calibrator_id": "1313+549",
+      "gain_calibrator_name": "J1313+5458",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-324.sb44160061.eb44415030.60170.04249369213",
+      "estimated_size_gb": 19.247306,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:13:37.852959",
+      "dec": "+54:58:23.894700",
+      "date_utc": "2023-08-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1651+014_21B-322.sb41070688.eb41125308.59589.70196006945",
+      "obs_id": "21B-322.sb41070688.eb41125308.59589.70196006945",
+      "project_code": "21B-322",
+      "calibrator_id": "1651+014",
+      "gain_calibrator_name": "J1651+014",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21B-322.sb41070688.eb41125308.59589.70196006945",
+      "estimated_size_gb": 19.382795,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:51:03.662382",
+      "dec": "+1:29:23.458780",
+      "date_utc": "2022-01-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0105+483_23A-296.sb43705203.eb43721654.60018.09472337963",
+      "obs_id": "23A-296.sb43705203.eb43721654.60018.09472337963",
+      "project_code": "23A-296",
+      "calibrator_id": "0105+483",
+      "gain_calibrator_name": "J0105+4819",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-296.sb43705203.eb43721654.60018.09472337963",
+      "estimated_size_gb": 19.466862,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:05:49.928164",
+      "dec": "+48:19:03.192580",
+      "date_utc": "2023-03-15",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2236-145_21A-148.sb39420197.eb39560796.59306.683016574076",
+      "obs_id": "21A-148.sb39420197.eb39560796.59306.683016574076",
+      "project_code": "21A-148",
+      "calibrator_id": "2236-145",
+      "gain_calibrator_name": "J2236-1433",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-148.sb39420197.eb39560796.59306.683016574076",
+      "estimated_size_gb": 19.499039,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:36:34.087168",
+      "dec": "-14:33:22.189590",
+      "date_utc": "2021-04-02",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1516+195_19A-223.sb36959979.eb37291985.58754.086678657404",
+      "obs_id": "19A-223.sb36959979.eb37291985.58754.086678657404",
+      "project_code": "19A-223",
+      "calibrator_id": "1516+195",
+      "gain_calibrator_name": "J1516+1932",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-223.sb36959979.eb37291985.58754.086678657404",
+      "estimated_size_gb": 19.597533,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:16:56.796194",
+      "dec": "+19:32:12.991870",
+      "date_utc": "2019-09-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0219+013_24A-381.sb45868042.eb46237536.60513.451323657406",
+      "obs_id": "24A-381.sb45868042.eb46237536.60513.451323657406",
+      "project_code": "24A-381",
+      "calibrator_id": "0219+013",
+      "gain_calibrator_name": "J0339-0146",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-381.sb45868042.eb46237536.60513.451323657406",
+      "estimated_size_gb": 19.72496,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:19:07.024497",
+      "dec": "+1:20:59.865760",
+      "date_utc": "2024-07-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0229+777_18B-048.sb36110611.eb36141244.58504.03136233796",
+      "obs_id": "18B-048.sb36110611.eb36141244.58504.03136233796",
+      "project_code": "18B-048",
+      "calibrator_id": "0229+777",
+      "gain_calibrator_name": "J0229+7743",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-048.sb36110611.eb36141244.58504.03136233796",
+      "estimated_size_gb": 19.750116,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:29:14.711500",
+      "dec": "+77:43:16.113000",
+      "date_utc": "2019-01-21",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1207+279_18A-487.sb35467021.eb35477289.58277.19298734954",
+      "obs_id": "18A-487.sb35467021.eb35477289.58277.19298734954",
+      "project_code": "18A-487",
+      "calibrator_id": "1207+279",
+      "gain_calibrator_name": "J1207+2754",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-487.sb35467021.eb35477289.58277.19298734954",
+      "estimated_size_gb": 19.861207,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "12:07:27.900475",
+      "dec": "+27:54:58.849970",
+      "date_utc": "2018-06-08",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2115+295_24B-418.sb47304303.eb47533941.60700.5545959375",
+      "obs_id": "24B-418.sb47304303.eb47533941.60700.5545959375",
+      "project_code": "24B-418",
+      "calibrator_id": "2115+295",
+      "gain_calibrator_name": "J2115+2933",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-418.sb47304303.eb47533941.60700.5545959375",
+      "estimated_size_gb": 19.924765,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:15:29.413455",
+      "dec": "+29:33:38.366940",
+      "date_utc": "2025-01-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1546+004_24B-418.sb47303734.eb47461253.60685.6006174537",
+      "obs_id": "24B-418.sb47303734.eb47461253.60685.6006174537",
+      "project_code": "24B-418",
+      "calibrator_id": "1546+004",
+      "gain_calibrator_name": "J1546+0026",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-418.sb47303734.eb47461253.60685.6006174537",
+      "estimated_size_gb": 19.925543,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:46:09.531474",
+      "dec": "+0:26:24.614080",
+      "date_utc": "2025-01-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1102+279_23A-361.sb44228261.eb44512568.60196.71140251157",
+      "obs_id": "23A-361.sb44228261.eb44512568.60196.71140251157",
+      "project_code": "23A-361",
+      "calibrator_id": "1102+279",
+      "gain_calibrator_name": "J1102+2757",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-361.sb44228261.eb44512568.60196.71140251157",
+      "estimated_size_gb": 20.088415,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:02:14.288458",
+      "dec": "+27:57:08.689940",
+      "date_utc": "2023-09-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1159-218_20A-357.sb37890532.eb37922756.58897.40151626157",
+      "obs_id": "20A-357.sb37890532.eb37922756.58897.40151626157",
+      "project_code": "20A-357",
+      "calibrator_id": "1159-218",
+      "gain_calibrator_name": "J1159-2148",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-357.sb37890532.eb37922756.58897.40151626157",
+      "estimated_size_gb": 20.622559,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:59:51.906135",
+      "dec": "-21:48:53.707610",
+      "date_utc": "2020-02-18",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1845+356_20B-149.sb39192321.eb39202618.59206.90241967593",
+      "obs_id": "20B-149.sb39192321.eb39202618.59206.90241967593",
+      "project_code": "20B-149",
+      "calibrator_id": "1845+356",
+      "gain_calibrator_name": "J1845+3541",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-149.sb39192321.eb39202618.59206.90241967593",
+      "estimated_size_gb": 20.985492,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:45:35.108870",
+      "dec": "+35:41:16.726510",
+      "date_utc": "2020-12-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2148+611_S91005.sb32542958.eb32681358.57633.940820625",
+      "obs_id": "S91005.sb32542958.eb32681358.57633.940820625",
+      "project_code": "S91005",
+      "calibrator_id": "2148+611",
+      "gain_calibrator_name": "J2052+3635",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/S91005.sb32542958.eb32681358.57633.940820625",
+      "estimated_size_gb": 21.239,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:48:16.045400",
+      "dec": "+61:07:05.838000",
+      "date_utc": "2016-09-03",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2216+353_SK0421.sb37138512.eb37163830.58726.197072800926",
+      "obs_id": "SK0421.sb37138512.eb37163830.58726.197072800926",
+      "project_code": "SK0421",
+      "calibrator_id": "2216+353",
+      "gain_calibrator_name": "J2216+3518",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SK0421.sb37138512.eb37163830.58726.197072800926",
+      "estimated_size_gb": 21.425018,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:16:20.009910",
+      "dec": "+35:18:14.180560",
+      "date_utc": "2019-08-31",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0954+745_20B-138.sb38772064.eb39305542.59258.85664550926",
+      "obs_id": "20B-138.sb38772064.eb39305542.59258.85664550926",
+      "project_code": "20B-138",
+      "calibrator_id": "0954+745",
+      "gain_calibrator_name": "J0954+7435",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-138.sb38772064.eb39305542.59258.85664550926",
+      "estimated_size_gb": 21.453796,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "9:54:47.442098",
+      "dec": "+74:35:57.145440",
+      "date_utc": "2021-02-13",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2359-315_22B-299.sb42917773.eb42956694.59879.18984140047",
+      "obs_id": "22B-299.sb42917773.eb42956694.59879.18984140047",
+      "project_code": "22B-299",
+      "calibrator_id": "2359-315",
+      "gain_calibrator_name": "J2359-3133",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22B-299.sb42917773.eb42956694.59879.18984140047",
+      "estimated_size_gb": 21.503553,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:59:35.494000",
+      "dec": "-31:33:43.820000",
+      "date_utc": "2022-10-27",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1113+147_19A-160.sb36851282.eb36999194.58696.998375324074",
+      "obs_id": "19A-160.sb36851282.eb36999194.58696.998375324074",
+      "project_code": "19A-160",
+      "calibrator_id": "1113+147",
+      "gain_calibrator_name": "J1125+2610",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-160.sb36851282.eb36999194.58696.998375324074",
+      "estimated_size_gb": 21.603483,
+      "band_guess": "X",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:13:58.695097",
+      "dec": "+14:42:26.952620",
+      "date_utc": "2019-08-02",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0424+020_22A-449.sb41466600.eb41788357.59700.729568622686",
+      "obs_id": "22A-449.sb41466600.eb41788357.59700.729568622686",
+      "project_code": "22A-449",
+      "calibrator_id": "0424+020",
+      "gain_calibrator_name": "J2147+0929",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-449.sb41466600.eb41788357.59700.729568622686",
+      "estimated_size_gb": 21.703494,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:24:08.562028",
+      "dec": "+2:04:24.964950",
+      "date_utc": "2022-05-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2331-159_23A-249.sb44531696.eb44600545.60216.40666087963",
+      "obs_id": "23A-249.sb44531696.eb44600545.60216.40666087963",
+      "project_code": "23A-249",
+      "calibrator_id": "2331-159",
+      "gain_calibrator_name": "J2331-1556",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-249.sb44531696.eb44600545.60216.40666087963",
+      "estimated_size_gb": 21.762137,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:31:38.652436",
+      "dec": "-15:56:57.009520",
+      "date_utc": "2023-09-29",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2137-207_23B-236.sb44632481.eb45013522.60318.79120050926",
+      "obs_id": "23B-236.sb44632481.eb45013522.60318.79120050926",
+      "project_code": "23B-236",
+      "calibrator_id": "2137-207",
+      "gain_calibrator_name": "J2137-2042",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-236.sb44632481.eb45013522.60318.79120050926",
+      "estimated_size_gb": 21.814045,
+      "band_guess": "L",
+      "usable_configs": [
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:37:50.001800",
+      "dec": "-20:42:31.751000",
+      "date_utc": "2024-01-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2250+143_19B-109.sb37521244.eb37565588.58814.989990567134",
+      "obs_id": "19B-109.sb37521244.eb37565588.58814.989990567134",
+      "project_code": "19B-109",
+      "calibrator_id": "2250+143",
+      "gain_calibrator_name": "J2025+0316",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19B-109.sb37521244.eb37565588.58814.989990567134",
+      "estimated_size_gb": 21.820879,
+      "band_guess": "C",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:50:25.540000",
+      "dec": "+14:19:50.600000",
+      "date_utc": "2019-11-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0607+673_23B-328.sb45318841.eb45319553.60391.01861103009",
+      "obs_id": "23B-328.sb45318841.eb45319553.60391.01861103009",
+      "project_code": "23B-328",
+      "calibrator_id": "0607+673",
+      "gain_calibrator_name": "J0607+6720",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-328.sb45318841.eb45319553.60391.01861103009",
+      "estimated_size_gb": 21.856876,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:07:52.671622",
+      "dec": "+67:20:55.409770",
+      "date_utc": "2024-03-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1944+548_20B-280.sb39344396.eb39383924.59272.759722800925",
+      "obs_id": "20B-280.sb39344396.eb39383924.59272.759722800925",
+      "project_code": "20B-280",
+      "calibrator_id": "1944+548",
+      "gain_calibrator_name": "J1944+5448",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-280.sb39344396.eb39383924.59272.759722800925",
+      "estimated_size_gb": 21.933664,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "19:44:31.512621",
+      "dec": "+54:48:07.063080",
+      "date_utc": "2021-02-27",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0837+249_20A-265.sb38299735.eb38424369.59031.06425008102",
+      "obs_id": "20A-265.sb38299735.eb38424369.59031.06425008102",
+      "project_code": "20A-265",
+      "calibrator_id": "0837+249",
+      "gain_calibrator_name": "J0837+2454",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-265.sb38299735.eb38424369.59031.06425008102",
+      "estimated_size_gb": 22.011102,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:37:40.245676",
+      "dec": "+24:54:23.121600",
+      "date_utc": "2020-07-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1308+357_19A-223.sb36957004.eb37109477.58718.96527208333",
+      "obs_id": "19A-223.sb36957004.eb37109477.58718.96527208333",
+      "project_code": "19A-223",
+      "calibrator_id": "1308+357",
+      "gain_calibrator_name": "J1308+3546",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-223.sb36957004.eb37109477.58718.96527208333",
+      "estimated_size_gb": 22.338621,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:08:23.698700",
+      "dec": "+35:46:37.246000",
+      "date_utc": "2019-08-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2214-385_16B-251.sb33684655.eb33979470.57929.40790219908",
+      "obs_id": "16B-251.sb33684655.eb33979470.57929.40790219908",
+      "project_code": "16B-251",
+      "calibrator_id": "2214-385",
+      "gain_calibrator_name": "J2214-3835",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-251.sb33684655.eb33979470.57929.40790219908",
+      "estimated_size_gb": 22.36022,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:14:38.569313",
+      "dec": "-38:35:45.009880",
+      "date_utc": "2017-06-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1146-247_19A-323.sb36251967.eb37329535.58760.750513125",
+      "obs_id": "19A-323.sb36251967.eb37329535.58760.750513125",
+      "project_code": "19A-323",
+      "calibrator_id": "1146-247",
+      "gain_calibrator_name": "J0943-0819",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-323.sb36251967.eb37329535.58760.750513125",
+      "estimated_size_gb": 22.641278,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:46:08.103374",
+      "dec": "-24:47:32.896810",
+      "date_utc": "2019-10-04",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0706-231_SC1046.sb37887364.eb37951420.58907.12150327546",
+      "obs_id": "SC1046.sb37887364.eb37951420.58907.12150327546",
+      "project_code": "SC1046",
+      "calibrator_id": "0706-231",
+      "gain_calibrator_name": "J0706-2311",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SC1046.sb37887364.eb37951420.58907.12150327546",
+      "estimated_size_gb": 22.736274,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:06:33.478200",
+      "dec": "-23:11:37.530000",
+      "date_utc": "2020-02-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0040-017_24A-381.sb45867846.eb46334576.60532.42686896991",
+      "obs_id": "24A-381.sb45867846.eb46334576.60532.42686896991",
+      "project_code": "24A-381",
+      "calibrator_id": "0040-017",
+      "gain_calibrator_name": "J0040-0146",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-381.sb45867846.eb46334576.60532.42686896991",
+      "estimated_size_gb": 22.844065,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:40:57.611582",
+      "dec": "-1:46:32.025620",
+      "date_utc": "2024-08-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1624+576_17A-362.sb33372533.eb33569323.57813.549384872684",
+      "obs_id": "17A-362.sb33372533.eb33569323.57813.549384872684",
+      "project_code": "17A-362",
+      "calibrator_id": "1624+576",
+      "gain_calibrator_name": "J1624+5741",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-362.sb33372533.eb33569323.57813.549384872684",
+      "estimated_size_gb": 22.851141,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:24:24.807563",
+      "dec": "+57:41:16.280790",
+      "date_utc": "2017-03-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1408-078_22A-378.sb42366037.eb42462898.59788.013507881944",
+      "obs_id": "22A-378.sb42366037.eb42462898.59788.013507881944",
+      "project_code": "22A-378",
+      "calibrator_id": "1408-078",
+      "gain_calibrator_name": "J1408-0752",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb42366037.eb42462898.59788.013507881944",
+      "estimated_size_gb": 22.881512,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:08:56.481200",
+      "dec": "-7:52:26.666330",
+      "date_utc": "2022-07-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1018+357_20A-182.sb38293767.eb38598241.59086.658039016205",
+      "obs_id": "20A-182.sb38293767.eb38598241.59086.658039016205",
+      "project_code": "20A-182",
+      "calibrator_id": "1018+357",
+      "gain_calibrator_name": "J1018+3542",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-182.sb38293767.eb38598241.59086.658039016205",
+      "estimated_size_gb": 23.453775,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:18:10.988079",
+      "dec": "+35:42:39.441310",
+      "date_utc": "2020-08-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0538-440_19A-306.sb36855961.eb37049457.58706.598288090274",
+      "obs_id": "19A-306.sb36855961.eb37049457.58706.598288090274",
+      "project_code": "19A-306",
+      "calibrator_id": "0538-440",
+      "gain_calibrator_name": "J0538-4405",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-306.sb36855961.eb37049457.58706.598288090274",
+      "estimated_size_gb": 23.567661,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:38:50.361551",
+      "dec": "-44:05:08.939080",
+      "date_utc": "2019-08-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2131-121_16B-306.sb33141521.eb33308706.57764.968783055556",
+      "obs_id": "16B-306.sb33141521.eb33308706.57764.968783055556",
+      "project_code": "16B-306",
+      "calibrator_id": "2131-121",
+      "gain_calibrator_name": "2131-121",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-306.sb33141521.eb33308706.57764.968783055556",
+      "estimated_size_gb": 23.712783,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:31:35.261758",
+      "dec": "-12:07:04.795880",
+      "date_utc": "2017-01-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0457-234_16B-306.sb33311134.eb33323274.57767.02146015046",
+      "obs_id": "16B-306.sb33311134.eb33323274.57767.02146015046",
+      "project_code": "16B-306",
+      "calibrator_id": "0457-234",
+      "gain_calibrator_name": "0204-170",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-306.sb33311134.eb33323274.57767.02146015046",
+      "estimated_size_gb": 23.904471,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:57:03.179230",
+      "dec": "-23:24:52.020050",
+      "date_utc": "2017-01-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1939-154_19A-323.sb37229482.eb37239617.58739.210718692135",
+      "obs_id": "19A-323.sb37229482.eb37239617.58739.210718692135",
+      "project_code": "19A-323",
+      "calibrator_id": "1939-154",
+      "gain_calibrator_name": "J1939-1525",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-323.sb37229482.eb37239617.58739.210718692135",
+      "estimated_size_gb": 24.03973,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "19:39:26.657740",
+      "dec": "-15:25:43.058320",
+      "date_utc": "2019-09-13",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1735+362_22A-378.sb42425517.eb42462900.59788.0504884838",
+      "obs_id": "22A-378.sb42425517.eb42462900.59788.0504884838",
+      "project_code": "22A-378",
+      "calibrator_id": "1735+362",
+      "gain_calibrator_name": "J1716+2152",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb42425517.eb42462900.59788.0504884838",
+      "estimated_size_gb": 24.049579,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:35:48.086675",
+      "dec": "+36:16:45.611390",
+      "date_utc": "2022-07-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0057+303_24B-323.sb46973749.eb47128958.60613.051109699074",
+      "obs_id": "24B-323.sb46973749.eb47128958.60613.051109699074",
+      "project_code": "24B-323",
+      "calibrator_id": "0057+303",
+      "gain_calibrator_name": "J0057+3021",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-323.sb46973749.eb47128958.60613.051109699074",
+      "estimated_size_gb": 24.134991,
+      "band_guess": "C",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:57:48.883353",
+      "dec": "+30:21:08.812130",
+      "date_utc": "2024-10-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0110-076_19A-223.sb36969900.eb37092511.58715.424748749996",
+      "obs_id": "19A-223.sb36969900.eb37092511.58715.424748749996",
+      "project_code": "19A-223",
+      "calibrator_id": "0110-076",
+      "gain_calibrator_name": "J0110-0741",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-223.sb36969900.eb37092511.58715.424748749996",
+      "estimated_size_gb": 24.252156,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:10:50.020945",
+      "dec": "-7:41:41.113690",
+      "date_utc": "2019-08-20",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0757+099_19A-223.sb36974694.eb37050888.58706.787770358795",
+      "obs_id": "19A-223.sb36974694.eb37050888.58706.787770358795",
+      "project_code": "19A-223",
+      "calibrator_id": "0757+099",
+      "gain_calibrator_name": "J0825+0309",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-223.sb36974694.eb37050888.58706.787770358795",
+      "estimated_size_gb": 24.362642,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:57:06.642936",
+      "dec": "+9:56:34.852100",
+      "date_utc": "2019-08-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1543-079_24B-221.sb46802951.eb47304410_000.60638.68551289351",
+      "obs_id": "24B-221.sb46802951.eb47304410_000.60638.68551289351",
+      "project_code": "24B-221",
+      "calibrator_id": "1543-079",
+      "gain_calibrator_name": "J1543-0757",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-221.sb46802951.eb47304410_000.60638.68551289351",
+      "estimated_size_gb": 24.501469,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:43:01.687567",
+      "dec": "-7:57:06.629160",
+      "date_utc": "2024-11-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0624+389_19A-184.sb36496294.eb36547035.58575.888327569446",
+      "obs_id": "19A-184.sb36496294.eb36547035.58575.888327569446",
+      "project_code": "19A-184",
+      "calibrator_id": "0624+389",
+      "gain_calibrator_name": "J0624+3856",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-184.sb36496294.eb36547035.58575.888327569446",
+      "estimated_size_gb": 25.351464,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:24:19.021305",
+      "dec": "+38:56:48.735910",
+      "date_utc": "2019-04-02",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0815+365_19A-160.sb36844841.eb37104683.58717.59939425926",
+      "obs_id": "19A-160.sb36844841.eb37104683.58717.59939425926",
+      "project_code": "19A-160",
+      "calibrator_id": "0815+365",
+      "gain_calibrator_name": "J0927+3902",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-160.sb36844841.eb37104683.58717.59939425926",
+      "estimated_size_gb": 25.382703,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:15:25.944824",
+      "dec": "+36:35:15.148300",
+      "date_utc": "2019-08-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1122+180_20B-377.sb43675442.eb43699633.60010.20037074074",
+      "obs_id": "20B-377.sb43675442.eb43699633.60010.20037074074",
+      "project_code": "20B-377",
+      "calibrator_id": "1122+180",
+      "gain_calibrator_name": "J1122+1805",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-377.sb43675442.eb43699633.60010.20037074074",
+      "estimated_size_gb": 25.398512,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:22:29.711471",
+      "dec": "+18:05:26.343400",
+      "date_utc": "2023-03-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1657+481_22A-378.sb42344392.eb42468874.59790.170360856486",
+      "obs_id": "22A-378.sb42344392.eb42468874.59790.170360856486",
+      "project_code": "22A-378",
+      "calibrator_id": "1657+481",
+      "gain_calibrator_name": "J1800+7828",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb42344392.eb42468874.59790.170360856486",
+      "estimated_size_gb": 26.104792,
+      "band_guess": "X",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:57:46.878947",
+      "dec": "+48:08:33.041080",
+      "date_utc": "2022-07-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2300+169_19B-139.sb37400463.eb37513911.58798.97399722222",
+      "obs_id": "19B-139.sb37400463.eb37513911.58798.97399722222",
+      "project_code": "19B-139",
+      "calibrator_id": "2300+169",
+      "gain_calibrator_name": "J2300+1655",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19B-139.sb37400463.eb37513911.58798.97399722222",
+      "estimated_size_gb": 26.35397,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:00:42.994100",
+      "dec": "+16:55:14.401000",
+      "date_utc": "2019-11-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0207+627_19B-139.sb37400903.eb37513913.58799.01879219907",
+      "obs_id": "19B-139.sb37400903.eb37513913.58799.01879219907",
+      "project_code": "19B-139",
+      "calibrator_id": "0207+627",
+      "gain_calibrator_name": "J0207+6246",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19B-139.sb37400903.eb37513913.58799.01879219907",
+      "estimated_size_gb": 26.376147,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:07:02.991400",
+      "dec": "+62:46:12.203000",
+      "date_utc": "2019-11-12",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1534+015_16B-349.sb32958476.eb32969833.57686.95527731482",
+      "obs_id": "16B-349.sb32958476.eb32969833.57686.95527731482",
+      "project_code": "16B-349",
+      "calibrator_id": "1534+015",
+      "gain_calibrator_name": "J1505+0326",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-349.sb32958476.eb32969833.57686.95527731482",
+      "estimated_size_gb": 26.772126,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:34:52.453675",
+      "dec": "+1:31:04.206570",
+      "date_utc": "2016-10-26",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0714+355_20B-375.sb39034288.eb39305548.59259.06824069444",
+      "obs_id": "20B-375.sb39034288.eb39305548.59259.06824069444",
+      "project_code": "20B-375",
+      "calibrator_id": "0714+355",
+      "gain_calibrator_name": "J0714+3534",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-375.sb39034288.eb39305548.59259.06824069444",
+      "estimated_size_gb": 26.785712,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:14:24.817480",
+      "dec": "+35:34:39.795330",
+      "date_utc": "2021-02-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1950+081_18A-275.sb34996255.eb35435362.58261.28620398148",
+      "obs_id": "18A-275.sb34996255.eb35435362.58261.28620398148",
+      "project_code": "18A-275",
+      "calibrator_id": "1950+081",
+      "gain_calibrator_name": "J1950+0807",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-275.sb34996255.eb35435362.58261.28620398148",
+      "estimated_size_gb": 27.39846,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "19:50:05.540300",
+      "dec": "+8:07:13.981000",
+      "date_utc": "2018-05-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0735-175_24B-498.sb47373288.eb47536831.60702.1524719213",
+      "obs_id": "24B-498.sb47373288.eb47536831.60702.1524719213",
+      "project_code": "24B-498",
+      "calibrator_id": "0735-175",
+      "gain_calibrator_name": "J0735-1735",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-498.sb47373288.eb47536831.60702.1524719213",
+      "estimated_size_gb": 27.782776,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:35:45.812488",
+      "dec": "-17:35:48.502230",
+      "date_utc": "2025-01-27",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1734+094_20B-375.sb38884269.eb39315491.59263.453255127315",
+      "obs_id": "20B-375.sb38884269.eb39315491.59263.453255127315",
+      "project_code": "20B-375",
+      "calibrator_id": "1734+094",
+      "gain_calibrator_name": "J1734+0926",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-375.sb38884269.eb39315491.59263.453255127315",
+      "estimated_size_gb": 28.060803,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:34:58.376995",
+      "dec": "+9:26:58.260060",
+      "date_utc": "2021-02-18",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1153+495_20A-275.sb38457323.eb38471676.59040.87605207176",
+      "obs_id": "20A-275.sb38457323.eb38471676.59040.87605207176",
+      "project_code": "20A-275",
+      "calibrator_id": "1153+495",
+      "gain_calibrator_name": "J1153+4931",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-275.sb38457323.eb38471676.59040.87605207176",
+      "estimated_size_gb": 28.367699,
+      "band_guess": "KU",
+      "usable_configs": [
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:53:24.466626",
+      "dec": "+49:31:08.830140",
+      "date_utc": "2020-07-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0340-213_22A-428.sb41176956.eb41880038.59753.56495479167",
+      "obs_id": "22A-428.sb41176956.eb41880038.59753.56495479167",
+      "project_code": "22A-428",
+      "calibrator_id": "0340-213",
+      "gain_calibrator_name": "J0340-2119",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-428.sb41176956.eb41880038.59753.56495479167",
+      "estimated_size_gb": 28.51347,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:40:35.607864",
+      "dec": "-21:19:31.172230",
+      "date_utc": "2022-06-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0016-002_22A-253.sb41536837.eb41773145.59687.589951435184",
+      "obs_id": "22A-253.sb41536837.eb41773145.59687.589951435184",
+      "project_code": "22A-253",
+      "calibrator_id": "0016-002",
+      "gain_calibrator_name": "J2134-0153",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-253.sb41536837.eb41773145.59687.589951435184",
+      "estimated_size_gb": 28.531026,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:16:11.088554",
+      "dec": "-0:15:12.445280",
+      "date_utc": "2022-04-18",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1744+402_20B-375.sb39029474.eb39309578.59262.43850030092",
+      "obs_id": "20B-375.sb39029474.eb39309578.59262.43850030092",
+      "project_code": "20B-375",
+      "calibrator_id": "1744+402",
+      "gain_calibrator_name": "J1744+4014",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-375.sb39029474.eb39309578.59262.43850030092",
+      "estimated_size_gb": 28.578035,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:44:25.095896",
+      "dec": "+40:14:48.140800",
+      "date_utc": "2021-02-17",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0154+477_23A-328.sb44271770.eb44394915.60155.60467678241",
+      "obs_id": "23A-328.sb44271770.eb44394915.60155.60467678241",
+      "project_code": "23A-328",
+      "calibrator_id": "0154+477",
+      "gain_calibrator_name": "J0154+4743",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-328.sb44271770.eb44394915.60155.60467678241",
+      "estimated_size_gb": 28.66316,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:54:56.289876",
+      "dec": "+47:43:26.539140",
+      "date_utc": "2023-07-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0239+042_20A-065.sb38320300.eb38436602.59034.521628877315",
+      "obs_id": "20A-065.sb38320300.eb38436602.59034.521628877315",
+      "project_code": "20A-065",
+      "calibrator_id": "0239+042",
+      "gain_calibrator_name": "J0239+0416",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-065.sb38320300.eb38436602.59034.521628877315",
+      "estimated_size_gb": 29.730069,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:39:51.263048",
+      "dec": "+4:16:21.411830",
+      "date_utc": "2020-07-04",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0402-317_18A-199.sb34773340.eb34962569.58147.010660451386",
+      "obs_id": "18A-199.sb34773340.eb34962569.58147.010660451386",
+      "project_code": "18A-199",
+      "calibrator_id": "0402-317",
+      "gain_calibrator_name": "J0402-3147",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-199.sb34773340.eb34962569.58147.010660451386",
+      "estimated_size_gb": 29.79415,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:02:21.266027",
+      "dec": "-31:47:25.945580",
+      "date_utc": "2018-01-29",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1658+076_22A-230.sb41499204.eb41633132.59646.371582499996",
+      "obs_id": "22A-230.sb41499204.eb41633132.59646.371582499996",
+      "project_code": "22A-230",
+      "calibrator_id": "1658+076",
+      "gain_calibrator_name": "J1658+0741",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-230.sb41499204.eb41633132.59646.371582499996",
+      "estimated_size_gb": 29.918578,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:58:09.011458",
+      "dec": "+7:41:27.540720",
+      "date_utc": "2022-03-08",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0051-068_22A-378.sb41850351.eb42474683.59795.49607375",
+      "obs_id": "22A-378.sb41850351.eb42474683.59795.49607375",
+      "project_code": "22A-378",
+      "calibrator_id": "0051-068",
+      "gain_calibrator_name": "J0051-0650",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb41850351.eb42474683.59795.49607375",
+      "estimated_size_gb": 30.056318,
+      "band_guess": "X",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:51:08.209796",
+      "dec": "-6:50:02.228140",
+      "date_utc": "2022-08-04",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2203+174_18A-034.sb35379173.eb35476705.58276.38824684027",
+      "obs_id": "18A-034.sb35379173.eb35476705.58276.38824684027",
+      "project_code": "18A-034",
+      "calibrator_id": "2203+174",
+      "gain_calibrator_name": "J2203+3145",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-034.sb35379173.eb35476705.58276.38824684027",
+      "estimated_size_gb": 30.588483,
+      "band_guess": "KU",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:03:26.893691",
+      "dec": "+17:25:48.247840",
+      "date_utc": "2018-06-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1326+319_19A-082.sb36982606.eb37356771.58767.98009038194",
+      "obs_id": "19A-082.sb36982606.eb37356771.58767.98009038194",
+      "project_code": "19A-082",
+      "calibrator_id": "1326+319",
+      "gain_calibrator_name": "J1326+3154",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-082.sb36982606.eb37356771.58767.98009038194",
+      "estimated_size_gb": 30.760964,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:26:16.512212",
+      "dec": "+31:54:09.515380",
+      "date_utc": "2019-10-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2006+644_20A-491.sb38191582.eb38219359.58994.62089556713",
+      "obs_id": "20A-491.sb38191582.eb38219359.58994.62089556713",
+      "project_code": "20A-491",
+      "calibrator_id": "2006+644",
+      "gain_calibrator_name": "J2202+4216",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-491.sb38191582.eb38219359.58994.62089556713",
+      "estimated_size_gb": 31.989936,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "20:06:17.694614",
+      "dec": "+64:24:45.417870",
+      "date_utc": "2020-05-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0512+152_18A-296.sb35009183.eb35228150.58195.07925738426",
+      "obs_id": "18A-296.sb35009183.eb35228150.58195.07925738426",
+      "project_code": "18A-296",
+      "calibrator_id": "0512+152",
+      "gain_calibrator_name": "J0512+1517",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-296.sb35009183.eb35228150.58195.07925738426",
+      "estimated_size_gb": 32.096924,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:12:41.012900",
+      "dec": "+15:17:23.479270",
+      "date_utc": "2018-03-18",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1735+508_19A-223.sb36958609.eb37164762.58728.26338967592",
+      "obs_id": "19A-223.sb36958609.eb37164762.58728.26338967592",
+      "project_code": "19A-223",
+      "calibrator_id": "1735+508",
+      "gain_calibrator_name": "J1745+1720",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-223.sb36958609.eb37164762.58728.26338967592",
+      "estimated_size_gb": 32.517607,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:35:49.005180",
+      "dec": "+50:49:11.565860",
+      "date_utc": "2019-09-02",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1830-360_SC1046.sb37917650.eb38124045.58978.29904",
+      "obs_id": "SC1046.sb37917650.eb38124045.58978.29904",
+      "project_code": "SC1046",
+      "calibrator_id": "1830-360",
+      "gain_calibrator_name": "J1626-2951",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SC1046.sb37917650.eb38124045.58978.29904",
+      "estimated_size_gb": 32.573636,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:30:58.882900",
+      "dec": "-36:02:30.132000",
+      "date_utc": "2020-05-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2129-156_17B-340.sb34527628.eb34756503.58090.972008993056",
+      "obs_id": "17B-340.sb34527628.eb34756503.58090.972008993056",
+      "project_code": "17B-340",
+      "calibrator_id": "2129-156",
+      "gain_calibrator_name": "J2129-1538",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-340.sb34527628.eb34756503.58090.972008993056",
+      "estimated_size_gb": 33.355318,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:29:12.175902",
+      "dec": "-15:38:41.040850",
+      "date_utc": "2017-12-03",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0811+017_18B-245.sb35920965.eb36025178.58466.42656640046",
+      "obs_id": "18B-245.sb35920965.eb36025178.58466.42656640046",
+      "project_code": "18B-245",
+      "calibrator_id": "0811+017",
+      "gain_calibrator_name": "J1024-0052",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-245.sb35920965.eb36025178.58466.42656640046",
+      "estimated_size_gb": 33.905024,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:11:26.707322",
+      "dec": "+1:46:52.220020",
+      "date_utc": "2018-12-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0329-239_17B-144.sb34407803.eb34534796.58024.35945729166",
+      "obs_id": "17B-144.sb34407803.eb34534796.58024.35945729166",
+      "project_code": "17B-144",
+      "calibrator_id": "0329-239",
+      "gain_calibrator_name": "J0329-2357",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-144.sb34407803.eb34534796.58024.35945729166",
+      "estimated_size_gb": 34.178577,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:29:54.075537",
+      "dec": "-23:57:08.773300",
+      "date_utc": "2017-09-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1753+441_21A-183.sb39383150.eb39519499.59295.32986099537",
+      "obs_id": "21A-183.sb39383150.eb39519499.59295.32986099537",
+      "project_code": "21A-183",
+      "calibrator_id": "1753+441",
+      "gain_calibrator_name": "J1842+6809",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-183.sb39383150.eb39519499.59295.32986099537",
+      "estimated_size_gb": 34.833686,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:53:22.647901",
+      "dec": "+44:09:45.686080",
+      "date_utc": "2021-03-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0824+558_18A-161.sb35160642.eb35231212.58197.119604074076",
+      "obs_id": "18A-161.sb35160642.eb35231212.58197.119604074076",
+      "project_code": "18A-161",
+      "calibrator_id": "0824+558",
+      "gain_calibrator_name": "J1150-0023",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-161.sb35160642.eb35231212.58197.119604074076",
+      "estimated_size_gb": 35.25976,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:24:47.236351",
+      "dec": "+55:52:42.669380",
+      "date_utc": "2018-03-20",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1107-448_20B-279.sb38962541.eb39226421.59227.371340300924",
+      "obs_id": "20B-279.sb38962541.eb39226421.59227.371340300924",
+      "project_code": "20B-279",
+      "calibrator_id": "1107-448",
+      "gain_calibrator_name": "J1051-3138",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-279.sb38962541.eb39226421.59227.371340300924",
+      "estimated_size_gb": 35.704374,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:07:08.694135",
+      "dec": "-44:49:07.618440",
+      "date_utc": "2021-01-13",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1623-116_SC1046.sb37924330.eb38014133.58942.4204050463",
+      "obs_id": "SC1046.sb37924330.eb38014133.58942.4204050463",
+      "project_code": "SC1046",
+      "calibrator_id": "1623-116",
+      "gain_calibrator_name": "J1743-0350",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SC1046.sb37924330.eb38014133.58942.4204050463",
+      "estimated_size_gb": 35.708457,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:23:59.517000",
+      "dec": "-11:40:43.790000",
+      "date_utc": "2020-04-03",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2257+419_24B-110.sb46866668.eb46965853.60598.048360162036",
+      "obs_id": "24B-110.sb46866668.eb46965853.60598.048360162036",
+      "project_code": "24B-110",
+      "calibrator_id": "2257+419",
+      "gain_calibrator_name": "J2257+4154",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-110.sb46866668.eb46965853.60598.048360162036",
+      "estimated_size_gb": 35.717542,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:57:22.072903",
+      "dec": "+41:54:16.530910",
+      "date_utc": "2024-10-15",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1616+049_22B-224.sb42585928.eb42948955.59875.916023530095",
+      "obs_id": "22B-224.sb42585928.eb42948955.59875.916023530095",
+      "project_code": "22B-224",
+      "calibrator_id": "1616+049",
+      "gain_calibrator_name": "J1616+0459",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22B-224.sb42585928.eb42948955.59875.916023530095",
+      "estimated_size_gb": 36.358462,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:16:37.556816",
+      "dec": "+4:59:32.736630",
+      "date_utc": "2022-10-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2152+175_18B-405.sb37082313.eb37092450.58715.20320743056",
+      "obs_id": "18B-405.sb37082313.eb37092450.58715.20320743056",
+      "project_code": "18B-405",
+      "calibrator_id": "2152+175",
+      "gain_calibrator_name": "J2152+1734",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-405.sb37082313.eb37092450.58715.20320743056",
+      "estimated_size_gb": 36.522507,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:52:24.819405",
+      "dec": "+17:34:37.794820",
+      "date_utc": "2019-08-20",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0512+406_18A-299.sb35253758.eb35341601.58222.796911805555",
+      "obs_id": "18A-299.sb35253758.eb35341601.58222.796911805555",
+      "project_code": "18A-299",
+      "calibrator_id": "0512+406",
+      "gain_calibrator_name": "J0714+3534",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-299.sb35253758.eb35341601.58222.796911805555",
+      "estimated_size_gb": 36.777628,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:12:52.544000",
+      "dec": "+40:41:43.603000",
+      "date_utc": "2018-04-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1445-164_17A-267.sb33792049.eb33927660.57919.04582113426",
+      "obs_id": "17A-267.sb33792049.eb33927660.57919.04582113426",
+      "project_code": "17A-267",
+      "calibrator_id": "1445-164",
+      "gain_calibrator_name": "J1239-1023",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-267.sb33792049.eb33927660.57919.04582113426",
+      "estimated_size_gb": 36.904094,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:45:53.376319",
+      "dec": "-16:29:01.619120",
+      "date_utc": "2017-06-15",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2322+509_18A-299.sb35183350.eb35341605.58222.922471620375",
+      "obs_id": "18A-299.sb35183350.eb35341605.58222.922471620375",
+      "project_code": "18A-299",
+      "calibrator_id": "2322+509",
+      "gain_calibrator_name": "J2322+5057",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-299.sb35183350.eb35341605.58222.922471620375",
+      "estimated_size_gb": 36.922749,
+      "band_guess": "X",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:22:25.982159",
+      "dec": "+50:57:51.963710",
+      "date_utc": "2018-04-14",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0151+277_18B-245.sb35916319.eb35934952.58446.20829001158",
+      "obs_id": "18B-245.sb35916319.eb35934952.58446.20829001158",
+      "project_code": "18B-245",
+      "calibrator_id": "0151+277",
+      "gain_calibrator_name": "J0029+3456",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-245.sb35916319.eb35934952.58446.20829001158",
+      "estimated_size_gb": 37.021755,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:51:27.146149",
+      "dec": "+27:44:41.793650",
+      "date_utc": "2018-11-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2225-049_22A-378.sb42494764.eb42544296.59816.21948731481",
+      "obs_id": "22A-378.sb42494764.eb42544296.59816.21948731481",
+      "project_code": "22A-378",
+      "calibrator_id": "2225-049",
+      "gain_calibrator_name": "J2320+0513",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-378.sb42494764.eb42544296.59816.21948731481",
+      "estimated_size_gb": 37.052468,
+      "band_guess": "X",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:25:47.259291",
+      "dec": "-4:57:01.390730",
+      "date_utc": "2022-08-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0242+110_24B-010.sb46665888.eb47557362.60703.93844891204",
+      "obs_id": "24B-010.sb46665888.eb47557362.60703.93844891204",
+      "project_code": "24B-010",
+      "calibrator_id": "0242+110",
+      "gain_calibrator_name": "J0302+1218",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-010.sb46665888.eb47557362.60703.93844891204",
+      "estimated_size_gb": 37.309242,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:42:29.170847",
+      "dec": "+11:01:00.728230",
+      "date_utc": "2025-01-29",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2354-152_16B-084.sb32940418.eb33045289.57722.10576277778",
+      "obs_id": "16B-084.sb32940418.eb33045289.57722.10576277778",
+      "project_code": "16B-084",
+      "calibrator_id": "2354-152",
+      "gain_calibrator_name": "J0125-0005",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-084.sb32940418.eb33045289.57722.10576277778",
+      "estimated_size_gb": 37.452961,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:54:30.195190",
+      "dec": "-15:13:11.213010",
+      "date_utc": "2016-11-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2203+317_20B-242.sb39106549.eb39178820.59195.843486087964",
+      "obs_id": "20B-242.sb39106549.eb39178820.59195.843486087964",
+      "project_code": "20B-242",
+      "calibrator_id": "2203+317",
+      "gain_calibrator_name": "J2203+3145",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-242.sb39106549.eb39178820.59195.843486087964",
+      "estimated_size_gb": 37.775863,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:03:14.975790",
+      "dec": "+31:45:38.269940",
+      "date_utc": "2020-12-12",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0334-401_22A-230.sb41491781.eb41774361.59688.917057997685",
+      "obs_id": "22A-230.sb41491781.eb41774361.59688.917057997685",
+      "project_code": "22A-230",
+      "calibrator_id": "0334-401",
+      "gain_calibrator_name": "J0334-4008",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-230.sb41491781.eb41774361.59688.917057997685",
+      "estimated_size_gb": 37.831031,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:34:13.654494",
+      "dec": "-40:08:25.397980",
+      "date_utc": "2022-04-19",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1604+012_18A-226.sb35590571.eb35598610.58368.85633003472",
+      "obs_id": "18A-226.sb35590571.eb35598610.58368.85633003472",
+      "project_code": "18A-226",
+      "calibrator_id": "1604+012",
+      "gain_calibrator_name": "J1604+0117",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-226.sb35590571.eb35598610.58368.85633003472",
+      "estimated_size_gb": 38.043891,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:04:45.291700",
+      "dec": "+1:17:51.222000",
+      "date_utc": "2018-09-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0358+561_17B-310.sb34053512.eb34348045.58003.52665141204",
+      "obs_id": "17B-310.sb34053512.eb34348045.58003.52665141204",
+      "project_code": "17B-310",
+      "calibrator_id": "0358+561",
+      "gain_calibrator_name": "J0358+5606",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-310.sb34053512.eb34348045.58003.52665141204",
+      "estimated_size_gb": 38.764146,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:58:30.179300",
+      "dec": "+56:06:44.493000",
+      "date_utc": "2017-09-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0010-418_17B-287.sb34173996.eb34830790.58134.97085854167",
+      "obs_id": "17B-287.sb34173996.eb34830790.58134.97085854167",
+      "project_code": "17B-287",
+      "calibrator_id": "0010-418",
+      "gain_calibrator_name": "J0010-4153",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-287.sb34173996.eb34830790.58134.97085854167",
+      "estimated_size_gb": 39.190578,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:10:52.519686",
+      "dec": "-41:53:10.790750",
+      "date_utc": "2018-01-16",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0927-205_SB072.sb37189098.eb37264877.58743.69841966435",
+      "obs_id": "SB072.sb37189098.eb37264877.58743.69841966435",
+      "project_code": "SB072",
+      "calibrator_id": "0927-205",
+      "gain_calibrator_name": "0927-205",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SB072.sb37189098.eb37264877.58743.69841966435",
+      "estimated_size_gb": 39.511668,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "9:27:51.824323",
+      "dec": "-20:34:51.232660",
+      "date_utc": "2019-09-17",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1728+044_19A-166.sb36383229.eb36520137.58568.57854001157",
+      "obs_id": "19A-166.sb36383229.eb36520137.58568.57854001157",
+      "project_code": "19A-166",
+      "calibrator_id": "1728+044",
+      "gain_calibrator_name": "J1728+0427",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-166.sb36383229.eb36520137.58568.57854001157",
+      "estimated_size_gb": 39.545393,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:28:24.952716",
+      "dec": "+4:27:04.914010",
+      "date_utc": "2019-03-26",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0745-007_18A-299.sb35163616.eb35265184.58212.986166331015",
+      "obs_id": "18A-299.sb35163616.eb35265184.58212.986166331015",
+      "project_code": "18A-299",
+      "calibrator_id": "0745-007",
+      "gain_calibrator_name": "J0653-0625",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-299.sb35163616.eb35265184.58212.986166331015",
+      "estimated_size_gb": 39.806712,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:45:54.082313",
+      "dec": "-0:44:17.539800",
+      "date_utc": "2018-04-05",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0019+203_23A-324.sb44360040.eb44410108.60163.599750497684",
+      "obs_id": "23A-324.sb44360040.eb44410108.60163.599750497684",
+      "project_code": "23A-324",
+      "calibrator_id": "0019+203",
+      "gain_calibrator_name": "J0019+2021",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-324.sb44360040.eb44410108.60163.599750497684",
+      "estimated_size_gb": 40.43832,
+      "band_guess": "KU",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "0:19:37.854504",
+      "dec": "+20:21:45.644610",
+      "date_utc": "2023-08-07",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1823+796_17B-294.sb34196338.eb34210137.57989.97503004629",
+      "obs_id": "17B-294.sb34196338.eb34210137.57989.97503004629",
+      "project_code": "17B-294",
+      "calibrator_id": "1823+796",
+      "gain_calibrator_name": "J1944+5448",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-294.sb34196338.eb34210137.57989.97503004629",
+      "estimated_size_gb": 40.976961,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:23:14.108717",
+      "dec": "+79:38:49.002450",
+      "date_utc": "2017-08-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1842+681_20B-384.sb39143067.eb39224845.59226.87749510417",
+      "obs_id": "20B-384.sb39143067.eb39224845.59226.87749510417",
+      "project_code": "20B-384",
+      "calibrator_id": "1842+681",
+      "gain_calibrator_name": "J1842+6809",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-384.sb39143067.eb39224845.59226.87749510417",
+      "estimated_size_gb": 42.18018,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:42:33.641636",
+      "dec": "+68:09:25.227880",
+      "date_utc": "2021-01-12",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1048-191_18A-357.sb34822514.eb35249699.58201.15133572917",
+      "obs_id": "18A-357.sb34822514.eb35249699.58201.15133572917",
+      "project_code": "18A-357",
+      "calibrator_id": "1048-191",
+      "gain_calibrator_name": "J1048-1909",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-357.sb34822514.eb35249699.58201.15133572917",
+      "estimated_size_gb": 42.298563,
+      "band_guess": "C",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:48:06.620606",
+      "dec": "-19:09:35.726950",
+      "date_utc": "2018-03-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0603+219_18A-389.sb35517192.eb35616035.58385.40196292824",
+      "obs_id": "18A-389.sb35517192.eb35616035.58385.40196292824",
+      "project_code": "18A-389",
+      "calibrator_id": "0603+219",
+      "gain_calibrator_name": "J0603+2159",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-389.sb35517192.eb35616035.58385.40196292824",
+      "estimated_size_gb": 42.486836,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:03:51.557091",
+      "dec": "+21:59:37.697500",
+      "date_utc": "2018-09-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0804-278_19A-166.sb36312986.eb36505007.58564.02488898148",
+      "obs_id": "19A-166.sb36312986.eb36505007.58564.02488898148",
+      "project_code": "19A-166",
+      "calibrator_id": "0804-278",
+      "gain_calibrator_name": "J0804-2749",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-166.sb36312986.eb36505007.58564.02488898148",
+      "estimated_size_gb": 42.646032,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:04:51.451191",
+      "dec": "-27:49:11.320180",
+      "date_utc": "2019-03-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1357-177_16B-084.sb32877724.eb33099740.57744.61861943287",
+      "obs_id": "16B-084.sb32877724.eb33099740.57744.61861943287",
+      "project_code": "16B-084",
+      "calibrator_id": "1357-177",
+      "gain_calibrator_name": "J1357-1744",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-084.sb32877724.eb33099740.57744.61861943287",
+      "estimated_size_gb": 44.308913,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:57:06.074200",
+      "dec": "-17:44:01.904130",
+      "date_utc": "2016-12-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1745+173_23A-253.sb43220113.eb43763663.60033.20064221065",
+      "obs_id": "23A-253.sb43220113.eb43763663.60033.20064221065",
+      "project_code": "23A-253",
+      "calibrator_id": "1745+173",
+      "gain_calibrator_name": "J1745+1720",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-253.sb43220113.eb43763663.60033.20064221065",
+      "estimated_size_gb": 44.950369,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:45:35.208181",
+      "dec": "+17:20:01.423410",
+      "date_utc": "2023-03-30",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1517-243_20B-377.sb43659818.eb43662722.60003.4348566088",
+      "obs_id": "20B-377.sb43659818.eb43662722.60003.4348566088",
+      "project_code": "20B-377",
+      "calibrator_id": "1517-243",
+      "gain_calibrator_name": "J1517-2422",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-377.sb43659818.eb43662722.60003.4348566088",
+      "estimated_size_gb": 45.490485,
+      "band_guess": "C",
+      "usable_configs": [
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:17:41.813132",
+      "dec": "-24:22:19.475940",
+      "date_utc": "2023-02-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1356-343_16B-359.sb35221098.eb35282915.58217.32270579861",
+      "obs_id": "16B-359.sb35221098.eb35282915.58217.32270579861",
+      "project_code": "16B-359",
+      "calibrator_id": "1356-343",
+      "gain_calibrator_name": "J1427-4206-gai",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-359.sb35221098.eb35282915.58217.32270579861",
+      "estimated_size_gb": 45.835463,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:56:05.383600",
+      "dec": "-34:21:10.824000",
+      "date_utc": "2018-04-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1849+670_16B-386.sb32659407.eb32670133.57632.97413690972",
+      "obs_id": "16B-386.sb32659407.eb32670133.57632.97413690972",
+      "project_code": "16B-386",
+      "calibrator_id": "1849+670",
+      "gain_calibrator_name": "J1849+6705",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-386.sb32659407.eb32670133.57632.97413690972",
+      "estimated_size_gb": 46.001316,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:49:16.072300",
+      "dec": "+67:05:41.679930",
+      "date_utc": "2016-09-02",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0423+418_22A-169.sb42445480.eb42479744.59797.66455606482",
+      "obs_id": "22A-169.sb42445480.eb42479744.59797.66455606482",
+      "project_code": "22A-169",
+      "calibrator_id": "0423+418",
+      "gain_calibrator_name": "J0423+4150",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-169.sb42445480.eb42479744.59797.66455606482",
+      "estimated_size_gb": 46.489095,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:23:56.009795",
+      "dec": "+41:50:02.712770",
+      "date_utc": "2022-08-06",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0559+238_22A-125.sb41250424.eb41918453.59764.845885",
+      "obs_id": "22A-125.sb41250424.eb41918453.59764.845885",
+      "project_code": "22A-125",
+      "calibrator_id": "0559+238",
+      "gain_calibrator_name": "J0559+2353",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-125.sb41250424.eb41918453.59764.845885",
+      "estimated_size_gb": 47.240771,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:59:32.033133",
+      "dec": "+23:53:53.926900",
+      "date_utc": "2022-07-04",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0155-408_19A-056.sb37061537.eb37180589.58730.4308771875",
+      "obs_id": "19A-056.sb37061537.eb37180589.58730.4308771875",
+      "project_code": "19A-056",
+      "calibrator_id": "0155-408",
+      "gain_calibrator_name": "J0145-2733",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-056.sb37061537.eb37180589.58730.4308771875",
+      "estimated_size_gb": 48.54845,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:55:37.059378",
+      "dec": "-40:48:42.356450",
+      "date_utc": "2019-09-04",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0449-391_20B-279.sb38965460.eb39209121.59215.18493018518",
+      "obs_id": "20B-279.sb38965460.eb39209121.59215.18493018518",
+      "project_code": "20B-279",
+      "calibrator_id": "0449-391",
+      "gain_calibrator_name": "J0402-3147",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-279.sb38965460.eb39209121.59215.18493018518",
+      "estimated_size_gb": 48.597144,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:49:42.259400",
+      "dec": "-39:11:09.056000",
+      "date_utc": "2021-01-01",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1010+828_24B-010.sb47389214.eb47520676.60698.14580670139",
+      "obs_id": "24B-010.sb47389214.eb47520676.60698.14580670139",
+      "project_code": "24B-010",
+      "calibrator_id": "1010+828",
+      "gain_calibrator_name": "J0854+2006",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-010.sb47389214.eb47520676.60698.14580670139",
+      "estimated_size_gb": 48.687927,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:10:15.783046",
+      "dec": "+82:50:14.384080",
+      "date_utc": "2025-01-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1037-295_22A-233.sb41302011.eb41863981.59748.990776597224",
+      "obs_id": "22A-233.sb41302011.eb41863981.59748.990776597224",
+      "project_code": "22A-233",
+      "calibrator_id": "1037-295",
+      "gain_calibrator_name": "J1037-2934",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-233.sb41302011.eb41863981.59748.990776597224",
+      "estimated_size_gb": 50.441464,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:37:16.079734",
+      "dec": "-29:34:02.813220",
+      "date_utc": "2022-06-19",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0224+278_17A-396_sb33611387_1_1_008.57832.81079510417",
+      "obs_id": "17A-396_sb33611387_1_1_008.57832.81079510417",
+      "project_code": "17A-396",
+      "calibrator_id": "0224+278",
+      "gain_calibrator_name": "J0224+2750",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-396_sb33611387_1_1_008.57832.81079510417",
+      "estimated_size_gb": 51.212354,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:24:12.297300",
+      "dec": "+27:50:12.016000",
+      "date_utc": "2017-03-20",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0318+164_18A-322.sb35204337.eb35250710.58203.965917939815",
+      "obs_id": "18A-322.sb35204337.eb35250710.58203.965917939815",
+      "project_code": "18A-322",
+      "calibrator_id": "0318+164",
+      "gain_calibrator_name": "J0318+1628",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-322.sb35204337.eb35250710.58203.965917939815",
+      "estimated_size_gb": 51.499591,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:18:57.802658",
+      "dec": "+16:28:32.698500",
+      "date_utc": "2018-03-27",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0808-078_20B-164.sb39247910.eb39250854.59237.13490226852",
+      "obs_id": "20B-164.sb39247910.eb39250854.59237.13490226852",
+      "project_code": "20B-164",
+      "calibrator_id": "0808-078",
+      "gain_calibrator_name": "J0808-0751",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-164.sb39247910.eb39250854.59237.13490226852",
+      "estimated_size_gb": 61.787994,
+      "band_guess": "KU",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:08:15.536036",
+      "dec": "-7:51:09.886340",
+      "date_utc": "2021-01-23",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0325+226_24B-448.sb47197859.eb47230834.60625.309898541665",
+      "obs_id": "24B-448.sb47197859.eb47230834.60625.309898541665",
+      "project_code": "24B-448",
+      "calibrator_id": "0325+226",
+      "gain_calibrator_name": "J0409-1238",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-448.sb47197859.eb47230834.60625.309898541665",
+      "estimated_size_gb": 62.491958,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "3:25:36.814375",
+      "dec": "+22:24:00.365180",
+      "date_utc": "2024-11-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0530-250_24B-448.sb47200992.eb47229634.60624.307026423616",
+      "obs_id": "24B-448.sb47200992.eb47229634.60624.307026423616",
+      "project_code": "24B-448",
+      "calibrator_id": "0530-250",
+      "gain_calibrator_name": "J0552+0313",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-448.sb47200992.eb47229634.60624.307026423616",
+      "estimated_size_gb": 64.728233,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "5:30:07.962795",
+      "dec": "-25:03:29.899590",
+      "date_utc": "2024-11-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0725+144_24B-448.sb47203628.eb47255769.60627.44817962963",
+      "obs_id": "24B-448.sb47203628.eb47255769.60627.44817962963",
+      "project_code": "24B-448",
+      "calibrator_id": "0725+144",
+      "gain_calibrator_name": "J0902-1415",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-448.sb47203628.eb47255769.60627.44817962963",
+      "estimated_size_gb": 65.426757,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:25:16.807752",
+      "dec": "+14:25:13.746840",
+      "date_utc": "2024-11-13",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0226+343_22B-267.sb42703697.eb42987367.59895.06416113426",
+      "obs_id": "22B-267.sb42703697.eb42987367.59895.06416113426",
+      "project_code": "22B-267",
+      "calibrator_id": "0226+343",
+      "gain_calibrator_name": "J0313+4120",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22B-267.sb42703697.eb42987367.59895.06416113426",
+      "estimated_size_gb": 67.656539,
+      "band_guess": "KU",
+      "usable_configs": [
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:26:10.333198",
+      "dec": "+34:21:30.286450",
+      "date_utc": "2022-11-12",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1638+625_19A-422.sb37477691.eb37511660.58797.787407615746",
+      "obs_id": "19A-422.sb37477691.eb37511660.58797.787407615746",
+      "project_code": "19A-422",
+      "calibrator_id": "1638+625",
+      "gain_calibrator_name": "J1549+5038",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-422.sb37477691.eb37511660.58797.787407615746",
+      "estimated_size_gb": 68.089584,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "16:38:28.205800",
+      "dec": "+62:34:44.318000",
+      "date_utc": "2019-11-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1109+377_24A-309.sb45204118.eb45291971.60372.14676832176",
+      "obs_id": "24A-309.sb45204118.eb45291971.60372.14676832176",
+      "project_code": "24A-309",
+      "calibrator_id": "1109+377",
+      "gain_calibrator_name": "J1016+2037",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-309.sb45204118.eb45291971.60372.14676832176",
+      "estimated_size_gb": 68.820648,
+      "band_guess": "X",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:09:28.871800",
+      "dec": "+37:44:30.924000",
+      "date_utc": "2024-03-03",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0837+584_22A-186.sb41907993.eb41914542.59762.597919039355",
+      "obs_id": "22A-186.sb41907993.eb41914542.59762.597919039355",
+      "project_code": "22A-186",
+      "calibrator_id": "0837+584",
+      "gain_calibrator_name": "J0242-2132",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-186.sb41907993.eb41914542.59762.597919039355",
+      "estimated_size_gb": 68.874971,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:37:22.409733",
+      "dec": "+58:25:01.845210",
+      "date_utc": "2022-07-02",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1438-220_23B-050.sb44774031.eb44778535.60257.654525509264",
+      "obs_id": "23B-050.sb44774031.eb44778535.60257.654525509264",
+      "project_code": "23B-050",
+      "calibrator_id": "1438-220",
+      "gain_calibrator_name": "J1438-2204",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-050.sb44774031.eb44778535.60257.654525509264",
+      "estimated_size_gb": 71.016209,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:38:09.469425",
+      "dec": "-22:04:54.748090",
+      "date_utc": "2023-11-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2302-373_17A-008.sb33324269.eb33497860.57796.79758064815",
+      "obs_id": "17A-008.sb33324269.eb33497860.57796.79758064815",
+      "project_code": "17A-008",
+      "calibrator_id": "2302-373",
+      "gain_calibrator_name": "J2302-3718",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-008.sb33324269.eb33497860.57796.79758064815",
+      "estimated_size_gb": 73.150305,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:02:23.890588",
+      "dec": "-37:18:06.842000",
+      "date_utc": "2017-02-12",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1945+709_24B-448.sb47200502.eb47228650.60622.9987609838",
+      "obs_id": "24B-448.sb47200502.eb47228650.60622.9987609838",
+      "project_code": "24B-448",
+      "calibrator_id": "1945+709",
+      "gain_calibrator_name": "J2005+7752",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-448.sb47200502.eb47228650.60622.9987609838",
+      "estimated_size_gb": 79.138125,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "19:45:53.519959",
+      "dec": "+70:55:48.732040",
+      "date_utc": "2024-11-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0730-116_SF1100.sb43373034.eb43659814.59999.03122798611",
+      "obs_id": "SF1100.sb43373034.eb43659814.59999.03122798611",
+      "project_code": "SF1100",
+      "calibrator_id": "0730-116",
+      "gain_calibrator_name": "J0632+1022",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SF1100.sb43373034.eb43659814.59999.03122798611",
+      "estimated_size_gb": 81.95723,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:30:19.112472",
+      "dec": "-11:41:12.600480",
+      "date_utc": "2023-02-24",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1707+018_19A-168.sb36995118.eb37057151.58708.052147615745",
+      "obs_id": "19A-168.sb36995118.eb37057151.58708.052147615745",
+      "project_code": "19A-168",
+      "calibrator_id": "1707+018",
+      "gain_calibrator_name": "J1239+0730",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-168.sb36995118.eb37057151.58708.052147615745",
+      "estimated_size_gb": 85.014962,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:07:34.415277",
+      "dec": "+1:48:45.699230",
+      "date_utc": "2019-08-13",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1145-228_22B-034.sb42820540.eb42897307.59862.601953854166",
+      "obs_id": "22B-034.sb42820540.eb42897307.59862.601953854166",
+      "project_code": "22B-034",
+      "calibrator_id": "1145-228",
+      "gain_calibrator_name": "J1039-1541",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22B-034.sb42820540.eb42897307.59862.601953854166",
+      "estimated_size_gb": 85.18273,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:45:22.046820",
+      "dec": "-22:50:31.342980",
+      "date_utc": "2022-10-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1014+230_24B-448.sb47189163.eb47228666.60623.681308009254",
+      "obs_id": "24B-448.sb47189163.eb47228666.60623.681308009254",
+      "project_code": "24B-448",
+      "calibrator_id": "1014+230",
+      "gain_calibrator_name": "J1033+4116",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-448.sb47189163.eb47228666.60623.681308009254",
+      "estimated_size_gb": 86.244865,
+      "band_guess": "C",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:14:47.065445",
+      "dec": "+23:01:16.570910",
+      "date_utc": "2024-11-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1246-257_17A-374.sb34331065.eb34501859.58021.82762146991",
+      "obs_id": "17A-374.sb34331065.eb34501859.58021.82762146991",
+      "project_code": "17A-374",
+      "calibrator_id": "1246-257",
+      "gain_calibrator_name": "J1246-2547",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-374.sb34331065.eb34501859.58021.82762146991",
+      "estimated_size_gb": 87.86212,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "12:46:46.802040",
+      "dec": "-25:47:49.288830",
+      "date_utc": "2017-09-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1806+698_19A-168.sb36822507.eb37043712.58704.40457760417",
+      "obs_id": "19A-168.sb36822507.eb37043712.58704.40457760417",
+      "project_code": "19A-168",
+      "calibrator_id": "1806+698",
+      "gain_calibrator_name": "J0251+4315",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-168.sb36822507.eb37043712.58704.40457760417",
+      "estimated_size_gb": 87.912886,
+      "band_guess": "X",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:06:50.680650",
+      "dec": "+69:49:28.108520",
+      "date_utc": "2019-08-09",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1146-289_17B-165.sb34219564.eb34752672.58085.55238447917",
+      "obs_id": "17B-165.sb34219564.eb34752672.58085.55238447917",
+      "project_code": "17B-165",
+      "calibrator_id": "1146-289",
+      "gain_calibrator_name": "J1058+0133",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-165.sb34219564.eb34752672.58085.55238447917",
+      "estimated_size_gb": 95.541678,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:46:26.188639",
+      "dec": "-28:59:18.504680",
+      "date_utc": "2017-11-28",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0826-225_16B-015.sb32765707.eb32969163.57686.31666494213",
+      "obs_id": "16B-015.sb32765707.eb32969163.57686.31666494213",
+      "project_code": "16B-015",
+      "calibrator_id": "0826-225",
+      "gain_calibrator_name": "J0738+1742",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-015.sb32765707.eb32969163.57686.31666494213",
+      "estimated_size_gb": 97.826979,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:26:01.572909",
+      "dec": "-22:30:27.202110",
+      "date_utc": "2016-10-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0157+747_21B-215.sb40157619.eb41141164.59597.07311185185",
+      "obs_id": "21B-215.sb40157619.eb41141164.59597.07311185185",
+      "project_code": "21B-215",
+      "calibrator_id": "0157+747",
+      "gain_calibrator_name": "J0157+7442",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21B-215.sb40157619.eb41141164.59597.07311185185",
+      "estimated_size_gb": 98.648934,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:57:34.964908",
+      "dec": "+74:42:43.229980",
+      "date_utc": "2022-01-18",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0639-337_22A-133.sb41539323.eb41598115.59643.17551461805",
+      "obs_id": "22A-133.sb41539323.eb41598115.59643.17551461805",
+      "project_code": "22A-133",
+      "calibrator_id": "0639-337",
+      "gain_calibrator_name": "J1051-3138",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-133.sb41539323.eb41598115.59643.17551461805",
+      "estimated_size_gb": 104.702448,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:39:20.904674",
+      "dec": "-33:46:00.113060",
+      "date_utc": "2022-03-05",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0604+442_20B-363.sb38875430.eb39175630.59194.19829997685",
+      "obs_id": "20B-363.sb38875430.eb39175630.59194.19829997685",
+      "project_code": "20B-363",
+      "calibrator_id": "0604+442",
+      "gain_calibrator_name": "J0700+1709",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-363.sb38875430.eb39175630.59194.19829997685",
+      "estimated_size_gb": 104.929457,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:04:35.628762",
+      "dec": "+44:13:58.549500",
+      "date_utc": "2020-12-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2003-328_17B-165.sb34408089.eb34786337.58097.91961019676",
+      "obs_id": "17B-165.sb34408089.eb34786337.58097.91961019676",
+      "project_code": "17B-165",
+      "calibrator_id": "2003-328",
+      "gain_calibrator_name": "J2101-2933",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-165.sb34408089.eb34786337.58097.91961019676",
+      "estimated_size_gb": 107.601844,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "20:03:24.116306",
+      "dec": "-32:51:45.132310",
+      "date_utc": "2017-12-10",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0645+213_21B-054.sb40862009.eb40863642.59508.524218935185",
+      "obs_id": "21B-054.sb40862009.eb40863642.59508.524218935185",
+      "project_code": "21B-054",
+      "calibrator_id": "0645+213",
+      "gain_calibrator_name": "J0748-1639",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21B-054.sb40862009.eb40863642.59508.524218935185",
+      "estimated_size_gb": 126.077665,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "6:45:24.099508",
+      "dec": "+21:21:51.201600",
+      "date_utc": "2021-10-21",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0729-366_19A-386.sb37075096.eb37113323.58720.64759306713",
+      "obs_id": "19A-386.sb37075096.eb37113323.58720.64759306713",
+      "project_code": "19A-386",
+      "calibrator_id": "0729-366",
+      "gain_calibrator_name": "J0729-3639",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-386.sb37075096.eb37113323.58720.64759306713",
+      "estimated_size_gb": 137.258248,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:29:05.415916",
+      "dec": "-36:39:45.240505",
+      "date_utc": "2019-08-25",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0839+033_16B-222.sb32765697.eb32972960.57692.51305247685",
+      "obs_id": "16B-222.sb32765697.eb32972960.57692.51305247685",
+      "project_code": "16B-222",
+      "calibrator_id": "0839+033",
+      "gain_calibrator_name": "J1407+2827",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-222.sb32765697.eb32972960.57692.51305247685",
+      "estimated_size_gb": 141.799894,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:39:49.195829",
+      "dec": "+3:19:53.858020",
+      "date_utc": "2016-10-31",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2321-163_20A-346.sb42431968.eb42466407.59789.27281421296",
+      "obs_id": "20A-346.sb42431968.eb42466407.59789.27281421296",
+      "project_code": "20A-346",
+      "calibrator_id": "2321-163",
+      "gain_calibrator_name": "J2321-1623",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-346.sb42431968.eb42466407.59789.27281421296",
+      "estimated_size_gb": 171.731828,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:21:01.958900",
+      "dec": "-16:23:05.187000",
+      "date_utc": "2022-07-29",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0110+565_20A-519.sb38216477.eb38715697.59134.048009907405",
+      "obs_id": "20A-519.sb38216477.eb38715697.59134.048009907405",
+      "project_code": "20A-519",
+      "calibrator_id": "0110+565",
+      "gain_calibrator_name": "J2007+4029",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-519.sb38216477.eb38715697.59134.048009907405",
+      "estimated_size_gb": 177.303795,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:10:57.561000",
+      "dec": "+56:32:16.932000",
+      "date_utc": "2020-10-12",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "0424+006_19A-386.sb37365744.eb37373004.58772.39290590277",
+      "obs_id": "19A-386.sb37365744.eb37373004.58772.39290590277",
+      "project_code": "19A-386",
+      "calibrator_id": "0424+006",
+      "gain_calibrator_name": "J0239+0416",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-386.sb37365744.eb37373004.58772.39290590277",
+      "estimated_size_gb": 253.848586,
+      "band_guess": "L",
+      "usable_configs": [
+        "A"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:24:46.842052",
+      "dec": "+0:36:06.329830",
+      "date_utc": "2019-10-16",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2010+333_22A-066.sb41335066.eb41813617.59721.26260728009",
+      "obs_id": "22A-066.sb41335066.eb41813617.59721.26260728009",
+      "project_code": "22A-066",
+      "calibrator_id": "2010+333",
+      "gain_calibrator_name": "J2010+3322",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-066.sb41335066.eb41813617.59721.26260728009",
+      "estimated_size_gb": 272.570181,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "20:10:49.706300",
+      "dec": "+33:22:13.627000",
+      "date_utc": "2022-05-22",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "1404+658_22B-066.sb42878391.eb43107735.59929.51701603009",
+      "obs_id": "22B-066.sb42878391.eb43107735.59929.51701603009",
+      "project_code": "22B-066",
+      "calibrator_id": "1404+658",
+      "gain_calibrator_name": "J1404+6551",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22B-066.sb42878391.eb43107735.59929.51701603009",
+      "estimated_size_gb": 285.369955,
+      "band_guess": "L",
+      "usable_configs": [
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:04:05.276000",
+      "dec": "+65:51:37.516000",
+      "date_utc": "2022-12-16",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    },
+    {
+      "entry_id": "2151+058_VLASS4.1.sb49212422.eb49528653.60929.16666857639",
+      "obs_id": "VLASS4.1.sb49212422.eb49528653.60929.16666857639",
+      "project_code": "VLASS4.1",
+      "calibrator_id": "2151+058",
+      "gain_calibrator_name": "J1929+0507",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/VLASS4.1.sb49212422.eb49528653.60929.16666857639",
+      "estimated_size_gb": 549.692879,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:51:37.875501",
+      "dec": "+5:52:12.954350",
+      "date_utc": "2025-09-11",
+      "provenance": {
+        "historical_selection": "original_size_ge_15_gb"
+      }
+    }
+  ]
+}

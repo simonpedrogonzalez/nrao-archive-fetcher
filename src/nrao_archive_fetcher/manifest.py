@@ -159,13 +159,28 @@ def write_manifest(manifest, path):
     print_status("[MANIFEST] wrote %s" % (destination,))
 
 
-def print_pending(manifest_path):
+def print_pending(manifest_path, failed=False, limit=None):
+    """Print pending entries, or with failed=True only the entries whose request failed.
+
+    limit prints only the first N matching entries. The count line still reports the total.
+    """
     manifest = read_manifest(manifest_path)
-    pending = 0
+    count = 0
     for entry in manifest.get("entries", []):
         viewer_url = entry.get("viewer_url")
-        download_command = entry.get("download_command")
-        if viewer_url and not str(download_command or "").strip():
-            pending += 1
-            print("%s %s" % (entry.get("project_code") or "<missing-project-code>", viewer_url))
-    print_status("[PENDING] %d pending entries" % (pending,))
+        if not viewer_url or str(entry.get("download_command") or "").strip():
+            continue
+        if (entry.get("request_status") == "request_failed") != failed:
+            continue
+        count += 1
+        if limit is not None and count > limit:
+            continue
+        line = "%s %s" % (entry.get("calibrator_id") or "<missing-calibrator-id>", viewer_url)
+        if failed:
+            line += " | %s" % (entry.get("request_error") or "<no details>",)
+        print(line)
+    tag, kind = ("FAILED", "failed") if failed else ("PENDING", "pending")
+    if limit is not None and count > limit:
+        print_status("[%s] showing %d of %d %s entries" % (tag, limit, count, kind))
+    else:
+        print_status("[%s] %d %s entries" % (tag, count, kind))

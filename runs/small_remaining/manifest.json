@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "created_at": "2026-09-20T21:55:13Z",
+  "created_at": "2026-11-09T22:57:54Z",
   "source": {
     "stage": "small_remaining",
-    "source_path": "/Users/u1528314/Documents/radioastro-ml/collect/small_subset/small_selection.csv",
+    "source_path": "/uufs/chpc.utah.edu/common/home/u1528314/radioastro-ml/collect/small_subset/small_selection.csv",
     "completed_calibrator_ids": [],
     "transient_failures": {}
   },
@@ -23,8 +23,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/295689142/63b09bec14053e123b57dada56d3876e/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -35,7 +35,8 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.247 < 0.5)"
-      }
+      },
+      "request_finished_at": "2026-11-12T03:17:20Z"
     },
     {
       "entry_id": "1051+213_18B-316.sb37532172.eb37535740_000.58806.759674016204",
@@ -52,8 +53,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/295693163/2d24044c923c7299bdeeab872f1adacc/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -64,7 +65,8 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 11 rejected: unflagged fraction too low (0.454 < 0.5)"
-      }
+      },
+      "request_finished_at": "2026-11-12T03:17:20Z"
     },
     {
       "entry_id": "1254+116_17A-396_sb33611387_1_1_009.57840.29095847222",
@@ -81,7 +83,7 @@
         "C",
         "D"
       ],
-      "request_status": "",
+      "request_status": "request_failed",
       "download_command": "",
       "download_root": null,
       "extracted_ms": null,
@@ -93,7 +95,9 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_error": "No further information found.",
+      "request_failed_at": "2026-11-12T03:19:45Z"
     },
     {
       "entry_id": "0410+769_17A-396_sb33611387_1_1_007.57840.0830209375",
@@ -110,7 +114,7 @@
         "C",
         "D"
       ],
-      "request_status": "",
+      "request_status": "request_failed",
       "download_command": "",
       "download_root": null,
       "extracted_ms": null,
@@ -122,7 +126,9 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_error": "No further information found.",
+      "request_failed_at": "2026-11-12T03:19:45Z"
     },
     {
       "entry_id": "1407+284_18B-316.sb37532172.eb37535740.58806.7596740625",
@@ -139,8 +145,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/295705308/b068321a23184e995d20045c54b1cc5c/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -151,7 +157,8 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.482 < 0.5)"
-      }
+      },
+      "request_finished_at": "2026-11-12T03:17:20Z"
     },
     {
       "entry_id": "1008+075_22A-099.sb42368485.eb42568846.59824.70339501157",
@@ -458,66 +465,8 @@
       "dec": "+34:54:10.400000",
       "date_utc": "2024-02-23 00:00:00+00:00",
       "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "0153-331_17B-027.sb34092487.eb34648152.58059.21447368056",
-      "obs_id": "17B-027.sb34092487.eb34648152.58059.21447368056",
-      "project_code": "17B-027",
-      "calibrator_id": "0153-331",
-      "gain_calibrator_name": "J0153-3310",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-027.sb34092487.eb34648152.58059.21447368056",
-      "estimated_size_gb": 3.76091,
-      "band_guess": "C",
-      "usable_configs": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "1:53:10.121744",
-      "dec": "-33:10:25.861310",
-      "date_utc": "2017-11-02 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "0022+002_17A-180.sb33654640.eb33912090.57909.467544224535",
-      "obs_id": "17A-180.sb33654640.eb33912090.57909.467544224535",
-      "project_code": "17A-180",
-      "calibrator_id": "0022+002",
-      "gain_calibrator_name": "J0022+0014",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-180.sb33654640.eb33912090.57909.467544224535",
-      "estimated_size_gb": 3.903047,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "0:22:25.425930",
-      "dec": "+0:14:56.161440",
-      "date_utc": "2017-06-05 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 9 rejected: unflagged fraction too low (0.459 < 0.5)"
       }
     },
     {
@@ -632,8 +581,8 @@
       "dec": "+24:45:23.422800",
       "date_utc": "2022-11-26 00:00:00+00:00",
       "provenance": {
-        "historical_status": null,
-        "historical_error": null
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.373 < 0.5)"
       }
     },
     {
@@ -715,8 +664,8 @@
       "dec": "+50:57:50.161510",
       "date_utc": "2017-04-03 00:00:00+00:00",
       "provenance": {
-        "historical_status": null,
-        "historical_error": null
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (0.50 MHz < 10.00 MHz)"
       }
     },
     {
@@ -951,33 +900,6 @@
       }
     },
     {
-      "entry_id": "1147-382_24A-483.sb46487465.eb46494485.60560.78258759259",
-      "obs_id": "24A-483.sb46487465.eb46494485.60560.78258759259",
-      "project_code": "24A-483",
-      "calibrator_id": "1147-382",
-      "gain_calibrator_name": "J1147-3812",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-483.sb46487465.eb46494485.60560.78258759259",
-      "estimated_size_gb": 6.022289,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "11:47:01.370704",
-      "dec": "-38:12:11.023530",
-      "date_utc": "2024-09-07 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
       "entry_id": "0239-025_23A-059.sb43050081.eb43413821.59963.04443475694",
       "obs_id": "23A-059.sb43050081.eb43413821.59963.04443475694",
       "project_code": "23A-059",
@@ -1002,34 +924,8 @@
       "dec": "-2:34:40.914300",
       "date_utc": "2023-01-19 00:00:00+00:00",
       "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "0129+236_16A-232.sb33433656.eb33643406.57852.696646400465",
-      "obs_id": "16A-232.sb33433656.eb33643406.57852.696646400465",
-      "project_code": "16A-232",
-      "calibrator_id": "0129+236",
-      "gain_calibrator_name": "J0129+2338",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16A-232.sb33433656.eb33643406.57852.696646400465",
-      "estimated_size_gb": 6.432334,
-      "band_guess": "L",
-      "usable_configs": [
-        "D"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "1:29:59.801300",
-      "dec": "+23:38:20.728000",
-      "date_utc": "2017-04-09 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 1 rejected: unflagged fraction too low (0.417 < 0.5)"
       }
     },
     {
@@ -1086,8 +982,8 @@
       "dec": "+18:32:12.133260",
       "date_utc": "2019-11-30 00:00:00+00:00",
       "provenance": {
-        "historical_status": null,
-        "historical_error": null
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
       }
     },
     {
@@ -1169,8 +1065,8 @@
       "dec": "+0:19:05.324150",
       "date_utc": "2020-02-14 00:00:00+00:00",
       "provenance": {
-        "historical_status": null,
-        "historical_error": null
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 27 rejected: unflagged fraction too low (0.325 < 0.5)"
       }
     },
     {
@@ -1514,63 +1410,6 @@
       }
     },
     {
-      "entry_id": "1923-210_17A-025.sb33772850.eb33827016.57899.509109502316",
-      "obs_id": "17A-025.sb33772850.eb33827016.57899.509109502316",
-      "project_code": "17A-025",
-      "calibrator_id": "1923-210",
-      "gain_calibrator_name": "J1923-2104",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-025.sb33772850.eb33827016.57899.509109502316",
-      "estimated_size_gb": 8.450179,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "19:23:32.189815",
-      "dec": "-21:04:33.333080",
-      "date_utc": "2017-05-26 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "0616-349_17A-025.sb33762109.eb33993640.57935.73936733796",
-      "obs_id": "17A-025.sb33762109.eb33993640.57935.73936733796",
-      "project_code": "17A-025",
-      "calibrator_id": "0616-349",
-      "gain_calibrator_name": "J0447-2203",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-025.sb33762109.eb33993640.57935.73936733796",
-      "estimated_size_gb": 8.596091,
-      "band_guess": "L",
-      "usable_configs": [
-        "B",
-        "C",
-        "D"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "6:16:35.981384",
-      "dec": "-34:56:16.564670",
-      "date_utc": "2017-07-01 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
       "entry_id": "1640+397_20B-158.sb38967973.eb39207505.59212.7415178125",
       "obs_id": "20B-158.sb38967973.eb39207505.59212.7415178125",
       "project_code": "20B-158",
@@ -1594,35 +1433,6 @@
       "ra": "16:40:29.632771",
       "dec": "+39:46:46.028540",
       "date_utc": "2020-12-29 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "0958+474_20A-392.sb38043692.eb38043835.58961.95115936342",
-      "obs_id": "20A-392.sb38043692.eb38043835.58961.95115936342",
-      "project_code": "20A-392",
-      "calibrator_id": "0958+474",
-      "gain_calibrator_name": "J0958+4725",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-392.sb38043692.eb38043835.58961.95115936342",
-      "estimated_size_gb": 8.882293,
-      "band_guess": "X",
-      "usable_configs": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "9:58:19.671648",
-      "dec": "+47:25:07.842500",
-      "date_utc": "2020-04-22 00:00:00+00:00",
       "provenance": {
         "historical_status": null,
         "historical_error": null
@@ -1738,59 +1548,6 @@
       }
     },
     {
-      "entry_id": "1130+382_23A-232.sb44373365.eb44380176.60151.03667774306",
-      "obs_id": "23A-232.sb44373365.eb44380176.60151.03667774306",
-      "project_code": "23A-232",
-      "calibrator_id": "1130+382",
-      "gain_calibrator_name": "J1130+3815",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-232.sb44373365.eb44380176.60151.03667774306",
-      "estimated_size_gb": 10.162558,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "11:30:53.282612",
-      "dec": "+38:15:18.547070",
-      "date_utc": "2023-07-26 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "1033+412_23A-232.sb44373460.eb44412470.60166.94868986111",
-      "obs_id": "23A-232.sb44373460.eb44412470.60166.94868986111",
-      "project_code": "23A-232",
-      "calibrator_id": "1033+412",
-      "gain_calibrator_name": "J1033+4116",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-232.sb44373460.eb44412470.60166.94868986111",
-      "estimated_size_gb": 10.185285,
-      "band_guess": "L",
-      "usable_configs": [
-        "A"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "10:33:03.707841",
-      "dec": "+41:16:06.232970",
-      "date_utc": "2023-08-10 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
       "entry_id": "1130-148_18B-373.sb35864264.eb35923810.58443.637368275464",
       "obs_id": "18B-373.sb35864264.eb35923810.58443.637368275464",
       "project_code": "18B-373",
@@ -1870,60 +1627,6 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 1 rejected: bandwidth too narrow (0.50 MHz < 10.00 MHz)"
-      }
-    },
-    {
-      "entry_id": "1310+323_16B-086.sb32939343.eb33039567.57717.68079039352",
-      "obs_id": "16B-086.sb32939343.eb33039567.57717.68079039352",
-      "project_code": "16B-086",
-      "calibrator_id": "1310+323",
-      "gain_calibrator_name": "J1310+3220",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-086.sb32939343.eb33039567.57717.68079039352",
-      "estimated_size_gb": 10.706742,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "13:10:28.663845",
-      "dec": "+32:20:43.782950",
-      "date_utc": "2016-11-25 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "1146+399_16B-086.sb32939000.eb33061496.57726.69281638889",
-      "obs_id": "16B-086.sb32939000.eb33061496.57726.69281638889",
-      "project_code": "16B-086",
-      "calibrator_id": "1146+399",
-      "gain_calibrator_name": "J1146+3958",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-086.sb32939000.eb33061496.57726.69281638889",
-      "estimated_size_gb": 10.730743,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "11:46:58.297907",
-      "dec": "+39:58:34.304610",
-      "date_utc": "2016-12-04 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
-        "historical_error": null
       }
     },
     {
@@ -2143,34 +1846,6 @@
       "date_utc": "2023-04-30 00:00:00+00:00",
       "provenance": {
         "historical_status": "downloading",
-        "historical_error": null
-      }
-    },
-    {
-      "entry_id": "0725-009_19A-446.sb36822498.eb37137561.58723.49784350695",
-      "obs_id": "19A-446.sb36822498.eb37137561.58723.49784350695",
-      "project_code": "19A-446",
-      "calibrator_id": "0725-009",
-      "gain_calibrator_name": "J0725-0054",
-      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-446.sb36822498.eb37137561.58723.49784350695",
-      "estimated_size_gb": 11.760316,
-      "band_guess": "L",
-      "usable_configs": [
-        "A",
-        "B",
-        "C"
-      ],
-      "request_status": "",
-      "download_command": "",
-      "download_root": null,
-      "extracted_ms": null,
-      "selected_spw": null,
-      "flux_estimate": null,
-      "ra": "7:25:50.639953",
-      "dec": "-0:54:56.544380",
-      "date_utc": "2019-08-28 00:00:00+00:00",
-      "provenance": {
-        "historical_status": null,
         "historical_error": null
       }
     },

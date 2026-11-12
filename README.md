@@ -33,7 +33,13 @@ uv sync --extra dev
 uv run nrao-fetch show-pending manifest.json
 ```
 
-5. The previous command output shows the links to the archive and the project id. Follow the links, and request the data, setting the project id as the request name.
+Add `--limit 10` to show only the next 10 entries. Entries whose request failed are left out. List them, with the error from the failure email, using:
+
+```bash
+uv run nrao-fetch show-pending manifest.json --failed
+```
+
+5. The previous command output shows the calibrator ID and the link to the archive. Follow the links, and request the data, setting the calibrator ID as the request name.
 
 6. After the NRAO emails arrive, import the `wget/wget2` commands into the manifest:
 
@@ -146,3 +152,18 @@ uv run python workflows/radioastro_calibrators/build_manifests.py \
 uv run python workflows/radioastro_calibrators/run_manifest.py \
   runs/small_remaining/manifest.json --casa /path/to/casa
 ```
+
+### Parallel downloads on CHPC (email import done locally)
+
+```bash
+# local
+uv run nrao-fetch import-email runs/<group>/manifest.json
+# copy it to CHPC as runs/<group>/incoming/manifest.local.json (not over the CHPC manifest), then on CHPC:
+uv run nrao-fetch sync-requests runs/<group>/incoming/manifest.local.json runs/<group>/manifest.json
+CASA=/path/to/casa slurm/submit_shards.sh runs/<group>/manifest.json <N> --account=... --partition=... --time=...
+uv run nrao-fetch merge-shards runs/<group>/manifest.json   # after the jobs finish
+```
+
+- `sync-requests` adds new links and failures. It never touches downloaded or extracted entries, and retries failed downloads that got a new link.
+- `submit_shards.sh` runs N jobs. Each takes every Nth entry and saves progress to `manifest.shard-<i>-of-<N>.json`. Logs go to `runs/<group>/logs/`.
+- `merge-shards` copies that progress into the main manifest. Run it before resubmitting with a different N.

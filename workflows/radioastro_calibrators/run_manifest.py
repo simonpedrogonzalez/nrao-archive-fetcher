@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 from pathlib import Path
 
 from nrao_archive_fetcher.download import download_manifest
 from nrao_archive_fetcher.manifest import read_manifest, write_manifest
+from nrao_archive_fetcher.sync import write_shard
 from nrao_archive_fetcher.utils import now_iso, print_status
 from workflows.radioastro_calibrators.extract_entry import find_first_ms
 
@@ -118,13 +120,40 @@ def run_manifest(
     return manifest
 
 
+def run_shard(manifest_path, shards, shard_index, **kwargs):
+    """Run job shard_index of shards on its own shard manifest, next to the main manifest.
+
+    All shards share the downloads/ and extracted/ folders. Each one writes only its shard manifest,
+    so the jobs never overwrite each other. Merge the progress back with ``nrao-fetch merge-shards``.
+    """
+    path = write_shard(manifest_path, shard_index, shards)
+    print_status("[SHARD] job %d of %d -> %s" % (shard_index, shards, path))
+    return run_manifest(path, **kwargs)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest")
     parser.add_argument("--casa", default="casa")
     parser.add_argument("--delete-original", action="store_true")
+    parser.add_argument("--shards", type=int, help="Total number of parallel jobs N. Each job takes every Nth entry.")
+    parser.add_argument(
+        "--shard-index",
+        type=int,
+        help="This job's index, 0..N-1. Defaults to SLURM_ARRAY_TASK_ID (submit with sbatch --array=0-<N-1>).",
+    )
     args = parser.parse_args(argv)
-    run_manifest(args.manifest, casa_executable=args.casa, delete_original=args.delete_original)
+    kwargs = dict(casa_executable=args.casa, delete_original=args.delete_original)
+    if args.shards is None:
+        run_manifest(args.manifest, **kwargs)
+        return 0
+    index = args.shard_index
+    if index is None:
+        task_id = os.environ.get("SLURM_ARRAY_TASK_ID")
+        if task_id is None:
+            parser.error("--shards needs --shard-index or a Slurm array job (SLURM_ARRAY_TASK_ID)")
+        index = int(task_id)
+    run_shard(args.manifest, args.shards, index, **kwargs)
     return 0
 
 

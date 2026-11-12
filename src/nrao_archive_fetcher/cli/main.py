@@ -5,14 +5,17 @@ import argparse
 from ..download import download_manifest
 from ..email import import_email_commands
 from ..manifest import print_pending
+from ..sync import merge_shards, sync_requests
 
 
 def build_parser():
     parser = argparse.ArgumentParser(prog="nrao-fetch")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    pending = subparsers.add_parser("show-pending", help="Print project code and viewer URL for pending entries.")
+    pending = subparsers.add_parser("show-pending", help="Print calibrator ID and viewer URL for pending entries.")
     pending.add_argument("manifest")
+    pending.add_argument("--failed", action="store_true", help="Show only entries whose request failed, with the error.")
+    pending.add_argument("--limit", type=int, help="Show only the first N entries.")
 
     email = subparsers.add_parser("import-email", help="Import wget commands from Mail, IMAP, or exported JSON.")
     email.add_argument("manifest")
@@ -29,6 +32,18 @@ def build_parser():
     email.add_argument("--dry-run", action="store_true")
     email.add_argument("--debug", action="store_true")
 
+    sync = subparsers.add_parser(
+        "sync-requests",
+        help="Copy new download links and request failures from a local manifest copy into this manifest.",
+    )
+    sync.add_argument("local_manifest", help="Copy of the manifest where import-email was run.")
+    sync.add_argument("manifest", help="Manifest to update (the one the download jobs use).")
+    sync.add_argument("--dry-run", action="store_true")
+
+    merge = subparsers.add_parser("merge-shards", help="Copy download/extraction progress from shard manifests into this manifest.")
+    merge.add_argument("manifest")
+    merge.add_argument("--dry-run", action="store_true")
+
     download = subparsers.add_parser("download", help="Run downloads for manifest entries that have commands.")
     download.add_argument("manifest")
     download.add_argument("--download-root")
@@ -39,7 +54,7 @@ def build_parser():
 def main(argv=None):
     args = build_parser().parse_args(argv)
     if args.command == "show-pending":
-        print_pending(args.manifest)
+        print_pending(args.manifest, failed=args.failed, limit=args.limit)
         return 0
     if args.command == "import-email":
         import_email_commands(
@@ -57,6 +72,12 @@ def main(argv=None):
             imap_username=args.username,
             imap_password=args.password,
         )
+        return 0
+    if args.command == "sync-requests":
+        sync_requests(args.local_manifest, args.manifest, dry_run=args.dry_run)
+        return 0
+    if args.command == "merge-shards":
+        merge_shards(args.manifest, dry_run=args.dry_run)
         return 0
     if args.command == "download":
         download_manifest(args.manifest, base_download_root=args.download_root)

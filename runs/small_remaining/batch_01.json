@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "created_at": "2026-11-09T22:57:54Z",
+  "source": {
+    "stage": "small_remaining",
+    "source_path": "/uufs/chpc.utah.edu/common/home/u1528314/radioastro-ml/collect/small_subset/small_selection.csv",
+    "completed_calibrator_ids": [],
+    "transient_failures": {},
+    "batch": {
+      "of": "runs/small_remaining/manifest.json",
+      "index": 1,
+      "entries": "1-5 of 81"
+    }
+  },
+  "entries": [
+    {
+      "entry_id": "1051-316_16B-069_sb32991151_1.57709.66087045139",
+      "obs_id": "16B-069_sb32991151_1.57709.66087045139",
+      "project_code": "16B-069",
+      "calibrator_id": "1051-316",
+      "gain_calibrator_name": "J1051-3138",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-069_sb32991151_1.57709.66087045139",
+      "estimated_size_gb": 0.263777,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:51:04.777538",
+      "dec": "-31:38:14.307410",
+      "date_utc": "2016-11-17 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.247 < 0.5)"
+      }
+    },
+    {
+      "entry_id": "1051+213_18B-316.sb37532172.eb37535740_000.58806.759674016204",
+      "obs_id": "18B-316.sb37532172.eb37535740_000.58806.759674016204",
+      "project_code": "18B-316",
+      "calibrator_id": "1051+213",
+      "gain_calibrator_name": "J1125+2610",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-316.sb37532172.eb37535740_000.58806.759674016204",
+      "estimated_size_gb": 1.429079,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:51:48.789073",
+      "dec": "+21:19:52.314110",
+      "date_utc": "2019-11-19 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 11 rejected: unflagged fraction too low (0.454 < 0.5)"
+      }
+    },
+    {
+      "entry_id": "1254+116_17A-396_sb33611387_1_1_009.57840.29095847222",
+      "obs_id": "17A-396_sb33611387_1_1_009.57840.29095847222",
+      "project_code": "17A-396",
+      "calibrator_id": "1254+116",
+      "gain_calibrator_name": "J1120+1420",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-396_sb33611387_1_1_009.57840.29095847222",
+      "estimated_size_gb": 1.457616,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "12:54:38.255601",
+      "dec": "+11:41:05.895070",
+      "date_utc": "2017-03-28 00:00:00+00:00",
+      "provenance": {
+        "historical_status": null,
+        "historical_error": null
+      }
+    },
+    {
+      "entry_id": "0410+769_17A-396_sb33611387_1_1_007.57840.0830209375",
+      "obs_id": "17A-396_sb33611387_1_1_007.57840.0830209375",
+      "project_code": "17A-396",
+      "calibrator_id": "0410+769",
+      "gain_calibrator_name": "J1206+6413",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-396_sb33611387_1_1_007.57840.0830209375",
+      "estimated_size_gb": 1.498171,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "4:10:45.605700",
+      "dec": "+76:56:45.301000",
+      "date_utc": "2017-03-28 00:00:00+00:00",
+      "provenance": {
+        "historical_status": null,
+        "historical_error": null
+      }
+    },
+    {
+      "entry_id": "1407+284_18B-316.sb37532172.eb37535740.58806.7596740625",
+      "obs_id": "18B-316.sb37532172.eb37535740.58806.7596740625",
+      "project_code": "18B-316",
+      "calibrator_id": "1407+284",
+      "gain_calibrator_name": "J1125+2610",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-316.sb37532172.eb37535740.58806.7596740625",
+      "estimated_size_gb": 1.621999,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "",
+      "download_command": "",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:07:00.394410",
+      "dec": "+28:27:14.689980",
+      "date_utc": "2019-11-19 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.482 < 0.5)"
+      }
+    }
+  ]
+}
