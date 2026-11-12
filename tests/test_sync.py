@@ -37,24 +37,23 @@ def test_sync_requests_copies_links_and_failures(tmp_path):
     assert sync_requests(local, target)["new"] == 0
 
 
-def test_sync_requests_retries_errors_but_keeps_downloaded(tmp_path):
+def test_sync_requests_retries_failed_or_stuck_but_keeps_downloaded(tmp_path):
+    stuck = ("error", "downloading", "extraction_error")
+    done = ("downloaded", "extracting", "extracted")
     local = _write(tmp_path / "local.json", [
-        _entry("errored", download_command=WGET_NEW, request_status="request_ready"),
-        _entry("done", download_command=WGET_NEW, request_status="request_ready"),
-        _entry("running", download_command=WGET_NEW, request_status="request_ready"),
+        _entry(status, download_command=WGET_NEW, request_status="request_ready") for status in stuck + done
     ])
     target = _write(tmp_path / "manifest.json", [
-        _entry("errored", download_command=WGET_OLD, request_status="error", last_error="404"),
-        _entry("done", download_command=WGET_OLD, request_status="extracted"),
-        _entry("running", download_command=WGET_OLD, request_status="downloading"),
+        _entry(status, download_command=WGET_OLD, request_status=status, last_error="x") for status in stuck + done
     ])
     counts = sync_requests(local, target)
-    assert counts["retry"] == 1 and counts["locked"] == 2
-    errored, done, running = read_manifest(target)["entries"]
-    assert errored["download_command"] == WGET_NEW and errored["request_status"] == "request_ready"
-    assert errored["last_error"] is None
-    assert done["download_command"] == WGET_OLD and done["request_status"] == "extracted"
-    assert running["download_command"] == WGET_OLD and running["request_status"] == "downloading"
+    assert counts["retry"] == 3 and counts["locked"] == 3
+    for entry in read_manifest(target)["entries"]:
+        if entry["entry_id"] in stuck:
+            assert entry["download_command"] == WGET_NEW and entry["request_status"] == "request_ready"
+            assert entry["last_error"] is None
+        else:
+            assert entry["download_command"] == WGET_OLD and entry["request_status"] == entry["entry_id"]
 
 
 def test_sync_requests_failure_does_not_overwrite_a_link(tmp_path):
@@ -112,7 +111,7 @@ def test_run_shard_only_processes_its_entries(tmp_path):
     ])
     seen = []
 
-    def fake_download(path, base_download_root=None):
+    def fake_download(path, base_download_root=None, after_download=None):
         manifest = read_manifest(path)
         for entry in manifest["entries"]:
             seen.append(entry["entry_id"])

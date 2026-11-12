@@ -47,3 +47,30 @@ def test_download_manifest(tmp_path, monkeypatch):
     assert entry_json.exists()
     loaded_entry = json.loads(entry_json.read_text())
     assert loaded_entry["project_code"] == "24B-465"
+
+
+def test_download_command_resumes_with_continue_flag(tmp_path):
+    from nrao_archive_fetcher.download import prepare_download_command
+
+    tokens = prepare_download_command('wget -r -np https://dl-dsoc.nrao.edu/u/1/aaaaaaaaaaaaaaaa/', tmp_path)
+    assert tokens.count("-c") == 1
+    tokens = prepare_download_command("wget2 -c -r https://dl-dsoc.nrao.edu/u/1/aaaaaaaaaaaaaaaa/", tmp_path)
+    assert tokens.count("-c") == 1
+
+
+def test_download_skips_entries_already_downloaded_or_extracted(tmp_path, monkeypatch):
+    statuses = ["", "error", "downloading", "downloaded", "extracting", "extracted", "extraction_error"]
+    entries = [
+        {"entry_id": status or "new", "project_code": "17A-001", "request_status": status,
+         "download_command": "wget https://dl-dsoc.nrao.edu/u/1/aaaaaaaaaaaaaaaa/"}
+        for status in statuses
+    ]
+    manifest_path = tmp_path / "manifest.json"
+    write_manifest({"entries": entries}, manifest_path)
+    downloaded = []
+    monkeypatch.setattr(
+        "nrao_archive_fetcher.download.run_download_command",
+        lambda tokens: (downloaded.append(tokens[-1]), (0, "ok"))[1],
+    )
+    download_manifest(manifest_path)
+    assert sorted(Path(path).name for path in downloaded) == ["downloading", "error", "new"]

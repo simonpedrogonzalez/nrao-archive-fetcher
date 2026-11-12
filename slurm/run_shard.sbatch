@@ -10,5 +10,6 @@ shards=$2
 # sbatch runs a spooled copy of this script, so work from the submit directory (the repo root).
 cd "${SLURM_SUBMIT_DIR:?submit through slurm/submit_shards.sh}"
 echo "Slurm job ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID} on $(hostname): shard ${SLURM_ARRAY_TASK_ID} of ${shards} for ${manifest}"
-exec uv run python workflows/radioastro_calibrators/run_manifest.py "$manifest" \
+# --frozen: the array tasks start together, so do not let each one try to update the environment.
+exec uv run --frozen python -m workflows.radioastro_calibrators.run_manifest "$manifest" \
     --shards "$shards" --casa "${CASA:-casa}" ${DELETE_ORIGINAL:+--delete-original}

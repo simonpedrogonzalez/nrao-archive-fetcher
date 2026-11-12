@@ -55,60 +55,49 @@ def run_manifest(
     download_fn=download_manifest,
     casa_runner=_run_casa,
 ):
+    """Download and extract every entry of a manifest, extracting each entry right after its download.
+
+    Only successful downloads are extracted. Entries downloaded in an earlier run but not extracted
+    (job stopped, or CASA failed) are extracted first. Finished entries are never downloaded again.
+    """
     manifest_path = Path(manifest_path).resolve()
     run_root = manifest_path.parent
     download_root = run_root / "downloads"
     output_root = run_root / "extracted"
     output_root.mkdir(parents=True, exist_ok=True)
-    manifest = download_fn(manifest_path, base_download_root=download_root)
     script_path = Path(__file__).with_name("extract_entry.py").resolve()
 
-    for entry in manifest.get("entries", []):
+    def extract(entry):
+        """Extract one downloaded entry, updating it in place."""
         entry_id = str(entry.get("entry_id") or "").strip()
         if not entry_id:
             entry["request_status"] = "extraction_error"
             entry["last_error"] = "Manifest entry is missing entry_id"
-            write_manifest(manifest, manifest_path)
-            continue
+            return
         outputs = _complete_outputs(output_root, entry_id)
         if outputs is not None:
-            result = json.loads(outputs["extraction_metadata"].read_text())
-            _record_success(entry, outputs, result)
-            write_manifest(manifest, manifest_path)
-            continue
-
+            _record_success(entry, outputs, json.loads(outputs["extraction_metadata"].read_text()))
+            return
         entry_download_root = Path(entry.get("download_root") or (download_root / entry_id))
         if find_first_ms(entry_download_root) is None:
-            write_manifest(manifest, manifest_path)
-            continue
-
+            entry["request_status"] = "extraction_error"
+            entry["last_error"] = "No MeasurementSet found in %s" % entry_download_root
+            return
         entry["request_status"] = "extracting"
         entry["last_error"] = None
-        write_manifest(manifest, manifest_path)
         entry_json = entry_download_root / "manifest_entry.json"
         entry_json.parent.mkdir(parents=True, exist_ok=True)
         entry_json.write_text(json.dumps(entry, indent=2) + "\n")
         result_json = output_root / entry_id / "extraction_result.json"
         result_json.parent.mkdir(parents=True, exist_ok=True)
-        process = casa_runner(
-            casa_executable,
-            script_path,
-            entry_json,
-            entry_download_root,
-            output_root,
-            result_json,
-        )
+        process = casa_runner(casa_executable, script_path, entry_json, entry_download_root, output_root, result_json)
         outputs = _complete_outputs(output_root, entry_id)
         if outputs is None or process.returncode != 0 or not result_json.is_file():
             entry["request_status"] = "extraction_error"
             entry["last_error"] = (process.stdout or "CASA extraction did not produce the expected files")[-4000:]
-            write_manifest(manifest, manifest_path)
-            continue
-        result = json.loads(result_json.read_text())
-        _record_success(entry, outputs, result)
-        write_manifest(manifest, manifest_path)
+            return
+        _record_success(entry, outputs, json.loads(result_json.read_text()))
         print_status("[EXTRACT] done entry=%s" % entry_id)
-
         if delete_original:
             resolved = entry_download_root.resolve()
             if download_root.resolve() not in resolved.parents:
@@ -116,8 +105,20 @@ def run_manifest(
             shutil.rmtree(resolved)
             entry["download_root"] = None
             entry["original_download_deleted"] = True
+
+    # 1. Entries whose download already finished but which are not extracted yet.
+    manifest = read_manifest(manifest_path)
+    for entry in manifest.get("entries", []):
+        if entry.get("request_status") == "extracted":
+            continue
+        entry_id = str(entry.get("entry_id") or "").strip()
+        finished = entry_id and _complete_outputs(output_root, entry_id) is not None
+        if finished or entry.get("request_status") in ("downloaded", "extracting", "extraction_error"):
+            extract(entry)
             write_manifest(manifest, manifest_path)
-    return manifest
+
+    # 2. Everything else: download, then extract right away (download_fn saves the entry after the hook).
+    return download_fn(manifest_path, base_download_root=download_root, after_download=lambda entry, folder: extract(entry))
 
 
 def run_shard(manifest_path, shards, shard_index, **kwargs):

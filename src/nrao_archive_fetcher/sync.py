@@ -20,8 +20,10 @@ from .utils import now_iso, print_status
 
 
 PROCESSING_STATUSES = ("downloading", "downloaded", "error", "extracting", "extracted", "extraction_error")
-# Statuses where the data is already (being) downloaded: a new request link must not touch them.
-LOCKED_STATUSES = ("downloading", "downloaded", "extracting", "extracted", "extraction_error")
+# Statuses where the data is complete on disk: a new request link must not touch them.
+# ("downloading" and "extraction_error" may be stuck: a timed-out job or a broken download, so they take a new link.)
+LOCKED_STATUSES = ("downloaded", "extracting", "extracted")
+RETRY_STATUSES = ("error", "downloading", "extraction_error")
 PROCESSING_FIELDS = (
     "request_status",
     "request_finished_at",
@@ -53,8 +55,9 @@ def _set_ready(target, source):
 def sync_requests(local_path, target_path, dry_run=False):
     """Copy new download links and request failures from a local manifest copy into the CHPC manifest.
 
-    Entries are matched by entry_id. Entries that are downloading, downloaded or extracted are never
-    changed. An entry whose download failed (status ``error``) gets the new link and is retried.
+    Entries are matched by entry_id. Entries that are downloaded or extracted are never changed.
+    An entry whose download failed or got stuck (``error``, ``downloading``, ``extraction_error``)
+    gets the new link and is retried.
     """
     local = read_manifest(local_path)
     target = read_manifest(target_path)
@@ -76,7 +79,7 @@ def sync_requests(local_path, target_path, dry_run=False):
                 counts["locked"] += 1
                 print_status("[SYNC] kept %s: already %s" % (entry_id, status))
                 continue
-            kind = "new" if not _command(entry) else "retry" if status == "error" else "updated"
+            kind = "new" if not _command(entry) else "retry" if status in RETRY_STATUSES else "updated"
             _set_ready(entry, source)
             if kind == "retry":
                 entry["last_error"] = None

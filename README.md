@@ -147,9 +147,9 @@ Build the four manifests from the immutable historical inputs, then resume one
 manifest's downloads and CASA extraction with:
 
 ```bash
-uv run python workflows/radioastro_calibrators/build_manifests.py \
+uv run python -m workflows.radioastro_calibrators.build_manifests \
   --radioastro-root /path/to/radioastro-ml --runs-root runs
-uv run python workflows/radioastro_calibrators/run_manifest.py \
+uv run python -m workflows.radioastro_calibrators.run_manifest \
   runs/small_remaining/manifest.json --casa /path/to/casa
 ```
 
@@ -164,6 +164,6 @@ CASA=/path/to/casa slurm/submit_shards.sh runs/<group>/manifest.json <N> --accou
 uv run nrao-fetch merge-shards runs/<group>/manifest.json   # after the jobs finish
 ```
 
-- `sync-requests` adds new links and failures. It never touches downloaded or extracted entries, and retries failed downloads that got a new link.
+- `sync-requests` adds new links and failures. It never touches downloaded or extracted entries, and retries failed or stuck downloads that got a new link. Interrupted downloads resume (`wget -c`).
 - `submit_shards.sh` runs N jobs. Each takes every Nth entry and saves progress to `manifest.shard-<i>-of-<N>.json`. Logs go to `runs/<group>/logs/`.
 - `merge-shards` copies that progress into the main manifest. Run it before resubmitting with a different N.

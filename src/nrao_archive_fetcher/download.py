@@ -8,6 +8,9 @@ from pathlib import Path
 from .manifest import dumps_json, read_manifest, write_manifest
 from .utils import now_iso, print_status
 
+# The data of these entries is already on disk (or extracted): never download them again.
+DOWNLOADED_STATUSES = ("downloaded", "extracting", "extracted", "extraction_error")
+
 
 def _normalize_command(command):
     return " ".join(str(command or "").replace("\\\n", " ").replace("\\\r", " ").split())
@@ -36,6 +39,9 @@ def prepare_download_command(command, download_dir):
         if token.startswith("--directory-prefix="):
             continue
         cleaned.append(token)
+    if not any(token in ("-c", "--continue") for token in cleaned):
+        # Resume interrupted files and skip complete ones when a download is re-run.
+        cleaned.append("-c")
     if executable == "wget" and not any(token.startswith("--progress") for token in cleaned):
         cleaned.append("--progress=dot:giga")
     cleaned.extend(["-P", str(download_dir)])
@@ -68,7 +74,7 @@ def download_manifest(manifest_path, base_download_root=None, before_download=No
     entries = manifest.get("entries", [])
     todo = [
         entry for entry in entries
-        if str(entry.get("download_command") or "").strip() and entry.get("request_status") != "downloaded"
+        if str(entry.get("download_command") or "").strip() and entry.get("request_status") not in DOWNLOADED_STATUSES
     ]
     print_status("[DOWNLOAD] total todo=%d" % (len(todo),))
     for index, entry in enumerate(todo, start=1):
@@ -105,7 +111,8 @@ def download_manifest(manifest_path, base_download_root=None, before_download=No
             write_manifest(manifest, manifest_path)
             if after_download is not None:
                 after_download(entry, str(project_folder))
-                _write_entry_json(entry, project_folder)
+                if project_folder.is_dir():  # the hook may delete the original download
+                    _write_entry_json(entry, project_folder)
                 write_manifest(manifest, manifest_path)
             print_status("[DOWNLOAD] done project=%s" % (project_code,))
         except Exception as exc:
