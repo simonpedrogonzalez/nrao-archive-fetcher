@@ -159,11 +159,12 @@ uv run python -m workflows.radioastro_calibrators.run_manifest \
 # local
 uv run nrao-fetch import-email runs/<group>/manifest.json
 # copy it to CHPC as runs/<group>/incoming/manifest.local.json (not over the CHPC manifest), then on CHPC:
-uv run nrao-fetch sync-requests runs/<group>/incoming/manifest.local.json runs/<group>/manifest.json
 CASA=/path/to/casa slurm/submit_shards.sh runs/<group>/manifest.json <N> --account=... --partition=... --time=...
-uv run nrao-fetch merge-shards runs/<group>/manifest.json   # after the jobs finish
 ```
+
+`submit_shards.sh` refuses while this group's jobs (`nrao-<group>`) are queued or running (`--force` overrides),
+then runs `merge-shards` and `sync-requests` before submitting. Both commands can also be run by hand.
 
 - `sync-requests` adds new links and failures. It never touches downloaded or extracted entries, and retries failed or stuck downloads that got a new link. Interrupted downloads resume (`wget -c`).
 - `submit_shards.sh` runs N jobs. Each takes every Nth entry and saves progress to `manifest.shard-<i>-of-<N>.json`. Logs go to `runs/<group>/logs/`.
-- `merge-shards` copies that progress into the main manifest. Run it before resubmitting with a different N.
+- `merge-shards` copies that progress into the main manifest.
