@@ -162,8 +162,12 @@ uv run nrao-fetch import-email runs/<group>/manifest.json
 CASA=/path/to/casa slurm/submit_shards.sh runs/<group>/manifest.json <N> --account=... --partition=... --time=...
 ```
 
-`submit_shards.sh` refuses while this group's jobs (`nrao-<group>`) are queued or running (`--force` overrides),
-then runs `merge-shards` and `sync-requests` before submitting. Both commands can also be run by hand.
+`submit_shards.sh` refuses while this group's jobs (`nrao-<group>`) are queued or running, or when `squeue` fails
+(`--force` overrides), then runs `merge-shards` and `sync-requests` before submitting. Both commands can also be run by hand.
+The incoming copy is `INCOMING`, or by default `.../incoming/runs/<group>/manifest.json` for a manifest at
+`.../local/runs/<group>/manifest.json` (otherwise `runs/<group>/incoming/manifest.local.json`). A missing incoming copy
+stops the submit; `--no-sync` skips `sync-requests`. On CHPC the cluster, account and partition default to the values in
+`slurm/env.sh` (`-M lonepeak --account=laskar --partition=lonepeak`) when not given.
 
 - `sync-requests` adds new links and failures. It never touches downloaded or extracted entries, and retries failed or stuck downloads that got a new link. Interrupted downloads resume (`wget -c`).
 - `submit_shards.sh` runs N jobs. Each takes every Nth entry and saves progress to `manifest.shard-<i>-of-<N>.json`. Logs go to `runs/<group>/logs/`.
