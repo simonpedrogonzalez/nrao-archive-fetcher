@@ -33,7 +33,7 @@ uv sync --extra dev
 uv run nrao-fetch show-pending manifest.json
 ```
 
-Add `--limit 10` to show only the next 10 entries. Entries whose request failed are left out. List them, with the error from the failure email, using:
+Add `--limit 10` to show only the next 10 entries. Entries already requested (a Submitted email was imported) or failed are left out. `--requested` lists the requests NRAO is still processing (no Complete or Failure email yet). `--failed` lists the failed ones, with the error:
 
 ```bash
 uv run nrao-fetch show-pending manifest.json --failed

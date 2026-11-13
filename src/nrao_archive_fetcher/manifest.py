@@ -159,18 +159,32 @@ def write_manifest(manifest, path):
     print_status("[MANIFEST] wrote %s" % (destination,))
 
 
-def print_pending(manifest_path, failed=False, limit=None):
-    """Print pending entries, or with failed=True only the entries whose request failed.
+def _request_state(entry):
+    status = entry.get("request_status")
+    if status == "request_failed":
+        return "failed"
+    if status == "request_submitted":
+        return "requested"
+    return "pending"
 
+
+def print_pending(manifest_path, failed=False, limit=None, requested=False):
+    """Print entries without a download link yet.
+
+    By default only the ones still to be requested. failed=True shows only failed requests (with the
+    error), requested=True only requests submitted to NRAO that have no Complete/Failure email yet.
     limit prints only the first N matching entries. The count line still reports the total.
     """
+    if failed and requested:
+        raise ValueError("choose failed or requested, not both")
+    wanted = "failed" if failed else "requested" if requested else "pending"
     manifest = read_manifest(manifest_path)
     count = 0
     for entry in manifest.get("entries", []):
         viewer_url = entry.get("viewer_url")
         if not viewer_url or str(entry.get("download_command") or "").strip():
             continue
-        if (entry.get("request_status") == "request_failed") != failed:
+        if _request_state(entry) != wanted:
             continue
         count += 1
         if limit is not None and count > limit:
@@ -178,8 +192,10 @@ def print_pending(manifest_path, failed=False, limit=None):
         line = "%s %s" % (entry.get("calibrator_id") or "<missing-calibrator-id>", viewer_url)
         if failed:
             line += " | %s" % (entry.get("request_error") or "<no details>",)
+        if requested:
+            line += " | request %s, submitted %s" % (entry.get("request_id") or "?", entry.get("request_submitted_at") or "?")
         print(line)
-    tag, kind = ("FAILED", "failed") if failed else ("PENDING", "pending")
+    tag, kind = {"failed": ("FAILED", "failed"), "requested": ("REQUESTED", "requested"), "pending": ("PENDING", "pending")}[wanted]
     if limit is not None and count > limit:
         print_status("[%s] showing %d of %d %s entries" % (tag, limit, count, kind))
     else:

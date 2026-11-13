@@ -214,3 +214,75 @@ def test_show_pending_limit(tmp_path, capsys):
     out = capsys.readouterr().out
     assert "1051-316" in out and "1051+213" not in out
     assert "showing 1 of 2 pending entries" in out
+
+
+def _submitted(request_id, name, received="2026-11-11 19:52"):
+    body = "Dear Simon Gonzalez:\n\nYour %s has been submitted.\n\nBest regards,\n\nThe NRAO Archive" % name
+    return MailMessage(str(request_id), "NRAO Archive Request %d: Submitted" % request_id, received, body)
+
+
+def _failure(request_id, name):
+    body = (
+        "Unfortunately, there was a problem processing your download request (no. %d, %s).\n\n"
+        "Details:\nNo further information found. \n\nBest regards,\n\nThe NRAO Archive" % (request_id, name)
+    )
+    return MailMessage("f%d" % request_id, "NRAO Archive Request %d: Failure" % request_id, "", body)
+
+
+def _complete(request_id, name, obs_id):
+    body = "Your %s is complete.\n%s\nwget -r https://dl-dsoc.nrao.edu/u/%d/abcdef1234567890/" % (name, obs_id, request_id)
+    return MailMessage("c%d" % request_id, "NRAO Archive Request %d: Complete" % request_id, "", body)
+
+
+def test_submitted_email_marks_entry_requested():
+    manifest = _failure_manifest()
+    assert update_manifest_from_messages(manifest, [_submitted(298510484, "1051+213")]) == 1
+    entry = manifest["entries"][1]
+    assert entry["request_status"] == "request_submitted" and entry["request_id"] == 298510484
+    assert "request_status" not in manifest["entries"][0]
+
+
+def test_outcome_wins_over_submitted_in_any_order():
+    for order in (lambda s, f: [s, f], lambda s, f: [f, s]):
+        manifest = _failure_manifest()
+        update_manifest_from_messages(manifest, order(_submitted(100, "1051+213"), _failure(100, "1051+213")))
+        assert manifest["entries"][1]["request_status"] == "request_failed"
+
+
+def test_resubmitted_request_overrides_older_failure_in_any_order():
+    for order in (lambda f, s: [f, s], lambda f, s: [s, f]):
+        manifest = _failure_manifest()
+        update_manifest_from_messages(manifest, order(_failure(100, "1051+213"), _submitted(200, "1051+213")))
+        entry = manifest["entries"][1]
+        assert entry["request_status"] == "request_submitted" and entry["request_id"] == 200
+
+
+def test_failure_recorded_before_request_ids_is_not_undone_by_its_submitted_email():
+    manifest = _failure_manifest()
+    manifest["entries"][1].update(request_status="request_failed", request_error="No further information found.")
+    update_manifest_from_messages(manifest, [_failure(100, "1051+213"), _submitted(100, "1051+213")])
+    assert manifest["entries"][1]["request_status"] == "request_failed"
+
+
+def test_completion_after_submitted_sets_link():
+    manifest = _failure_manifest()
+    obs_id = manifest["entries"][1]["obs_id"]
+    update_manifest_from_messages(manifest, [_complete(100, "1051+213", obs_id), _submitted(100, "1051+213")])
+    entry = manifest["entries"][1]
+    assert entry["request_status"] == "request_ready" and entry["download_command"].startswith("wget")
+
+
+def test_show_pending_requested_option(tmp_path, capsys):
+    from nrao_archive_fetcher.manifest import print_pending, write_manifest
+
+    manifest = _failure_manifest()
+    update_manifest_from_messages(manifest, [_submitted(298510484, "1051+213")])
+    path = tmp_path / "manifest.json"
+    write_manifest(manifest, path)
+    capsys.readouterr()
+    print_pending(path)
+    out = capsys.readouterr().out
+    assert "1051-316" in out and "1051+213" not in out
+    print_pending(path, requested=True)
+    out = capsys.readouterr().out
+    assert "1051+213" in out and "1051-316" not in out and "298510484" in out

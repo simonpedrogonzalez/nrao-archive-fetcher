@@ -14,7 +14,13 @@ def build_parser():
 
     pending = subparsers.add_parser("show-pending", help="Print calibrator ID and viewer URL for pending entries.")
     pending.add_argument("manifest")
-    pending.add_argument("--failed", action="store_true", help="Show only entries whose request failed, with the error.")
+    which = pending.add_mutually_exclusive_group()
+    which.add_argument("--failed", action="store_true", help="Show only entries whose request failed, with the error.")
+    which.add_argument(
+        "--requested",
+        action="store_true",
+        help="Show only entries submitted to NRAO that have no Complete or Failure email yet.",
+    )
     pending.add_argument("--limit", type=int, help="Show only the first N entries.")
 
     email = subparsers.add_parser("import-email", help="Import wget commands from Mail, IMAP, or exported JSON.")
@@ -54,7 +60,7 @@ def build_parser():
 def main(argv=None):
     args = build_parser().parse_args(argv)
     if args.command == "show-pending":
-        print_pending(args.manifest, failed=args.failed, limit=args.limit)
+        print_pending(args.manifest, failed=args.failed, limit=args.limit, requested=args.requested)
         return 0
     if args.command == "import-email":
         import_email_commands(

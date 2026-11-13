@@ -23,6 +23,9 @@ REQUEST_NAME_RE = re.compile(r"your\s+([A-Za-z0-9][A-Za-z0-9+\-_.]*)\s+is\s+comp
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 FAILURE_REQUEST_NAME_RE = re.compile(r"download\s+request\s+\(no\.\s*\d+,\s*([A-Za-z0-9][A-Za-z0-9+\-_.]*)\s*\)", re.IGNORECASE)
 FAILURE_SUBJECT_RE = re.compile(r"\bfailure\b", re.IGNORECASE)
+SUBMITTED_SUBJECT_RE = re.compile(r"\bsubmitted\b", re.IGNORECASE)
+SUBMITTED_REQUEST_NAME_RE = re.compile(r"your\s+([A-Za-z0-9][A-Za-z0-9+\-_.]*)\s+has\s+been\s+submitted\b", re.IGNORECASE)
+REQUEST_ID_RE = re.compile(r"\bRequest\s+(\d+)\b", re.IGNORECASE)
 FAILURE_DETAILS_RE = re.compile(r"Details:\s*(.*?)\s*(?:\n\s*Best regards\b|\Z)", re.IGNORECASE | re.DOTALL)
 
 
@@ -87,6 +90,8 @@ def extract_message_tokens(text):
     for match in REQUEST_NAME_RE.finditer(text):
         tokens.add(match.group(1).lower())
     for match in FAILURE_REQUEST_NAME_RE.finditer(text):
+        tokens.add(match.group(1).lower())
+    for match in SUBMITTED_REQUEST_NAME_RE.finditer(text):
         tokens.add(match.group(1).lower())
     return tokens
 
@@ -289,6 +294,22 @@ def is_failure_message(message):
     return bool(FAILURE_SUBJECT_RE.search(message.subject or ""))
 
 
+def is_submitted_message(message):
+    return bool(SUBMITTED_SUBJECT_RE.search(message.subject or ""))
+
+
+def extract_request_id(message):
+    """NRAO request number from the subject, e.g. 'NRAO Archive Request 298510484: Submitted'."""
+    match = REQUEST_ID_RE.search(message.subject or "")
+    return int(match.group(1)) if match else None
+
+
+def _is_older_request(entry, request_id):
+    """True when the email is about an earlier request than the latest one recorded for the entry."""
+    current = entry.get("request_id")
+    return request_id is not None and current is not None and request_id < int(current)
+
+
 def extract_failure_details(text):
     match = FAILURE_DETAILS_RE.search(text or "")
     if not match:
@@ -304,22 +325,53 @@ def update_manifest_from_messages(manifest, messages):
     entries = manifest.get("entries", [])
     pending = [idx for idx, entry in enumerate(entries) if not str(entry.get("download_command") or "").strip()]
     updates = 0
+    # Each email carries its request number. An email about an older request than the latest one
+    # recorded for the entry (e.g. the failure of a request that was later re-submitted) is ignored,
+    # so the order in which the emails are read does not matter.
     for message in messages:
         body = (message.subject or "") + "\n" + (message.content or "")
+        request_id = extract_request_id(message)
         if is_failure_message(message):
             best_index = _unique_match(entries, pending, body)
             if best_index is None:
-                print_status("[EMAIL] unmatched failure email: %s" % (message.subject,))
+                if _unique_match(entries, range(len(entries)), body) is None:  # else: already has a link
+                    print_status("[EMAIL] unmatched failure email: %s" % (message.subject,))
                 continue
             entry = entries[best_index]
+            if _is_older_request(entry, request_id):
+                continue
             error = extract_failure_details(message.content) or "<no details found>"
             if entry.get("request_status") == "request_failed" and entry.get("request_error") == error:
+                if request_id is not None and entry.get("request_id") is None:
+                    entry["request_id"] = request_id  # failed before request ids were recorded
+                    updates += 1
                 continue
             entry["request_status"] = "request_failed"
             entry["request_error"] = error
             entry["request_failed_at"] = now_iso()
+            if request_id is not None:
+                entry["request_id"] = request_id
             updates += 1
             print_status("[EMAIL] failed %s: %s" % (_entry_label(entry), error))
+            continue
+        if is_submitted_message(message):
+            best_index = _unique_match(entries, pending, body)
+            if best_index is None:
+                if _unique_match(entries, range(len(entries)), body) is None:  # else: already has a link
+                    print_status("[EMAIL] unmatched submitted email: %s" % (message.subject,))
+                continue
+            entry = entries[best_index]
+            if _is_older_request(entry, request_id):
+                continue
+            if request_id is not None and entry.get("request_id") is not None and request_id == int(entry["request_id"]):
+                continue  # already recorded, or this request already failed
+            entry["request_status"] = "request_submitted"
+            entry["request_submitted_at"] = message.received_at or now_iso()
+            entry.pop("request_error", None)
+            if request_id is not None:
+                entry["request_id"] = request_id
+            updates += 1
+            print_status("[EMAIL] submitted %s (request %s)" % (_entry_label(entry), request_id))
             continue
         commands = extract_wget_commands(message.content)
         if not commands:
@@ -332,6 +384,8 @@ def update_manifest_from_messages(manifest, messages):
         entry["request_status"] = "request_ready"
         entry["request_finished_at"] = now_iso()
         entry.pop("request_error", None)
+        if request_id is not None:
+            entry["request_id"] = request_id
         pending = [idx for idx in pending if idx != best_index]
         updates += 1
         print_status("[EMAIL] matched %s -> %s" % (_entry_label(entry), commands[0]))
