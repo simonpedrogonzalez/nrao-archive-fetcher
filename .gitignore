@@ -217,3 +217,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Agent guidance (local only)
+AGENTS.md
+.agent/
