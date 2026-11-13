@@ -236,8 +236,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298505779/c8598c266ccb83d4ebfea0cef28da3b7/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -250,7 +250,8 @@
         "historical_error": "[SPW] SPW 5 rejected: unflagged fraction too low (0.465 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 10:57:24\u202fAM",
-      "request_id": 298505779
+      "request_id": 298505779,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0902-142_17A-296.sb33813849.eb33997674.57941.76535543981",
@@ -384,8 +385,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298526298/0d0fc539e8307056ed402401be47e997/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -398,7 +399,8 @@
         "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.436 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 11:21:03\u202fAM",
-      "request_id": 298526298
+      "request_id": 298526298,
+      "request_finished_at": "2026-11-13T20:19:15Z"
     },
     {
       "entry_id": "0842+185_17A-210.sb33373278.eb33635071.57840.98806701389",
@@ -473,8 +475,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298664843/bf957b05f22fde7467887c7b37c860f7/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -487,7 +489,8 @@
         "historical_error": "[SPW] SPW 9 rejected: unflagged fraction too low (0.459 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:25:06\u202fPM",
-      "request_id": 298664843
+      "request_id": 298664843,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0741+312_17A-210.sb33373364.eb33655334.57865.82736850694",
@@ -535,8 +538,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298672728/779b6feb8a0d70fc50252d59c8e5959b/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -547,7 +550,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 10 rejected: unflagged fraction too low (0.434 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:46:30\u202fPM",
+      "request_id": 298672728,
+      "request_finished_at": "2026-11-13T20:12:50Z"
     },
     {
       "entry_id": "2236+284_22A-141.sb41176971.eb41822011.59725.43640582176",
@@ -564,8 +570,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298676875/ba09b8d620dbe6ac9a77caa827fbd2fb/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -576,7 +582,9 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.480 < 0.5)"
-      }
+      },
+      "request_finished_at": "2026-11-13T20:03:34Z",
+      "request_id": 298676875
     },
     {
       "entry_id": "2254+247_22B-240.sb42872582.eb43022624.59909.1994543287",
@@ -593,8 +601,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298680359/a5dc4b0ca8688323b0eb0c1d62ed0dae/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -605,7 +613,9 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.373 < 0.5)"
-      }
+      },
+      "request_finished_at": "2026-11-13T19:53:30Z",
+      "request_id": 298680359
     },
     {
       "entry_id": "1347+122_17A-210.sb33328551.eb33758328.57887.20416579861",
@@ -622,8 +632,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298684532/45e0f588cb1d311f3f1474776d5139dd/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -634,7 +644,9 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (7.99 MHz < 10.00 MHz)"
-      }
+      },
+      "request_finished_at": "2026-11-13T20:20:39Z",
+      "request_id": 298684532
     },
     {
       "entry_id": "2255+132_17A-210.sb33375334.eb33649843.57857.84621354166",
@@ -649,8 +661,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298689652/0603863df8bf54e8620421048076e7cb/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -663,7 +675,8 @@
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (7.99 MHz < 10.00 MHz)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:20:10\u202fPM",
-      "request_id": 298689652
+      "request_id": 298689652,
+      "request_finished_at": "2026-11-13T20:12:50Z"
     },
     {
       "entry_id": "0359+509_17A-388.sb33206553.eb33639886.57846.806479861116",
@@ -740,8 +753,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298701569/489c4c9a2bd01a169ec92b05033975e2/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -752,7 +765,9 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (7.98 MHz < 10.00 MHz)"
-      }
+      },
+      "request_finished_at": "2026-11-13T20:03:34Z",
+      "request_id": 298701569
     },
     {
       "entry_id": "1313+675_20B-419.sb38674664.eb38678588.59121.42539103009",
@@ -800,8 +815,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298709117/1a7199618c0f0cf79a4e8959b681d274/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -814,7 +829,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.438 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:37:34\u202fPM",
-      "request_id": 298709117
+      "request_id": 298709117,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "1400+621_22A-431.sb42128367.eb42498952.59800.14593054398",
@@ -831,8 +847,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298713260/12f2cc61c911e55464af9102fd881bd4/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -845,7 +861,8 @@
         "historical_error": "wget rc=8; accepted because folder present, size=9.910 GB, no expected size to compare"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:40:20\u202fPM",
-      "request_id": 298713260
+      "request_id": 298713260,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0854+201_21A-282.sb39997395.eb40006113.59418.744534259255",
@@ -861,8 +878,8 @@
         "B",
         "C"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298718593/d986fac3b85b29b72d05b7a9ab617b0f/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -875,7 +892,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:32:01\u202fPM",
-      "request_id": 298718593
+      "request_id": 298718593,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "1438+621_18B-229.sb35926973.eb36095962.58490.61836706019",
@@ -892,8 +910,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298722339/b0b7015750202c01bf785230644ffc65/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -906,7 +924,8 @@
         "historical_error": "download looks present but no .ms found in download folder"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:23:20\u202fPM",
-      "request_id": 298722339
+      "request_id": 298722339,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "1239+075_17B-027.sb34127179.eb34632765.58052.60135188657",
@@ -923,8 +942,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298726494/58197895b6405a82a8c43b9b3d73c411/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -935,7 +954,10 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:58:37\u202fPM",
+      "request_id": 298726494,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0239-025_23A-059.sb43050081.eb43413821.59963.04443475694",
@@ -952,8 +974,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298730967/01a83399cfcd1bc72c0a63957cb6a421/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -966,7 +988,8 @@
         "historical_error": "[SPW] SPW 1 rejected: unflagged fraction too low (0.417 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:29:21\u202fPM",
-      "request_id": 298730967
+      "request_id": 298730967,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "2358-103_20B-406.sb38614301.eb38627579.59093.27090224537",
@@ -983,8 +1006,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298734199/09da03e4552a2b41d04fa9b7b74d59f5/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -995,7 +1018,9 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 29 rejected: unflagged fraction too low (0.368 < 0.5)"
-      }
+      },
+      "request_finished_at": "2026-11-13T20:03:34Z",
+      "request_id": 298734199
     },
     {
       "entry_id": "0832+185_19A-395.sb37534937.eb37565644.58817.52268164352",
@@ -1012,8 +1037,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298738222/09f68857781c64089e08e0e2dc32c262/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1024,7 +1049,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:59:39\u202fPM",
+      "request_id": 298738222,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0713+438_21A-334.sb39898070.eb40110130.59462.897265023144",
@@ -1041,8 +1069,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298742355/62b2d349800ab568dd5a3c87a205d48e/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1055,7 +1083,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:28:02\u202fPM",
-      "request_id": 298742355
+      "request_id": 298742355,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "2047-026_18B-028.sb35923574.eb36138932.58501.838387337964",
@@ -1070,8 +1099,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298747579/03845a098057ad3a462d92bdcd8693ac/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1084,7 +1113,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:28:29\u202fPM",
-      "request_id": 298747579
+      "request_id": 298747579,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "1538+003_20A-363.sb37597102.eb37917458.58893.38856366898",
@@ -1099,8 +1129,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298752101/8b31d693ad6a635a3af3e83136049213/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1113,7 +1143,8 @@
         "historical_error": "[SPW] SPW 27 rejected: unflagged fraction too low (0.325 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:28:36\u202fPM",
-      "request_id": 298752101
+      "request_id": 298752101,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0336+323_20A-235.sb38622794.eb38624965.59091.54055288194",
@@ -1130,8 +1161,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298756219/965a49a1031edfaee35696584472645c/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1144,7 +1175,8 @@
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (1.00 MHz < 10.00 MHz)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:29:26\u202fPM",
-      "request_id": 298756219
+      "request_id": 298756219,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "1714-252_S91005.sb32550480.eb32659406.57632.09222305556",
@@ -1159,8 +1191,8 @@
         "B",
         "C"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298760614/0afa0bbacac709adc7e88d8090aa4806/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1173,7 +1205,8 @@
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (4.00 MHz < 10.00 MHz)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:27:30\u202fPM",
-      "request_id": 298760614
+      "request_id": 298760614,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "0632+103_S91005.sb32550336.eb32738393.57642.57169658565",
@@ -1190,8 +1223,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298764278/056ed9e7b944b48e100be1dd0e350459/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1202,7 +1235,9 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (4.00 MHz < 10.00 MHz)"
-      }
+      },
+      "request_finished_at": "2026-11-13T20:03:34Z",
+      "request_id": 298764278
     },
     {
       "entry_id": "1013+248_23B-010.sb44639066.eb44793969.60258.44113553241",
@@ -1219,8 +1254,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298768156/313da17abfeabb0aaf700e562351d4a0/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1231,7 +1266,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.444 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:01:20\u202fPM",
+      "request_id": 298768156,
+      "request_finished_at": "2026-11-13T20:03:34Z"
     },
     {
       "entry_id": "1822-096_21A-111.sb39309310.eb39520049.59295.61026173611",
@@ -1247,8 +1285,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298777560/ef4ffb0e0542ea7823834a03f894623a/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1261,7 +1299,8 @@
         "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.296 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:28:50\u202fPM",
-      "request_id": 298777560
+      "request_id": 298777560,
+      "request_finished_at": "2026-11-13T20:08:55Z"
     },
     {
       "entry_id": "0447-220_17B-329.sb34138166.eb34534856.58024.40257539352",
@@ -1278,8 +1317,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298781430/246e1ea60b53e8810e727e0202e965d1/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1292,7 +1331,8 @@
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (3.99 MHz < 10.00 MHz)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:31:37\u202fPM",
-      "request_id": 298781430
+      "request_id": 298781430,
+      "request_finished_at": "2026-11-13T20:19:15Z"
     },
     {
       "entry_id": "2340+266_22B-240.sb42878071.eb42990624.59899.09906601852",
@@ -1309,8 +1349,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298785914/c5cf23f0211285fb6641956b84d61ad2/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1321,7 +1361,10 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:52:09\u202fPM",
+      "request_id": 298785914,
+      "request_finished_at": "2026-11-13T20:19:15Z"
     },
     {
       "entry_id": "1526-138_20A-365.sb37909790.eb37932011.58899.53130584491",
@@ -1336,8 +1379,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298791444/f5e76ee6083cfdb555ad7f3686fb4f37/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1348,7 +1391,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:47:13\u202fPM",
+      "request_id": 298791444,
+      "request_finished_at": "2026-11-13T20:08:55Z"
     },
     {
       "entry_id": "1057-245_17B-388.sb34154645.eb34218619.57990.749118611115",
@@ -1363,8 +1409,8 @@
         "B",
         "C"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298797378/3390b2ca918696271789ea809df42db7/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1377,7 +1423,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:29:53\u202fPM",
-      "request_id": 298797378
+      "request_id": 298797378,
+      "request_finished_at": "2026-11-13T20:12:50Z"
     },
     {
       "entry_id": "2015+371_24A-412.sb44994315.eb45281805.60365.72064175926",
@@ -1394,8 +1441,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298801861/286986d09fb332cd00a1c635d1ab219c/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1408,7 +1455,8 @@
         "historical_error": "RuntimeError: Field Expression: No match found for name \"J2015+3710\" (near char. 10 in string \"J2015+3710\")"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:32:06\u202fPM",
-      "request_id": 298801861
+      "request_id": 298801861,
+      "request_finished_at": "2026-11-13T20:19:15Z"
     },
     {
       "entry_id": "0750+482_20B-149.sb39581491.eb39589549.59324.919125370376",
@@ -1425,8 +1473,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298805625/659208b77119409a17f4975dbd5197c6/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1439,7 +1487,8 @@
         "historical_error": null
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:37:04\u202fPM",
-      "request_id": 298805625
+      "request_id": 298805625,
+      "request_finished_at": "2026-11-13T20:12:50Z"
     },
     {
       "entry_id": "2110-103_19A-422.sb36668888.eb36677553.58625.529400162035",
@@ -1455,8 +1504,8 @@
         "B",
         "C"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298809589/9743a96a719ef186fb4dc081ef14458a/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1469,7 +1518,8 @@
         "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.435 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:41:34\u202fPM",
-      "request_id": 298809589
+      "request_id": 298809589,
+      "request_finished_at": "2026-11-13T20:12:50Z"
     },
     {
       "entry_id": "1640+397_20B-158.sb38967973.eb39207505.59212.7415178125",
@@ -1486,8 +1536,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298814926/42e18393de5a2a9e52107767034db4d7/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1498,7 +1548,10 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:03:12\u202fPM",
+      "request_id": 298814926,
+      "request_finished_at": "2026-11-13T20:19:15Z"
     },
     {
       "entry_id": "1436+636_16B-318.sb32751362.eb32773290.57646.13711486111",
@@ -1515,8 +1568,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298819107/e67b42b55a70e790e83d2b57e270a199/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1527,7 +1580,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 32 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:10:02\u202fPM",
+      "request_id": 298819107,
+      "request_finished_at": "2026-11-13T20:21:49Z"
     },
     {
       "entry_id": "2206-185_17A-025.sb33388792.eb33497856.57796.7248419213",
@@ -1541,8 +1597,8 @@
       "usable_configs": [
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298829426/1dc4085d00f0b3839f6d8bbb0b0c576f/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1553,7 +1609,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 11 rejected: unflagged fraction too low (0.477 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:06:51\u202fPM",
+      "request_id": 298829426,
+      "request_finished_at": "2026-11-13T20:21:49Z"
     },
     {
       "entry_id": "1156+314_23B-079.sb44690973.eb44797274.60260.84528259259",
@@ -1568,8 +1627,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298833283/09874c34f9dc2af17cabd37de719b4d9/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1582,7 +1641,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.174 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:38:25\u202fPM",
-      "request_id": 298833283
+      "request_id": 298833283,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "0825+031_18A-127.sb35164053.eb35195443.58182.21449738426",
@@ -1597,8 +1657,8 @@
         "A",
         "B"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298837740/030e5cb939c72b50d1e35bdc8cd9f2e0/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1611,7 +1671,8 @@
         "historical_error": "download looks present but no .ms found in download folder"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:35:47\u202fPM",
-      "request_id": 298837740
+      "request_id": 298837740,
+      "request_finished_at": "2026-11-13T20:21:48Z"
     },
     {
       "entry_id": "1130-148_18B-373.sb35864264.eb35923810.58443.637368275464",
@@ -1628,8 +1689,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298841392/18fae714bb231204f3ce17e1a23e56f7/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1640,7 +1701,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 36 rejected: unflagged fraction too low (0.478 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:57:30\u202fPM",
+      "request_id": 298841392,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "1419+064_23B-079.sb44747441.eb44774577.60255.897367881946",
@@ -1655,8 +1719,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298845346/76a9eb85c7c79ece2c61fb0005fea338/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1667,7 +1731,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.283 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:45:29\u202fPM",
+      "request_id": 298845346,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "0121+043_18A-253.sb35146759.eb35452011.58267.54645782408",
@@ -1681,8 +1748,8 @@
       "usable_configs": [
         "A"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298849262/6c56d7ecdde4f6eaab374e1cd396dd2e/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1693,7 +1760,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 1 rejected: bandwidth too narrow (0.50 MHz < 10.00 MHz)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:50:37\u202fPM",
+      "request_id": 298849262,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "1459+716_18B-099.sb35749446.eb35934408.58445.46521650463",
@@ -1708,8 +1778,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298853861/fdc04408dafa544531686a2c2ffb850e/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1722,7 +1792,8 @@
         "historical_error": null
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:32:58\u202fPM",
-      "request_id": 298853861
+      "request_id": 298853861,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "1956-076_23B-079.sb44661345.eb44756911.60247.01668302083",
@@ -1736,8 +1807,8 @@
       "usable_configs": [
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298858964/1cd3af15041ff3f59720589b4ebfb400/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1750,7 +1821,8 @@
         "historical_error": "[SPW] SPW 3 rejected: unflagged fraction too low (0.175 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:34:26\u202fPM",
-      "request_id": 298858964
+      "request_id": 298858964,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "2350+646_23B-079.sb44649808.eb44756893.60246.03351306713",
@@ -1765,8 +1837,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298863119/7db1e0074092d686c350736710d48b83/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1777,7 +1849,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 7 rejected: unflagged fraction too low (0.353 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:00:11\u202fPM",
+      "request_id": 298863119,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "2009+724_19B-260.sb38409298.eb38419935.59030.17762898148",
@@ -1792,8 +1867,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298867493/8674073896c6012edfc9be92f75a721c/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1804,7 +1879,10 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:01:53\u202fPM",
+      "request_id": 298867493,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "2035+189_19A-395.sb36787108.eb36788272.58653.331291678245",
@@ -1820,8 +1898,8 @@
         "B",
         "C"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298872804/365388e824f8b6cf6275cc970783add4/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1832,7 +1910,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "RuntimeError: MSSelectionNullSelection : The selected table has zero rows."
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:04:08\u202fPM",
+      "request_id": 298872804,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "2134-018_24B-301.sb46881603.eb47342705.60647.98770333333",
@@ -1847,8 +1928,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298877646/89a4e93d6bbc07454dfc1da2115c516f/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1859,7 +1940,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:51:39\u202fPM",
+      "request_id": 298877646,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "0431+206_20A-365.sb37903815.eb37921700.58896.986665000004",
@@ -1876,8 +1960,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298881276/716b9cfee6e8d6a14ed76edae8bf64e4/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1888,7 +1972,10 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:59:12\u202fPM",
+      "request_id": 298881276,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "1209-322_23A-002.sb43071043.eb43832931.60064.11118541667",
@@ -1905,8 +1992,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298886665/8035681adbad77ed5eb7ecfbda22c54c/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1919,7 +2006,8 @@
         "historical_error": null
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:36:33\u202fPM",
-      "request_id": 298886665
+      "request_id": 298886665,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "1739+476_19A-425.sb36340822.eb36807423.58657.96280179398",
@@ -1934,8 +2022,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298891136/68910ac3a7df9e237e9c1af07e5b8eb0/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1946,7 +2034,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "download looks present but no .ms found in download folder"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:56:37\u202fPM",
+      "request_id": 298891136,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "1740+521_20A-182.sb38309845.eb38565672.59071.99120952546",
@@ -1963,8 +2054,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298895701/64334ad94c8ffadd14f2656ffbc2e824/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -1975,7 +2066,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.394 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:53:22\u202fPM",
+      "request_id": 298895701,
+      "request_finished_at": "2026-11-13T20:56:48Z"
     },
     {
       "entry_id": "0437-187_21A-213.sb39869337.eb39924818.59377.819371875",
@@ -1992,8 +2086,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298899289/141a50e1d4216df9c3dd3f9a53d781ca/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2004,7 +2098,10 @@
       "provenance": {
         "historical_status": null,
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:43:02\u202fPM",
+      "request_id": 298899289,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "0541-056_21B-014.sb40071326.eb41709833.59654.053136180555",
@@ -2021,8 +2118,8 @@
         "C",
         "D"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298903746/20ea62b4e0938301c6a6f8f39e73088a/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2035,7 +2132,8 @@
         "historical_error": null
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:38:09\u202fPM",
-      "request_id": 298903746
+      "request_id": 298903746,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "1112-219_19A-380.sb37144062.eb37369838.58771.75039190972",
@@ -2050,8 +2148,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298907801/5c71333009e203d371fb40ea06d391f3/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2062,7 +2160,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.442 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:01:39\u202fPM",
+      "request_id": 298907801,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "0119+321_24A-478.sb46137593.eb46351813.60540.28640730324",
@@ -2077,8 +2178,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298911877/b20ad2b0b8142c8a4a39761a367fb98f/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2089,7 +2190,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:42:53\u202fPM",
+      "request_id": 298911877,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "1753+288_22A-314.sb41472246.eb41745690.59667.72629252315",
@@ -2104,8 +2208,8 @@
         "A",
         "B"
       ],
-      "request_status": "request_submitted",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298915939/e229f144db946a7df7f0fb83b89ae119/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2118,7 +2222,8 @@
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
       },
       "request_submitted_at": "Friday, November 13, 2026 at 12:40:24\u202fPM",
-      "request_id": 298915939
+      "request_id": 298915939,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "1258-223_17B-425.sb35376461.eb35378532.58239.269184363424",
@@ -2133,8 +2238,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298921624/ff94c5d610dd977351bda8c0d918efba/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2145,7 +2250,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:10:53\u202fPM",
+      "request_id": 298921624,
+      "request_finished_at": "2026-11-13T21:16:49Z"
     },
     {
       "entry_id": "1833-210_17A-335.sb33997221.eb34000349.57943.26858418982",
@@ -2160,8 +2268,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298925318/f87886a624073f51a29f4fca9837019c/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2172,7 +2280,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "RuntimeError: MSSelectionNullSelection : The selected table has zero rows."
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:44:34\u202fPM",
+      "request_id": 298925318,
+      "request_finished_at": "2026-11-13T21:24:24Z"
     },
     {
       "entry_id": "0555+398_23A-010.sb43643732.eb44028001.60093.66670934028",
@@ -2189,8 +2300,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298929468/3362757e469ba6cc1640b2cd4e786fcf/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2201,7 +2312,10 @@
       "provenance": {
         "historical_status": "downloading",
         "historical_error": null
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:52:14\u202fPM",
+      "request_id": 298929468,
+      "request_finished_at": "2026-11-13T21:47:35Z"
     },
     {
       "entry_id": "0949+662_21A-315.sb39406850.eb39523787.59297.08140472222",
@@ -2215,8 +2329,8 @@
       "usable_configs": [
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298933531/7e5c565cde093710c3513452f2954b2e/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2227,7 +2341,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:04:36\u202fPM",
+      "request_id": 298933531,
+      "request_finished_at": "2026-11-13T21:24:24Z"
     },
     {
       "entry_id": "1409-269_20A-492.sb38163369.eb38220937.58996.18955887732",
@@ -2244,8 +2361,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298938542/33fd1a1221bf0177f7855c6f07453ddb/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2256,7 +2373,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:55:52\u202fPM",
+      "request_id": 298938542,
+      "request_finished_at": "2026-11-13T21:47:35Z"
     },
     {
       "entry_id": "1727+455_17B-264.sb34427032.eb34961501.58146.86166513889",
@@ -2271,8 +2391,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298943800/0b28b09555b9eca968b1392f1472a244/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2283,7 +2403,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: bandwidth too narrow (1.00 MHz < 10.00 MHz)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:16:08\u202fPM",
+      "request_id": 298943800,
+      "request_finished_at": "2026-11-13T21:24:24Z"
     },
     {
       "entry_id": "2346+095_SA101269.sb45189188.eb45299195.60381.65584369213",
@@ -2298,8 +2421,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298947356/3926e9e532813ec97e9aa69e863111f1/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2310,7 +2433,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:48:08\u202fPM",
+      "request_id": 298947356,
+      "request_finished_at": "2026-11-13T21:47:35Z"
     },
     {
       "entry_id": "2101-295_17B-384.sb34139532.eb34155785.57985.22066895833",
@@ -2327,8 +2453,8 @@
         "C",
         "D"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298955730/6501a7526b350ad9ad42fbe1f35d0773/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2339,7 +2465,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:09:01\u202fPM",
+      "request_id": 298955730,
+      "request_finished_at": "2026-11-13T21:52:07Z"
     },
     {
       "entry_id": "0921-263_21A-282.sb40441786.eb40485330.59489.64181988426",
@@ -2354,8 +2483,8 @@
         "A",
         "B"
       ],
-      "request_status": "",
-      "download_command": "",
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298959650/a2259c9dd5d23e1a73919aa7ddb0a3cf/",
       "download_root": null,
       "extracted_ms": null,
       "selected_spw": null,
@@ -2366,7 +2495,10 @@
       "provenance": {
         "historical_status": "error",
         "historical_error": "wget rc=127; downloaded folder too small (0.000 GB)/bin/sh: wget2: command not found"
-      }
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:47:26\u202fPM",
+      "request_id": 298959650,
+      "request_finished_at": "2026-11-13T21:47:35Z"
     }
   ]
 }
