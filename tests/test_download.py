@@ -74,3 +74,19 @@ def test_download_skips_entries_already_downloaded_or_extracted(tmp_path, monkey
     )
     download_manifest(manifest_path)
     assert sorted(Path(path).name for path in downloaded) == ["downloading", "error", "new"]
+
+
+def test_wget_rc8_is_treated_as_success(tmp_path, monkeypatch):
+    manifest_path = tmp_path / "manifest.json"
+    write_manifest({"entries": [{"entry_id": "a", "project_code": "18B-316", "download_command": "wget -r https://x/", "request_status": "error"}]}, manifest_path)
+    monkeypatch.setattr("nrao_archive_fetcher.download.run_download_command", lambda tokens: (8, "404 robots.txt"))
+    entry = download_manifest(manifest_path)["entries"][0]
+    assert entry["request_status"] == "downloaded"
+    assert entry["last_error"] is None
+
+
+def test_other_wget_errors_still_fail(tmp_path, monkeypatch):
+    manifest_path = tmp_path / "manifest.json"
+    write_manifest({"entries": [{"entry_id": "a", "project_code": "18B-316", "download_command": "wget -r https://x/", "request_status": ""}]}, manifest_path)
+    monkeypatch.setattr("nrao_archive_fetcher.download.run_download_command", lambda tokens: (4, "network failure"))
+    assert download_manifest(manifest_path)["entries"][0]["request_status"] == "error"

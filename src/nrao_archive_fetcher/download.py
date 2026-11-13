@@ -11,6 +11,10 @@ from .utils import now_iso, print_status
 # The data of these entries is already on disk (or extracted): never download them again.
 DOWNLOADED_STATUSES = ("downloaded", "extracting", "extracted", "extraction_error")
 
+# wget exit codes treated as success. 8 ("server issued an error response") is returned by
+# recursive NRAO downloads whenever robots.txt or a broken weblog link 404s, even when all data arrived.
+OK_RETURN_CODES = (0, 8)
+
 
 def _normalize_command(command):
     return " ".join(str(command or "").replace("\\\n", " ").replace("\\\r", " ").split())
@@ -96,7 +100,7 @@ def download_manifest(manifest_path, base_download_root=None, before_download=No
         try:
             tokens = prepare_download_command(entry.get("download_command"), project_folder)
             return_code, output = run_download_command(tokens)
-            if return_code != 0:
+            if return_code not in OK_RETURN_CODES:
                 entry["request_status"] = "error"
                 entry["request_finished_at"] = now_iso()
                 entry["last_error"] = output[-4000:]
@@ -104,6 +108,8 @@ def download_manifest(manifest_path, base_download_root=None, before_download=No
                 write_manifest(manifest, manifest_path)
                 print_status("[DOWNLOAD] error project=%s rc=%s" % (project_code, return_code))
                 continue
+            if return_code != 0:
+                print_status("[DOWNLOAD] warning project=%s rc=%s (server error responses; treated as success)" % (project_code, return_code))
             entry["request_status"] = "downloaded"
             entry["request_finished_at"] = now_iso()
             entry["last_error"] = None
