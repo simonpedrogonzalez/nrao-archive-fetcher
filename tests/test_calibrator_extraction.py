@@ -23,7 +23,23 @@ def test_parse_retained_17b078_fluxboot_fixture():
     assert result["fit_snr"] == 3201.53460341
 
 
+def test_parse_flux_with_spix_list_from_newer_pipelines():
+    line = (
+        "2023-02-03 00:24:07\tINFO\tfluxscale::pipeline.infrastructure.jobrequest::casa\t"
+        "Executing setjy(vis='calibrators.ms', field='J0239-0234', spw='0,1', standard='manual', "
+        "fluxdensity=[0.4332708876619984, 0, 0, 0], spix=[0.5910513751904884, -0.12], "
+        "reffreq='5468221464.542124Hz', usescratch=True)"
+    )
+    result = parse_flux_text(line, "J0239-0234")
+    assert result["stokes_i_jy"] == 0.4332708876619984
+    assert result["spectral_index"] == 0.5910513751904884
+    assert abs(result["reference_frequency_ghz"] - 5.468221464542124) < 1e-12
+
+
 class FakeTable:
+    # FIELD_ID of each main-table row (DATA_DESC_ID 0, 1, 1); FIELD 0 is the gain calibrator.
+    row_fields = (0, 0, 0)
+
     def open(self, path):
         self.path = Path(path)
 
@@ -47,9 +63,28 @@ class FakeTable:
             return np.array([0, 1])
         if name == "DATA_DESC_ID":
             return np.array([0, 1, 1])
-        if name == "FLAG":
-            return np.zeros((2, 1, 3), dtype=bool)
+        if name == "FIELD_ID":
+            return np.array(self.row_fields)
         raise AssertionError((self.path, name))
+
+
+def _source_ms(tmp_path):
+    download = tmp_path / "downloads"
+    source_ms = download / "pipeline" / "source.ms"
+    source_ms.mkdir(parents=True)
+    (source_ms / "table.dat").touch()
+    return download
+
+
+def test_select_spw_ignores_flags_and_skips_spws_without_gain_calibrator_rows(tmp_path):
+    from workflows.radioastro_calibrators.extract_entry import select_spw
+
+    class GainCalOnlyInSpw0(FakeTable):
+        row_fields = (0, 1, 1)  # the wider SPW 1 only has rows for another field
+
+    ms = _source_ms(tmp_path) / "pipeline" / "source.ms"
+    assert select_spw(ms, "C", GainCalOnlyInSpw0, [0])["spw"] == 0
+    assert select_spw(ms, "C", FakeTable, [0])["spw"] == 1
 
 
 def test_extract_entry_selects_field_spw_and_updates_metadata(tmp_path):

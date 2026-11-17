@@ -57,7 +57,8 @@ def parse_flux_text(text, gain_calibrator_name, source_file="", band=None):
         if field != gain_calibrator_name:
             continue
         flux = _argument(line, "fluxdensity", r"\[\s*(%s)" % FLOAT_RE)
-        spix = _argument(line, "spix", r"(%s)" % FLOAT_RE)
+        # Older pipelines log spix=-0.38, newer ones a list of terms: spix=[0.59, -0.1].
+        spix = _argument(line, "spix", r"\[?\s*(%s)" % FLOAT_RE)
         reffreq = _argument(line, "reffreq", r"['\"]\s*(%s)\s*([GMK]?Hz)['\"]" % FLOAT_RE)
         reffreq_match = re.search(
             r"\breffreq\s*=\s*['\"]\s*(%s)\s*([GMK]?Hz)['\"]" % FLOAT_RE,

@@ -58,7 +58,9 @@ def run_manifest(
     """Download and extract every entry of a manifest, extracting each entry right after its download.
 
     Only successful downloads are extracted. Entries downloaded in an earlier run but not extracted
-    (job stopped, or CASA failed) are extracted first. Finished entries are never downloaded again.
+    (job stopped before or during extraction) are extracted first. Only download failures are retried:
+    an ``extraction_error`` (data rejected by the filters, or CASA failed) is final and is neither
+    extracted nor downloaded again. A download without a MeasurementSet counts as a download failure.
     """
     manifest_path = Path(manifest_path).resolve()
     run_root = manifest_path.parent
@@ -80,7 +82,8 @@ def run_manifest(
             return
         entry_download_root = Path(entry.get("download_root") or (download_root / entry_id))
         if find_first_ms(entry_download_root) is None:
-            entry["request_status"] = "extraction_error"
+            # Nothing usable arrived: a download failure, so the next run downloads it again (wget -c resumes).
+            entry["request_status"] = "error"
             entry["last_error"] = "No MeasurementSet found in %s" % entry_download_root
             return
         entry["request_status"] = "extracting"
@@ -113,7 +116,7 @@ def run_manifest(
             continue
         entry_id = str(entry.get("entry_id") or "").strip()
         finished = entry_id and _complete_outputs(output_root, entry_id) is not None
-        if finished or entry.get("request_status") in ("downloaded", "extracting", "extraction_error"):
+        if finished or entry.get("request_status") in ("downloaded", "extracting"):
             extract(entry)
             write_manifest(manifest, manifest_path)
 

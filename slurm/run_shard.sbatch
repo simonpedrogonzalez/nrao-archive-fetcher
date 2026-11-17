@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
+# CASA split/listobs of a full pipeline MS needs several GB (2 GB jobs were OOM-killed).
+#SBATCH --mem=16G
 #SBATCH --job-name=nrao-shard
 # One array task = one shard. Submit through slurm/submit_shards.sh, which sets --array and the log paths.
 set -euo pipefail

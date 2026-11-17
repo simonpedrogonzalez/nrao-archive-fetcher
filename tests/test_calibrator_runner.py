@@ -118,3 +118,34 @@ def test_each_entry_is_extracted_right_after_its_download(tmp_path):
 
     run_manifest(manifest_path, download_fn=download, casa_runner=_fake_casa("a"))
     assert events == ["downloaded", "extracted"]
+
+
+def test_extraction_error_is_not_retried(tmp_path):
+    manifest_path = tmp_path / "manifest.json"
+    entry = {"entry_id": "a", "download_command": "wget x", "request_status": "extraction_error", "last_error": "SPW 0 has unflagged fraction 0.2"}
+    write_manifest({"entries": [entry]}, manifest_path)
+    _partial_ms(tmp_path, "a")
+    casa_calls = []
+
+    def no_new_downloads(path, base_download_root=None, after_download=None):
+        return read_manifest(path)
+
+    run_manifest(manifest_path, download_fn=no_new_downloads, casa_runner=lambda *a: casa_calls.append(a))
+    assert casa_calls == []
+    persisted = read_manifest(manifest_path)["entries"][0]
+    assert persisted["request_status"] == "extraction_error"
+    assert persisted["last_error"] == "SPW 0 has unflagged fraction 0.2"
+
+
+def test_download_without_measurement_set_is_a_download_error(tmp_path):
+    manifest_path = tmp_path / "manifest.json"
+    write_manifest({"entries": [{"entry_id": "a", "download_command": "wget x", "request_status": "downloaded"}]}, manifest_path)
+    (tmp_path / "downloads" / "a").mkdir(parents=True)
+
+    def no_new_downloads(path, base_download_root=None, after_download=None):
+        return read_manifest(path)
+
+    run_manifest(manifest_path, download_fn=no_new_downloads, casa_runner=_fake_casa("a"))
+    persisted = read_manifest(manifest_path)["entries"][0]
+    assert persisted["request_status"] == "error"
+    assert "No MeasurementSet" in persisted["last_error"]

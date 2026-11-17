@@ -21,7 +21,8 @@ from .utils import now_iso, print_status
 
 PROCESSING_STATUSES = ("downloading", "downloaded", "error", "extracting", "extracted", "extraction_error")
 # Statuses where the data is complete on disk: a new request link must not touch them.
-# ("downloading" and "extraction_error" may be stuck: a timed-out job or a broken download, so they take a new link.)
+# ("downloading" may be stuck in a timed-out job, so it takes a new link. "extraction_error" is final for the
+# runner, but a new link from a fresh request means the user wants it downloaded again.)
 LOCKED_STATUSES = ("downloaded", "extracting", "extracted")
 RETRY_STATUSES = ("error", "downloading", "extraction_error")
 PROCESSING_FIELDS = (

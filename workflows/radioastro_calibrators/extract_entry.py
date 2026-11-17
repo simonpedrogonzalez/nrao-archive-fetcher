@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import shutil
 import sys
 from pathlib import Path
@@ -26,7 +25,6 @@ BAND_RANGES_HZ = {
     "KA": (26.5e9, 40e9),
     "Q": (40e9, 50e9),
 }
-MIN_UNFLAGGED = 0.5
 MIN_BANDWIDTH_HZ = 10e6
 
 
@@ -54,12 +52,19 @@ def require_corrected_data(ms_path, table_factory):
 
 
 def require_field(ms_path, field_name, table_factory):
+    """Return the FIELD ids named ``field_name`` (the gain calibrator)."""
     names = _read_table(table_factory, Path(ms_path) / "FIELD", lambda table: table.getcol("NAME"))
-    if field_name not in {str(name) for name in names}:
+    field_ids = [index for index, name in enumerate(names) if str(name) == field_name]
+    if not field_ids:
         raise ValueError("Field %r is not present in the MeasurementSet" % field_name)
+    return field_ids
 
 
-def select_spw(ms_path, band_guess, table_factory):
+def select_spw(ms_path, band_guess, table_factory, field_ids):
+    """Pick the widest SPW that has rows for the gain calibrator, preferring SPWs in ``band_guess``.
+
+    Flags are ignored: they are kept in the split MS but do not affect the choice.
+    """
     def read_spws(table):
         result = []
         for spw in range(table.nrows()):
@@ -77,45 +82,31 @@ def select_spw(ms_path, band_guess, table_factory):
     spws = _read_table(table_factory, Path(ms_path) / "SPECTRAL_WINDOW", read_spws)
     if not spws:
         raise ValueError("MeasurementSet has no readable spectral windows")
-    data_desc_ids, flags = _read_table(
+    # Only small integer columns are read: loading FLAG for a whole MS takes several GB.
+    data_desc_ids, row_fields = _read_table(
         table_factory,
         ms_path,
-        lambda table: (np.asarray(table.getcol("DATA_DESC_ID")), np.asarray(table.getcol("FLAG"))),
+        lambda table: (np.asarray(table.getcol("DATA_DESC_ID")), np.asarray(table.getcol("FIELD_ID"))),
     )
     dd_to_spw = _read_table(
         table_factory,
         Path(ms_path) / "DATA_DESCRIPTION",
         lambda table: np.asarray(table.getcol("SPECTRAL_WINDOW_ID"), dtype=int),
     )
+    field_ddids = np.unique(data_desc_ids[np.isin(row_fields, field_ids)])
+    field_spws = set(int(spw) for spw in dd_to_spw[field_ddids])
     band = str(band_guess or "").strip().upper()
     band_range = BAND_RANGES_HZ.get(band)
     for info in spws:
-        ddids = np.where(dd_to_spw == info["spw"])[0]
-        row_mask = np.isin(data_desc_ids, ddids)
-        info["n_rows"] = int(np.count_nonzero(row_mask))
-        selected_flags = flags[:, :, row_mask]
-        info["unflagged_fraction"] = (
-            1.0 - float(np.count_nonzero(selected_flags)) / selected_flags.size
-            if selected_flags.size else float("nan")
-        )
         info["matches_band"] = bool(
             band_range and band_range[0] <= info["f_center_hz"] <= band_range[1]
         )
 
-    matching = [info for info in spws if info["matches_band"]]
-    candidates = matching or spws
-    best = max(
-        candidates,
-        key=lambda info: (
-            info["bandwidth_hz"],
-            info["unflagged_fraction"] if math.isfinite(info["unflagged_fraction"]) else -1.0,
-        ),
-    )
-    if not math.isfinite(best["unflagged_fraction"]) or best["unflagged_fraction"] < MIN_UNFLAGGED:
-        raise ValueError(
-            "SPW %s has unflagged fraction %.3f below %.3f"
-            % (best["spw"], best["unflagged_fraction"], MIN_UNFLAGGED)
-        )
+    observed = [info for info in spws if info["spw"] in field_spws]
+    if not observed:
+        raise ValueError("No spectral window has rows for the gain calibrator")
+    matching = [info for info in observed if info["matches_band"]]
+    best = max(matching or observed, key=lambda info: info["bandwidth_hz"])
     if best["bandwidth_hz"] < MIN_BANDWIDTH_HZ:
         raise ValueError(
             "SPW %s bandwidth %.3f MHz is below %.3f MHz"
@@ -133,8 +124,8 @@ def extract_entry(entry, download_root, output_root, table_factory, split_task, 
     if source_ms is None:
         raise FileNotFoundError("No downloaded MeasurementSet found under %s" % download_root)
     require_corrected_data(source_ms, table_factory)
-    require_field(source_ms, field, table_factory)
-    spw = select_spw(source_ms, entry.get("band_guess"), table_factory)
+    field_ids = require_field(source_ms, field, table_factory)
+    spw = select_spw(source_ms, entry.get("band_guess"), table_factory, field_ids)
 
     output_dir = Path(output_root) / entry_id
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -165,7 +156,6 @@ def extract_entry(entry, download_root, output_root, table_factory, split_task, 
         "selected_spw": str(spw["spw"]),
         "spw_center_ghz": spw["f_center_hz"] / 1e9,
         "spw_bandwidth_mhz": spw["bandwidth_hz"] / 1e6,
-        "spw_unflagged_fraction": spw["unflagged_fraction"],
         "spw_matches_band": spw["matches_band"],
         "listobs": str(listobs_path),
         "flux_estimate": str(flux_path),
