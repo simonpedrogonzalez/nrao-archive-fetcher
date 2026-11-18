@@ -1,0 +1,1389 @@
+{
+  "version": 1,
+  "created_at": "2026-11-18T16:53:19Z",
+  "source": {
+    "stage": "small_flag_rejected",
+    "source_path": "/Users/u1528314/Documents/radioastro-ml/collect/small_subset/small_selection.csv",
+    "completed_calibrator_ids": [],
+    "transient_failures": {},
+    "note": "small_selection.csv MSs rejected by the old 0.5 unflagged-fraction rule. Same entries (and links) as in small_remaining."
+  },
+  "entries": [
+    {
+      "entry_id": "1051-316_16B-069_sb32991151_1.57709.66087045139",
+      "obs_id": "16B-069_sb32991151_1.57709.66087045139",
+      "project_code": "16B-069",
+      "calibrator_id": "1051-316",
+      "gain_calibrator_name": "J1051-3138",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-069_sb32991151_1.57709.66087045139",
+      "estimated_size_gb": 0.263777,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/295689142/63b09bec14053e123b57dada56d3876e/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:51:04.777538",
+      "dec": "-31:38:14.307410",
+      "date_utc": "2016-11-17 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.247 < 0.5)"
+      },
+      "request_finished_at": "2026-11-12T03:17:20Z"
+    },
+    {
+      "entry_id": "1051+213_18B-316.sb37532172.eb37535740_000.58806.759674016204",
+      "obs_id": "18B-316.sb37532172.eb37535740_000.58806.759674016204",
+      "project_code": "18B-316",
+      "calibrator_id": "1051+213",
+      "gain_calibrator_name": "J1125+2610",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-316.sb37532172.eb37535740_000.58806.759674016204",
+      "estimated_size_gb": 1.429079,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/295693163/2d24044c923c7299bdeeab872f1adacc/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:51:48.789073",
+      "dec": "+21:19:52.314110",
+      "date_utc": "2019-11-19 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 11 rejected: unflagged fraction too low (0.454 < 0.5)"
+      },
+      "request_finished_at": "2026-11-12T03:17:20Z"
+    },
+    {
+      "entry_id": "1407+284_18B-316.sb37532172.eb37535740.58806.7596740625",
+      "obs_id": "18B-316.sb37532172.eb37535740.58806.7596740625",
+      "project_code": "18B-316",
+      "calibrator_id": "1407+284",
+      "gain_calibrator_name": "J1125+2610",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-316.sb37532172.eb37535740.58806.7596740625",
+      "estimated_size_gb": 1.621999,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/295705308/b068321a23184e995d20045c54b1cc5c/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:07:00.394410",
+      "dec": "+28:27:14.689980",
+      "date_utc": "2019-11-19 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.482 < 0.5)"
+      },
+      "request_finished_at": "2026-11-12T03:17:20Z"
+    },
+    {
+      "entry_id": "1008+075_22A-099.sb42368485.eb42568846.59824.70339501157",
+      "obs_id": "22A-099.sb42368485.eb42568846.59824.70339501157",
+      "project_code": "22A-099",
+      "calibrator_id": "1008+075",
+      "gain_calibrator_name": "J1008+0730",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-099.sb42368485.eb42568846.59824.70339501157",
+      "estimated_size_gb": 2.323126,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298491852/4faab2ab8f41cd2e5b0a3949cc7ab1ef/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:08:00.016000",
+      "dec": "+7:30:16.552000",
+      "date_utc": "2022-09-02 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.093 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T19:07:03Z",
+      "request_id": 298491852
+    },
+    {
+      "entry_id": "1150-003_18A-074.sb35417086.eb35598661.58370.65209020833",
+      "obs_id": "18A-074.sb35417086.eb35598661.58370.65209020833",
+      "project_code": "18A-074",
+      "calibrator_id": "1150-003",
+      "gain_calibrator_name": "J1150-0023",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18A-074.sb35417086.eb35598661.58370.65209020833",
+      "estimated_size_gb": 3.048794,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298655594/6be4f9a1c2dd1f23066eb5743331a092/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:50:43.870761",
+      "dec": "-0:23:54.204900",
+      "date_utc": "2018-09-09 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.459 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T19:46:49Z",
+      "request_id": 298655594
+    },
+    {
+      "entry_id": "2148+069_17A-004.sb33239406.eb33496856.57795.69639670139",
+      "obs_id": "17A-004.sb33239406.eb33496856.57795.69639670139",
+      "project_code": "17A-004",
+      "calibrator_id": "2148+069",
+      "gain_calibrator_name": "J2148+0657",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-004.sb33239406.eb33496856.57795.69639670139",
+      "estimated_size_gb": 3.081179,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298505779/c8598c266ccb83d4ebfea0cef28da3b7/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:48:05.458679",
+      "dec": "+6:57:38.604220",
+      "date_utc": "2017-02-11 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 5 rejected: unflagged fraction too low (0.465 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 10:57:24\u202fAM",
+      "request_id": 298505779,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "0108+015_17A-060.sb33364047.eb33638732.57843.627024050926",
+      "obs_id": "17A-060.sb33364047.eb33638732.57843.627024050926",
+      "project_code": "17A-060",
+      "calibrator_id": "0108+015",
+      "gain_calibrator_name": "J0108+0135",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-060.sb33364047.eb33638732.57843.627024050926",
+      "estimated_size_gb": 3.555156,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298518271/2ff809e367875caab5a0c97b3bd9bf91/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:08:38.771074",
+      "dec": "+1:35:00.317140",
+      "date_utc": "2017-03-31 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.133 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T18:41:14Z"
+    },
+    {
+      "entry_id": "1445+099_17A-004.sb33239358.eb33548001.57805.655359861106",
+      "obs_id": "17A-004.sb33239358.eb33548001.57805.655359861106",
+      "project_code": "17A-004",
+      "calibrator_id": "1445+099",
+      "gain_calibrator_name": "J1445+0958",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-004.sb33239358.eb33548001.57805.655359861106",
+      "estimated_size_gb": 3.590398,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298522440/6b614d1491a8645cbf003a849f1a69c4/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:45:16.465213",
+      "dec": "+9:58:36.072440",
+      "date_utc": "2017-02-21 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 5 rejected: unflagged fraction too low (0.342 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T18:41:14Z"
+    },
+    {
+      "entry_id": "1227+365_23B-010.sb44612948.eb44735077.60241.5411727662",
+      "obs_id": "23B-010.sb44612948.eb44735077.60241.5411727662",
+      "project_code": "23B-010",
+      "calibrator_id": "1227+365",
+      "gain_calibrator_name": "J1227+3635_S",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-010.sb44612948.eb44735077.60241.5411727662",
+      "estimated_size_gb": 3.607307,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298526298/0d0fc539e8307056ed402401be47e997/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "12:27:58.725446",
+      "dec": "+36:35:11.827350",
+      "date_utc": "2023-10-24 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.436 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 11:21:03\u202fAM",
+      "request_id": 298526298,
+      "request_finished_at": "2026-11-13T20:19:15Z"
+    },
+    {
+      "entry_id": "1056+701_21B-358.sb40926235.eb40941793.59520.526829814815",
+      "obs_id": "21B-358.sb40926235.eb40941793.59520.526829814815",
+      "project_code": "21B-358",
+      "calibrator_id": "1056+701",
+      "gain_calibrator_name": "J1056+7011",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21B-358.sb40926235.eb40941793.59520.526829814815",
+      "estimated_size_gb": 3.664517,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298535135/bcaae040cc4df48a6cc9e3cd3a14b369/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:56:53.617492",
+      "dec": "+70:11:45.915850",
+      "date_utc": "2021-11-02 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 13 rejected: unflagged fraction too low (0.310 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T18:41:14Z"
+    },
+    {
+      "entry_id": "1006+349_24A-164.sb45219943.eb45278280.60363.50562447916",
+      "obs_id": "24A-164.sb45219943.eb45278280.60363.50562447916",
+      "project_code": "24A-164",
+      "calibrator_id": "1006+349",
+      "gain_calibrator_name": "J1006+3454",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-164.sb45219943.eb45278280.60363.50562447916",
+      "estimated_size_gb": 3.708305,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298664843/bf957b05f22fde7467887c7b37c860f7/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:06:01.750000",
+      "dec": "+34:54:10.400000",
+      "date_utc": "2024-02-23 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 9 rejected: unflagged fraction too low (0.459 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:25:06\u202fPM",
+      "request_id": 298664843,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "2139+143_17A-167.sb33475643.eb33560335.57809.78770505787",
+      "obs_id": "17A-167.sb33475643.eb33560335.57809.78770505787",
+      "project_code": "17A-167",
+      "calibrator_id": "2139+143",
+      "gain_calibrator_name": "J2139+143",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-167.sb33475643.eb33560335.57809.78770505787",
+      "estimated_size_gb": 3.960965,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298672728/779b6feb8a0d70fc50252d59c8e5959b/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:39:01.309267",
+      "dec": "+14:23:35.991990",
+      "date_utc": "2017-02-25 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 10 rejected: unflagged fraction too low (0.434 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:46:30\u202fPM",
+      "request_id": 298672728,
+      "request_finished_at": "2026-11-13T20:12:50Z"
+    },
+    {
+      "entry_id": "2236+284_22A-141.sb41176971.eb41822011.59725.43640582176",
+      "obs_id": "22A-141.sb41176971.eb41822011.59725.43640582176",
+      "project_code": "22A-141",
+      "calibrator_id": "2236+284",
+      "gain_calibrator_name": "J2236+2828",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-141.sb41176971.eb41822011.59725.43640582176",
+      "estimated_size_gb": 4.120915,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298676875/ba09b8d620dbe6ac9a77caa827fbd2fb/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:36:22.470860",
+      "dec": "+28:28:57.413290",
+      "date_utc": "2022-05-26 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.480 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T20:03:34Z",
+      "request_id": 298676875
+    },
+    {
+      "entry_id": "2254+247_22B-240.sb42872582.eb43022624.59909.1994543287",
+      "obs_id": "22B-240.sb42872582.eb43022624.59909.1994543287",
+      "project_code": "22B-240",
+      "calibrator_id": "2254+247",
+      "gain_calibrator_name": "J2254+2445",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22B-240.sb42872582.eb43022624.59909.1994543287",
+      "estimated_size_gb": 4.160023,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298680359/a5dc4b0ca8688323b0eb0c1d62ed0dae/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:54:09.341903",
+      "dec": "+24:45:23.422800",
+      "date_utc": "2022-11-26 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.373 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T19:53:30Z",
+      "request_id": 298680359
+    },
+    {
+      "entry_id": "1313+675_20B-419.sb38674664.eb38678588.59121.42539103009",
+      "obs_id": "20B-419.sb38674664.eb38678588.59121.42539103009",
+      "project_code": "20B-419",
+      "calibrator_id": "1313+675",
+      "gain_calibrator_name": "J1313+6735",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-419.sb38674664.eb38678588.59121.42539103009",
+      "estimated_size_gb": 4.81744,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298705709/0889ab90ddffae37e6ecd66d61ba0b48/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "13:13:27.984800",
+      "dec": "+67:35:50.376000",
+      "date_utc": "2020-09-29 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.470 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T19:46:49Z",
+      "request_id": 298705709
+    },
+    {
+      "entry_id": "0943-083_21A-386.sb39511611.eb39580570.59321.03600622685",
+      "obs_id": "21A-386.sb39511611.eb39580570.59321.03600622685",
+      "project_code": "21A-386",
+      "calibrator_id": "0943-083",
+      "gain_calibrator_name": "J0943-0819",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-386.sb39511611.eb39580570.59321.03600622685",
+      "estimated_size_gb": 5.224599,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298709117/1a7199618c0f0cf79a4e8959b681d274/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "9:43:36.944364",
+      "dec": "-8:19:30.812400",
+      "date_utc": "2021-04-17 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.438 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:37:34\u202fPM",
+      "request_id": 298709117,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "0854+201_21A-282.sb39997395.eb40006113.59418.744534259255",
+      "obs_id": "21A-282.sb39997395.eb40006113.59418.744534259255",
+      "project_code": "21A-282",
+      "calibrator_id": "0854+201",
+      "gain_calibrator_name": "J0854+2006",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-282.sb39997395.eb40006113.59418.744534259255",
+      "estimated_size_gb": 5.693449,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298718593/d986fac3b85b29b72d05b7a9ab617b0f/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:54:48.874925",
+      "dec": "+20:06:30.640880",
+      "date_utc": "2021-07-23 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:32:01\u202fPM",
+      "request_id": 298718593,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "0239-025_23A-059.sb43050081.eb43413821.59963.04443475694",
+      "obs_id": "23A-059.sb43050081.eb43413821.59963.04443475694",
+      "project_code": "23A-059",
+      "calibrator_id": "0239-025",
+      "gain_calibrator_name": "J0239-0234",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23A-059.sb43050081.eb43413821.59963.04443475694",
+      "estimated_size_gb": 6.31254,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298730967/01a83399cfcd1bc72c0a63957cb6a421/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "2:39:45.472266",
+      "dec": "-2:34:40.914300",
+      "date_utc": "2023-01-19 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 1 rejected: unflagged fraction too low (0.417 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:29:21\u202fPM",
+      "request_id": 298730967,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "2358-103_20B-406.sb38614301.eb38627579.59093.27090224537",
+      "obs_id": "20B-406.sb38614301.eb38627579.59093.27090224537",
+      "project_code": "20B-406",
+      "calibrator_id": "2358-103",
+      "gain_calibrator_name": "J2358-1020",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20B-406.sb38614301.eb38627579.59093.27090224537",
+      "estimated_size_gb": 6.720223,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298734199/09da03e4552a2b41d04fa9b7b74d59f5/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:58:10.882409",
+      "dec": "-10:20:08.611260",
+      "date_utc": "2020-09-01 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 29 rejected: unflagged fraction too low (0.368 < 0.5)"
+      },
+      "request_finished_at": "2026-11-13T20:03:34Z",
+      "request_id": 298734199
+    },
+    {
+      "entry_id": "0832+185_19A-395.sb37534937.eb37565644.58817.52268164352",
+      "obs_id": "19A-395.sb37534937.eb37565644.58817.52268164352",
+      "project_code": "19A-395",
+      "calibrator_id": "0832+185",
+      "gain_calibrator_name": "J0832+1832",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-395.sb37534937.eb37565644.58817.52268164352",
+      "estimated_size_gb": 6.7595,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298738222/09f68857781c64089e08e0e2dc32c262/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "8:32:16.040224",
+      "dec": "+18:32:12.133260",
+      "date_utc": "2019-11-30 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:59:39\u202fPM",
+      "request_id": 298738222,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "0713+438_21A-334.sb39898070.eb40110130.59462.897265023144",
+      "obs_id": "21A-334.sb39898070.eb40110130.59462.897265023144",
+      "project_code": "21A-334",
+      "calibrator_id": "0713+438",
+      "gain_calibrator_name": "J0958+3224",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-334.sb39898070.eb40110130.59462.897265023144",
+      "estimated_size_gb": 6.780064,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298742355/62b2d349800ab568dd5a3c87a205d48e/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "7:13:38.164129",
+      "dec": "+43:49:17.206980",
+      "date_utc": "2021-09-05 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:28:02\u202fPM",
+      "request_id": 298742355,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "2047-026_18B-028.sb35923574.eb36138932.58501.838387337964",
+      "obs_id": "18B-028.sb35923574.eb36138932.58501.838387337964",
+      "project_code": "18B-028",
+      "calibrator_id": "2047-026",
+      "gain_calibrator_name": "J2047-0236",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-028.sb35923574.eb36138932.58501.838387337964",
+      "estimated_size_gb": 6.786233,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298747579/03845a098057ad3a462d92bdcd8693ac/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "20:47:10.351400",
+      "dec": "-2:36:22.152000",
+      "date_utc": "2019-01-18 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:28:29\u202fPM",
+      "request_id": 298747579,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "1538+003_20A-363.sb37597102.eb37917458.58893.38856366898",
+      "obs_id": "20A-363.sb37597102.eb37917458.58893.38856366898",
+      "project_code": "20A-363",
+      "calibrator_id": "1538+003",
+      "gain_calibrator_name": "J1538+0019",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-363.sb37597102.eb37917458.58893.38856366898",
+      "estimated_size_gb": 6.92279,
+      "band_guess": "C",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298752101/8b31d693ad6a635a3af3e83136049213/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:38:15.953081",
+      "dec": "+0:19:05.324150",
+      "date_utc": "2020-02-14 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 27 rejected: unflagged fraction too low (0.325 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:28:36\u202fPM",
+      "request_id": 298752101,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "1013+248_23B-010.sb44639066.eb44793969.60258.44113553241",
+      "obs_id": "23B-010.sb44639066.eb44793969.60258.44113553241",
+      "project_code": "23B-010",
+      "calibrator_id": "1013+248",
+      "gain_calibrator_name": "J1013+2449_X",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-010.sb44639066.eb44793969.60258.44113553241",
+      "estimated_size_gb": 7.290859,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298768156/313da17abfeabb0aaf700e562351d4a0/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:13:53.428737",
+      "dec": "+24:49:16.441100",
+      "date_utc": "2023-11-10 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 4 rejected: unflagged fraction too low (0.444 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:01:20\u202fPM",
+      "request_id": 298768156,
+      "request_finished_at": "2026-11-13T20:03:34Z"
+    },
+    {
+      "entry_id": "1822-096_21A-111.sb39309310.eb39520049.59295.61026173611",
+      "obs_id": "21A-111.sb39309310.eb39520049.59295.61026173611",
+      "project_code": "21A-111",
+      "calibrator_id": "1822-096",
+      "gain_calibrator_name": "J1822-0938",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-111.sb39309310.eb39520049.59295.61026173611",
+      "estimated_size_gb": 7.384019,
+      "band_guess": "L",
+      "usable_configs": [
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298777560/ef4ffb0e0542ea7823834a03f894623a/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "18:22:28.704200",
+      "dec": "-9:38:56.835000",
+      "date_utc": "2021-03-22 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.296 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:28:50\u202fPM",
+      "request_id": 298777560,
+      "request_finished_at": "2026-11-13T20:08:55Z"
+    },
+    {
+      "entry_id": "1526-138_20A-365.sb37909790.eb37932011.58899.53130584491",
+      "obs_id": "20A-365.sb37909790.eb37932011.58899.53130584491",
+      "project_code": "20A-365",
+      "calibrator_id": "1526-138",
+      "gain_calibrator_name": "J1526-1351",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-365.sb37909790.eb37932011.58899.53130584491",
+      "estimated_size_gb": 7.872439,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298791444/f5e76ee6083cfdb555ad7f3686fb4f37/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "15:26:59.440733",
+      "dec": "-13:51:00.163560",
+      "date_utc": "2020-02-20 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:47:13\u202fPM",
+      "request_id": 298791444,
+      "request_finished_at": "2026-11-13T20:08:55Z"
+    },
+    {
+      "entry_id": "1057-245_17B-388.sb34154645.eb34218619.57990.749118611115",
+      "obs_id": "17B-388.sb34154645.eb34218619.57990.749118611115",
+      "project_code": "17B-388",
+      "calibrator_id": "1057-245",
+      "gain_calibrator_name": "J1057-2433",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-388.sb34154645.eb34218619.57990.749118611115",
+      "estimated_size_gb": 7.905568,
+      "band_guess": "L",
+      "usable_configs": [
+        "B",
+        "C"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298797378/3390b2ca918696271789ea809df42db7/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "10:57:55.410047",
+      "dec": "-24:33:48.871750",
+      "date_utc": "2017-08-25 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:29:53\u202fPM",
+      "request_id": 298797378,
+      "request_finished_at": "2026-11-13T20:12:50Z"
+    },
+    {
+      "entry_id": "2110-103_19A-422.sb36668888.eb36677553.58625.529400162035",
+      "obs_id": "19A-422.sb36668888.eb36677553.58625.529400162035",
+      "project_code": "19A-422",
+      "calibrator_id": "2110-103",
+      "gain_calibrator_name": "J2110-1020",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-422.sb36668888.eb36677553.58625.529400162035",
+      "estimated_size_gb": 8.256058,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298809589/9743a96a719ef186fb4dc081ef14458a/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:10:00.979002",
+      "dec": "-10:20:57.319410",
+      "date_utc": "2019-05-22 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 12 rejected: unflagged fraction too low (0.435 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:41:34\u202fPM",
+      "request_id": 298809589,
+      "request_finished_at": "2026-11-13T20:12:50Z"
+    },
+    {
+      "entry_id": "1436+636_16B-318.sb32751362.eb32773290.57646.13711486111",
+      "obs_id": "16B-318.sb32751362.eb32773290.57646.13711486111",
+      "project_code": "16B-318",
+      "calibrator_id": "1436+636",
+      "gain_calibrator_name": "J1436+6336",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/16B-318.sb32751362.eb32773290.57646.13711486111",
+      "estimated_size_gb": 9.179246,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298819107/e67b42b55a70e790e83d2b57e270a199/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:36:45.802138",
+      "dec": "+63:36:37.866580",
+      "date_utc": "2016-09-15 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 32 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:10:02\u202fPM",
+      "request_id": 298819107,
+      "request_finished_at": "2026-11-13T20:21:49Z"
+    },
+    {
+      "entry_id": "2206-185_17A-025.sb33388792.eb33497856.57796.7248419213",
+      "obs_id": "17A-025.sb33388792.eb33497856.57796.7248419213",
+      "project_code": "17A-025",
+      "calibrator_id": "2206-185",
+      "gain_calibrator_name": "J1923-2104",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17A-025.sb33388792.eb33497856.57796.7248419213",
+      "estimated_size_gb": 9.207233,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298829426/1dc4085d00f0b3839f6d8bbb0b0c576f/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "22:06:10.417082",
+      "dec": "-18:35:38.746520",
+      "date_utc": "2017-02-12 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 11 rejected: unflagged fraction too low (0.477 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:06:51\u202fPM",
+      "request_id": 298829426,
+      "request_finished_at": "2026-11-13T20:21:49Z"
+    },
+    {
+      "entry_id": "1156+314_23B-079.sb44690973.eb44797274.60260.84528259259",
+      "obs_id": "23B-079.sb44690973.eb44797274.60260.84528259259",
+      "project_code": "23B-079",
+      "calibrator_id": "1156+314",
+      "gain_calibrator_name": "J1156+3128",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-079.sb44690973.eb44797274.60260.84528259259",
+      "estimated_size_gb": 9.646724,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298833283/09874c34f9dc2af17cabd37de719b4d9/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:56:18.732100",
+      "dec": "+31:28:04.305000",
+      "date_utc": "2023-11-12 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.174 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:38:25\u202fPM",
+      "request_id": 298833283,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "1130-148_18B-373.sb35864264.eb35923810.58443.637368275464",
+      "obs_id": "18B-373.sb35864264.eb35923810.58443.637368275464",
+      "project_code": "18B-373",
+      "calibrator_id": "1130-148",
+      "gain_calibrator_name": "J1130-1449",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/18B-373.sb35864264.eb35923810.58443.637368275464",
+      "estimated_size_gb": 10.426423,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298841392/18fae714bb231204f3ce17e1a23e56f7/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:30:07.052580",
+      "dec": "-14:49:27.388160",
+      "date_utc": "2018-11-21 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 36 rejected: unflagged fraction too low (0.478 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:57:30\u202fPM",
+      "request_id": 298841392,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "1419+064_23B-079.sb44747441.eb44774577.60255.897367881946",
+      "obs_id": "23B-079.sb44747441.eb44774577.60255.897367881946",
+      "project_code": "23B-079",
+      "calibrator_id": "1419+064",
+      "gain_calibrator_name": "J1419+0628",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-079.sb44747441.eb44774577.60255.897367881946",
+      "estimated_size_gb": 10.556105,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298845346/76a9eb85c7c79ece2c61fb0005fea338/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:19:08.180173",
+      "dec": "+6:28:34.803490",
+      "date_utc": "2023-11-07 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.283 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:45:29\u202fPM",
+      "request_id": 298845346,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "1956-076_23B-079.sb44661345.eb44756911.60247.01668302083",
+      "obs_id": "23B-079.sb44661345.eb44756911.60247.01668302083",
+      "project_code": "23B-079",
+      "calibrator_id": "1956-076",
+      "gain_calibrator_name": "J1956-0736",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-079.sb44661345.eb44756911.60247.01668302083",
+      "estimated_size_gb": 11.307675,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298858964/1cd3af15041ff3f59720589b4ebfb400/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "19:56:11.091000",
+      "dec": "-7:36:54.567000",
+      "date_utc": "2023-10-30 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 3 rejected: unflagged fraction too low (0.175 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:34:26\u202fPM",
+      "request_id": 298858964,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "2350+646_23B-079.sb44649808.eb44756893.60246.03351306713",
+      "obs_id": "23B-079.sb44649808.eb44756893.60246.03351306713",
+      "project_code": "23B-079",
+      "calibrator_id": "2350+646",
+      "gain_calibrator_name": "J2350+6440",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/23B-079.sb44649808.eb44756893.60246.03351306713",
+      "estimated_size_gb": 11.336491,
+      "band_guess": "L",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298863119/7db1e0074092d686c350736710d48b83/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:50:54.917600",
+      "dec": "+64:40:17.830000",
+      "date_utc": "2023-10-29 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 7 rejected: unflagged fraction too low (0.353 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:00:11\u202fPM",
+      "request_id": 298863119,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "2134-018_24B-301.sb46881603.eb47342705.60647.98770333333",
+      "obs_id": "24B-301.sb46881603.eb47342705.60647.98770333333",
+      "project_code": "24B-301",
+      "calibrator_id": "2134-018",
+      "gain_calibrator_name": "J2134-0153",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24B-301.sb46881603.eb47342705.60647.98770333333",
+      "estimated_size_gb": 11.517164,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298877646/89a4e93d6bbc07454dfc1da2115c516f/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:34:10.309614",
+      "dec": "-1:53:17.238900",
+      "date_utc": "2024-12-03 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:51:39\u202fPM",
+      "request_id": 298877646,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "1740+521_20A-182.sb38309845.eb38565672.59071.99120952546",
+      "obs_id": "20A-182.sb38309845.eb38565672.59071.99120952546",
+      "project_code": "20A-182",
+      "calibrator_id": "1740+521",
+      "gain_calibrator_name": "J1740+5211",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-182.sb38309845.eb38565672.59071.99120952546",
+      "estimated_size_gb": 12.224367,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298895701/64334ad94c8ffadd14f2656ffbc2e824/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:40:36.977850",
+      "dec": "+52:11:43.407500",
+      "date_utc": "2020-08-11 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.394 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:53:22\u202fPM",
+      "request_id": 298895701,
+      "request_finished_at": "2026-11-13T20:56:48Z"
+    },
+    {
+      "entry_id": "1112-219_19A-380.sb37144062.eb37369838.58771.75039190972",
+      "obs_id": "19A-380.sb37144062.eb37369838.58771.75039190972",
+      "project_code": "19A-380",
+      "calibrator_id": "1112-219",
+      "gain_calibrator_name": "J1112-2158",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/19A-380.sb37144062.eb37369838.58771.75039190972",
+      "estimated_size_gb": 12.488127,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298907801/5c71333009e203d371fb40ea06d391f3/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "11:12:49.848703",
+      "dec": "-21:58:29.351860",
+      "date_utc": "2019-10-15 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 6 rejected: unflagged fraction too low (0.442 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:01:39\u202fPM",
+      "request_id": 298907801,
+      "request_finished_at": "2026-11-13T21:16:49Z"
+    },
+    {
+      "entry_id": "0119+321_24A-478.sb46137593.eb46351813.60540.28640730324",
+      "obs_id": "24A-478.sb46137593.eb46351813.60540.28640730324",
+      "project_code": "24A-478",
+      "calibrator_id": "0119+321",
+      "gain_calibrator_name": "J0119+3210",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/24A-478.sb46137593.eb46351813.60540.28640730324",
+      "estimated_size_gb": 12.615356,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298911877/b20ad2b0b8142c8a4a39761a367fb98f/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "1:19:35.000447",
+      "dec": "+32:10:50.054290",
+      "date_utc": "2024-08-18 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:42:53\u202fPM",
+      "request_id": 298911877,
+      "request_finished_at": "2026-11-13T21:16:49Z"
+    },
+    {
+      "entry_id": "1753+288_22A-314.sb41472246.eb41745690.59667.72629252315",
+      "obs_id": "22A-314.sb41472246.eb41745690.59667.72629252315",
+      "project_code": "22A-314",
+      "calibrator_id": "1753+288",
+      "gain_calibrator_name": "J1740+5211",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/22A-314.sb41472246.eb41745690.59667.72629252315",
+      "estimated_size_gb": 12.649019,
+      "band_guess": "L",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298915939/e229f144db946a7df7f0fb83b89ae119/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "17:53:42.473634",
+      "dec": "+28:48:04.939080",
+      "date_utc": "2022-03-29 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:40:24\u202fPM",
+      "request_id": 298915939,
+      "request_finished_at": "2026-11-13T21:16:49Z"
+    },
+    {
+      "entry_id": "1258-223_17B-425.sb35376461.eb35378532.58239.269184363424",
+      "obs_id": "17B-425.sb35376461.eb35378532.58239.269184363424",
+      "project_code": "17B-425",
+      "calibrator_id": "1258-223",
+      "gain_calibrator_name": "J1258-2219",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-425.sb35376461.eb35378532.58239.269184363424",
+      "estimated_size_gb": 12.671322,
+      "band_guess": "C",
+      "usable_configs": [
+        "A",
+        "B"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298921624/ff94c5d610dd977351bda8c0d918efba/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "12:58:54.478780",
+      "dec": "-22:19:31.125450",
+      "date_utc": "2018-05-01 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:10:53\u202fPM",
+      "request_id": 298921624,
+      "request_finished_at": "2026-11-13T21:16:49Z"
+    },
+    {
+      "entry_id": "0949+662_21A-315.sb39406850.eb39523787.59297.08140472222",
+      "obs_id": "21A-315.sb39406850.eb39523787.59297.08140472222",
+      "project_code": "21A-315",
+      "calibrator_id": "0949+662",
+      "gain_calibrator_name": "J0949+6614",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/21A-315.sb39406850.eb39523787.59297.08140472222",
+      "estimated_size_gb": 13.64031,
+      "band_guess": "L",
+      "usable_configs": [
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298933531/7e5c565cde093710c3513452f2954b2e/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "9:49:12.210000",
+      "dec": "+66:14:59.321000",
+      "date_utc": "2021-03-24 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:04:36\u202fPM",
+      "request_id": 298933531,
+      "request_finished_at": "2026-11-13T21:24:24Z"
+    },
+    {
+      "entry_id": "1409-269_20A-492.sb38163369.eb38220937.58996.18955887732",
+      "obs_id": "20A-492.sb38163369.eb38220937.58996.18955887732",
+      "project_code": "20A-492",
+      "calibrator_id": "1409-269",
+      "gain_calibrator_name": "J1409-2657",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/20A-492.sb38163369.eb38220937.58996.18955887732",
+      "estimated_size_gb": 13.643795,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298938542/33fd1a1221bf0177f7855c6f07453ddb/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "14:09:50.169776",
+      "dec": "-26:57:36.979720",
+      "date_utc": "2020-05-27 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:55:52\u202fPM",
+      "request_id": 298938542,
+      "request_finished_at": "2026-11-13T21:47:35Z"
+    },
+    {
+      "entry_id": "2346+095_SA101269.sb45189188.eb45299195.60381.65584369213",
+      "obs_id": "SA101269.sb45189188.eb45299195.60381.65584369213",
+      "project_code": "SA101269",
+      "calibrator_id": "2346+095",
+      "gain_calibrator_name": "J2346+0930",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/SA101269.sb45189188.eb45299195.60381.65584369213",
+      "estimated_size_gb": 14.235795,
+      "band_guess": "X",
+      "usable_configs": [
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298947356/3926e9e532813ec97e9aa69e863111f1/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "23:46:36.838558",
+      "dec": "+9:30:45.514970",
+      "date_utc": "2024-03-12 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 12:48:08\u202fPM",
+      "request_id": 298947356,
+      "request_finished_at": "2026-11-13T21:47:35Z"
+    },
+    {
+      "entry_id": "2101-295_17B-384.sb34139532.eb34155785.57985.22066895833",
+      "obs_id": "17B-384.sb34139532.eb34155785.57985.22066895833",
+      "project_code": "17B-384",
+      "calibrator_id": "2101-295",
+      "gain_calibrator_name": "J2101-2933",
+      "viewer_url": "https://data.nrao.edu/portal/#/productViewer/17B-384.sb34139532.eb34155785.57985.22066895833",
+      "estimated_size_gb": 14.752729,
+      "band_guess": "X",
+      "usable_configs": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "request_status": "request_ready",
+      "download_command": "wget -r -l 10 --reject \"index.html*\" -np -nH --cut-dirs=3 https://dl-dsoc.nrao.edu/simonpedrogonzalez/298955730/6501a7526b350ad9ad42fbe1f35d0773/",
+      "download_root": null,
+      "extracted_ms": null,
+      "selected_spw": null,
+      "flux_estimate": null,
+      "ra": "21:01:01.659969",
+      "dec": "-29:33:27.836500",
+      "date_utc": "2017-08-20 00:00:00+00:00",
+      "provenance": {
+        "historical_status": "error",
+        "historical_error": "[SPW] SPW 0 rejected: unflagged fraction too low (0.000 < 0.5)"
+      },
+      "request_submitted_at": "Friday, November 13, 2026 at 1:09:01\u202fPM",
+      "request_id": 298955730,
+      "request_finished_at": "2026-11-13T21:52:07Z"
+    }
+  ]
+}

@@ -221,3 +221,6 @@ __marimo__/
 # Agent guidance (local only)
 AGENTS.md
 .agent/
+
+# macOS Finder metadata
+.DS_Store

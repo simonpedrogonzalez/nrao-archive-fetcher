@@ -140,3 +140,43 @@ def test_archive_preflight_failure_stops_before_manifest_writes(tmp_path):
         )
 
     assert not (tmp_path / "runs").exists()
+
+
+def _details(*scans):
+    return {"details": {"execution_blocks": [{"cals": [1], "scan_rows": [
+        dict(target_name=name, intent=intent, ra=ra, dec=dec, duration=duration)
+        for name, intent, ra, dec, duration in scans]}]}}
+
+
+def test_gain_field_must_be_at_the_requested_position():
+    from workflows.radioastro_calibrators.build_manifests import matching_gain_calibrator
+
+    phase = "CALIBRATE_PHASE CALIBRATE_AMPLI"
+    details = _details(
+        ("J1125+2610", phase, 171.4740, 26.1734, 0.05),          # most-observed, other source
+        ("J1407+2827", phase, 211.7516, 28.4541, 0.01),          # the requested source
+        ("1331+305", "CALIBRATE_FLUX CALIBRATE_BANDPASS", 202.78, 30.51, 0.02),
+    )
+    name, separation = matching_gain_calibrator(details, "14:07:00.394", "+28:27:14.69")
+    assert name == "J1407+2827" and separation < 5.0
+    assert matching_gain_calibrator(details, "10:51:48.789", "+21:19:52.31") is None
+
+
+def test_historical_field_mismatch_is_rejected_or_resolved():
+    from workflows.radioastro_calibrators.build_manifests import check_historical_field
+
+    def entry(name):
+        return dict(entry_id="1407+284_obs", gain_calibrator_name=name, viewer_url="u",
+                    ra="14:07:00.394410", dec="+28:27:14.689980")
+
+    kept, rejection = check_historical_field(entry("J1407+2827"))
+    assert kept["field_check"] == "name_matches_position" and rejection is None
+    kept, rejection = check_historical_field(entry("1407+284"))
+    assert kept["field_check"] == "verify_at_extraction"
+    kept, rejection = check_historical_field(entry("J1125+2610"))
+    assert kept is None and "does not match" in rejection["reason"]
+    kept, rejection = check_historical_field(entry("J1125+2610"), lambda e: "J1407+2827")
+    assert kept["gain_calibrator_name"] == "J1407+2827"
+    assert kept["replaced_gain_calibrator_name"] == "J1125+2610" and rejection is None
+    kept, rejection = check_historical_field(entry("J1125+2610"), lambda e: None)
+    assert kept is None and "no phase-calibrator field" in rejection["reason"]

@@ -9,9 +9,11 @@ from pathlib import Path
 import numpy as np
 
 try:
+    from .field_match import position_problem
     from .flux_weblog import find_flux_estimate, write_flux_estimate
 except ImportError:  # Direct execution by CASA: ``casa -c extract_entry.py ...``
     sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from field_match import position_problem
     from flux_weblog import find_flux_estimate, write_flux_estimate
 
 
@@ -58,6 +60,22 @@ def require_field(ms_path, field_name, table_factory):
     if not field_ids:
         raise ValueError("Field %r is not present in the MeasurementSet" % field_name)
     return field_ids
+
+
+def require_field_position(ms_path, field_ids, ra, dec, table_factory):
+    """Fail unless every FIELD row named for the gain calibrator lies at the requested source's
+    catalog position; returns the field position in degrees (from PHASE_DIR)."""
+    phase_dir = _read_table(table_factory, Path(ms_path) / "FIELD",
+                            lambda table: np.asarray(table.getcol("PHASE_DIR"), dtype=float))
+    positions = []
+    for field_id in field_ids:
+        ra_rad, dec_rad = phase_dir[0, 0, field_id], phase_dir[1, 0, field_id]
+        positions.append((float(np.degrees(ra_rad)) % 360.0, float(np.degrees(dec_rad))))
+    for field_ra, field_dec in positions:
+        problem = position_problem(field_ra, field_dec, ra, dec)
+        if problem:
+            raise ValueError("Field is not the requested source: %s" % problem)
+    return positions[0]
 
 
 def select_spw(ms_path, band_guess, table_factory, field_ids):
@@ -125,6 +143,7 @@ def extract_entry(entry, download_root, output_root, table_factory, split_task, 
         raise FileNotFoundError("No downloaded MeasurementSet found under %s" % download_root)
     require_corrected_data(source_ms, table_factory)
     field_ids = require_field(source_ms, field, table_factory)
+    field_ra, field_dec = require_field_position(source_ms, field_ids, entry.get("ra"), entry.get("dec"), table_factory)
     spw = select_spw(source_ms, entry.get("band_guess"), table_factory, field_ids)
 
     output_dir = Path(output_root) / entry_id
@@ -145,7 +164,8 @@ def extract_entry(entry, download_root, output_root, table_factory, split_task, 
     listobs_path = output_dir / "listobs.txt"
     listobs_task(vis=str(output_ms), listfile=str(listobs_path), overwrite=True)
 
-    flux = find_flux_estimate(download_root, field, band=entry.get("band_guess"))
+    flux = find_flux_estimate(download_root, field, selected_spw=spw["spw"],
+                              spw_center_ghz=spw["f_center_hz"] / 1e9, band=entry.get("band_guess"))
     flux_path = output_dir / "flux_estimate.json"
     write_flux_estimate(flux, flux_path)
     metadata = {
@@ -153,6 +173,11 @@ def extract_entry(entry, download_root, output_root, table_factory, split_task, 
         "source_ms": str(source_ms),
         "extracted_ms": str(output_ms),
         "gain_calibrator_name": field,
+        "calibrator_id": entry.get("calibrator_id"),
+        "field_ra_deg": field_ra,
+        "field_dec_deg": field_dec,
+        "requested_ra": entry.get("ra"),
+        "requested_dec": entry.get("dec"),
         "selected_spw": str(spw["spw"]),
         "spw_center_ghz": spw["f_center_hz"] / 1e9,
         "spw_bandwidth_mhz": spw["bandwidth_hz"] / 1e6,

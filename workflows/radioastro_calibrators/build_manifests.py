@@ -18,6 +18,12 @@ from workflows.radioastro_calibrators.downloaded_inventory import (
     ALREADY_DOWNLOADED_OBS_IDS,
     DOWNLOADED_BY_OBS_ID,
 )
+from workflows.radioastro_calibrators.field_match import (
+    MATCH_RADIUS_ARCSEC,
+    jname_consistent,
+    separation_arcsec,
+    sky_degrees,
+)
 
 
 class TransientArchiveError(RuntimeError):
@@ -170,7 +176,46 @@ def new_manifest(stage, source_path, entries=None):
     }
 
 
-def build_small_remaining(rows, reserved, config_lookup=None):
+def check_historical_field(entry, field_resolver=None):
+    """Keep the inherited gain_calibrator_name only when it can be the requested source.
+
+    Returns (entry or None, rejection or None). A J2000 name that does not match the catalog
+    position is replaced by field_resolver(entry) (the observation's phase-calibrator field at
+    that position) when given, otherwise the entry is rejected. Names that encode no position
+    are kept and verified by position at extraction.
+    """
+    name = entry["gain_calibrator_name"]
+    try:
+        ra_deg, dec_deg = sky_degrees(entry.get("ra"), entry.get("dec"))
+    except (TypeError, ValueError):
+        return None, dict(entry_id=entry["entry_id"], gain_calibrator_name=name,
+                          reason="requested source has no valid catalog position")
+    verdict = jname_consistent(name, ra_deg, dec_deg) if name else False
+    if verdict is not False:
+        entry["field_check"] = "name_matches_position" if verdict else "verify_at_extraction"
+        return entry, None
+    reason = "gain_calibrator_name %r does not match the requested position" % name
+    if field_resolver is not None:
+        try:
+            resolved = field_resolver(entry)
+        except Exception as exc:  # recorded; a rerun of the builder retries it
+            resolved, reason = None, reason + "; archive lookup failed: %s" % exc
+        if resolved:
+            entry.update(gain_calibrator_name=resolved, field_check="archive_position_match",
+                         replaced_gain_calibrator_name=name)
+            return entry, None
+        reason += "; no phase-calibrator field at that position"
+    return None, dict(entry_id=entry["entry_id"], gain_calibrator_name=name, reason=reason)
+
+
+def _keep_historical(entry, field_resolver, rejected):
+    entry, rejection = check_historical_field(entry, field_resolver)
+    if rejection is not None and rejected is not None:
+        rejected.append(rejection)
+    return entry
+
+
+def build_small_remaining(rows, reserved, config_lookup=None, field_resolver=None, rejected=None):
     entries = []
     selected_obs_ids = set(reserved)
     for row in rows:
@@ -183,12 +228,14 @@ def build_small_remaining(rows, reserved, config_lookup=None):
             usable_configs=(config_lookup or {}).get((_text(row.get("name")), _text(row.get("band_guess")) or _text(row.get("band_code")))),
         )
         if entry is not None and entry["obs_id"] not in selected_obs_ids:
+            entry = _keep_historical(entry, field_resolver, rejected)
+        if entry is not None and entry["obs_id"] not in selected_obs_ids:
             entries.append(entry)
             selected_obs_ids.add(entry["obs_id"])
     return sort_entries(entries)
 
 
-def build_large_original(rows, reserved, config_lookup=None):
+def build_large_original(rows, reserved, config_lookup=None, field_resolver=None, rejected=None):
     entries = []
     selected_obs_ids = set(reserved)
     for row in rows:
@@ -200,6 +247,8 @@ def build_large_original(rows, reserved, config_lookup=None):
             usable_configs=(config_lookup or {}).get((_text(row.get("name")), _text(row.get("band_guess")) or _text(row.get("band_code")))),
         )
         if entry is not None and entry["obs_id"] not in selected_obs_ids:
+            entry = _keep_historical(entry, field_resolver, rejected)
+        if entry is not None and entry["obs_id"] not in selected_obs_ids:
             entries.append(entry)
             selected_obs_ids.add(entry["obs_id"])
     return sort_entries(entries)
@@ -209,10 +258,18 @@ def _intent_tokens(intent):
     return set(_text(intent).upper().split())
 
 
-def probable_gain_calibrator(details):
+def matching_gain_calibrator(details, ra, dec, radius_arcsec=MATCH_RADIUS_ARCSEC):
+    """(field name, separation arcsec) of the phase-calibrator field at the requested position.
+
+    Only phase-calibrator scans (not flux/bandpass/delay) whose pointing lies within
+    radius_arcsec of (ra, dec) count, so another, more-observed phase calibrator in the same
+    observation is never chosen. Among matching names the longest-observed wins. None when no
+    phase-calibrator scan is at that position.
+    """
     execution_blocks = (details.get("details") or {}).get("execution_blocks") or []
     if not execution_blocks:
         return None
+    ra_deg, dec_deg = sky_degrees(ra, dec)
     scores = {}
     for scan in execution_blocks[0].get("scan_rows") or []:
         tokens = _intent_tokens(scan.get("intent"))
@@ -221,18 +278,30 @@ def probable_gain_calibrator(details):
         if tokens & {"CALIBRATE_FLUX", "CALIBRATE_BANDPASS", "CALIBRATE_DELAY"}:
             continue
         target = _text(scan.get("target_name"))
-        if not target:
+        scan_ra, scan_dec = _float(scan.get("ra")), _float(scan.get("dec"))
+        if not target or scan_ra is None or scan_dec is None:
+            continue
+        separation = separation_arcsec(scan_ra, scan_dec, ra_deg, dec_deg)
+        if separation > radius_arcsec:
             continue
         try:
             duration = float(scan.get("duration")) * 86400.0
         except (TypeError, ValueError):
             duration = 0.0
-        score = scores.setdefault(target, [0.0, 0])
+        score = scores.setdefault(target, [0.0, 0, separation])
         score[0] += duration
         score[1] += 1
+        score[2] = min(score[2], separation)
     if not scores:
         return None
-    return max(sorted(scores), key=lambda target: tuple(scores[target]))
+    best = max(sorted(scores), key=lambda target: tuple(scores[target][:2]))
+    return best, scores[best][2]
+
+
+def archive_field_resolver(entry):
+    """Phase-calibrator field of entry's observation at entry's catalog position (or None)."""
+    match = matching_gain_calibrator(fetch_product_details(entry["viewer_url"]), entry["ra"], entry["dec"])
+    return match[0] if match else None
 
 
 def archive_candidates(spec, max_candidates=100):
@@ -269,9 +338,10 @@ def archive_candidates(spec, max_candidates=100):
         execution_blocks = (details.get("details") or {}).get("execution_blocks") or []
         if not execution_blocks or not execution_blocks[0].get("cals"):
             continue
-        gain_field = probable_gain_calibrator(details)
-        if not gain_field:
-            continue
+        match = matching_gain_calibrator(details, spec["ra"], spec["dec"])
+        if not match:
+            continue  # the requested source is not a phase calibrator here
+        gain_field, separation = match
         obs_id = extract_sdm_id_from_access_url(url)
         candidates.append(
             entry_from_values(
@@ -288,6 +358,8 @@ def archive_candidates(spec, max_candidates=100):
                 usable_configs=spec["usable_configs"],
                 ra=spec["ra"],
                 dec=spec["dec"],
+                field_check="archive_position_match",
+                field_separation_arcsec=separation,
             )
         )
     if detail_errors and not candidates:
@@ -401,6 +473,7 @@ def build_all(
     downloaded_obs_ids=None,
     downloaded_by_obs_id=None,
     archive_preflight=None,
+    field_resolver=None,
 ):
     if archive_preflight is not None:
         archive_preflight()
@@ -419,9 +492,12 @@ def build_all(
     config_lookup = selected_config_lookup(selected_rows)
 
     reserved = set(downloaded_obs_ids)
+    small_rejected = []
     small_manifest = new_manifest(
-        "small_remaining", small_path, build_small_remaining(small_rows, reserved, config_lookup)
+        "small_remaining", small_path,
+        build_small_remaining(small_rows, reserved, config_lookup, field_resolver, small_rejected),
     )
+    small_manifest["source"]["rejected_field_mismatch"] = small_rejected
     small_output = runs_root / "small_remaining/manifest.json"
     write_manifest(small_manifest, small_output)
     reserved.update(entry["obs_id"] for entry in small_manifest["entries"])
@@ -438,9 +514,12 @@ def build_all(
         candidate_finder,
     )
 
+    large_rejected = []
     large_manifest = new_manifest(
-        "large_original", one_hit_path, build_large_original(one_hit_rows, reserved, config_lookup)
+        "large_original", one_hit_path,
+        build_large_original(one_hit_rows, reserved, config_lookup, field_resolver, large_rejected),
     )
+    large_manifest["source"]["rejected_field_mismatch"] = large_rejected
     large_output = runs_root / "large_original/manifest.json"
     write_manifest(large_manifest, large_output)
     reserved.update(entry["obs_id"] for entry in large_manifest["entries"])
@@ -481,9 +560,12 @@ def main(argv=None):
         args.runs_root,
         candidate_finder=find,
         archive_preflight=ensure_archive_available,
+        field_resolver=archive_field_resolver,
     )
     for manifest in manifests:
         print("%s: %d entries" % (manifest["source"]["stage"], len(manifest["entries"])))
+        for rejection in manifest["source"].get("rejected_field_mismatch") or []:
+            print("  rejected %(entry_id)s (%(gain_calibrator_name)s): %(reason)s" % rejection)
     return 0
 
 

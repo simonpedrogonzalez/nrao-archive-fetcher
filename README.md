@@ -164,8 +164,10 @@ CASA=/path/to/casa slurm/submit_shards.sh runs/<group>/manifest.json <N> --accou
 
 `submit_shards.sh` refuses while this group's jobs (`nrao-<group>`) are queued or running, or when `squeue` fails
 (`--force` overrides), then runs `merge-shards` and `sync-requests` before submitting. Both commands can also be run by hand.
-The incoming copy is `INCOMING`, or by default `.../incoming/runs/<group>/manifest.json` for a manifest at
-`.../local/runs/<group>/manifest.json` (otherwise `runs/<group>/incoming/manifest.local.json`). A missing incoming copy
+The incoming copy is `INCOMING`, or by default `$NRAO_INCOMING_ROOT/<group>/manifest.json` for a manifest at
+`$NRAO_RUNS_ROOT/<group>/manifest.json` (both set in `slurm/env.sh`: `$RADIOASTRO_STORAGE/reports/manifests/incoming/runs`
+and `$RADIOASTRO_STORAGE/data/nrao-archive-fetcher/runs`), `.../incoming/runs/<group>/manifest.json` for a manifest at
+`.../local/runs/<group>/manifest.json`, otherwise `runs/<group>/incoming/manifest.local.json`. A missing incoming copy
 stops the submit; `--no-sync` skips `sync-requests`. On CHPC the cluster, account and partition default to the values in
 `slurm/env.sh` (`-M lonepeak --account=laskar --partition=lonepeak`) when not given.
 

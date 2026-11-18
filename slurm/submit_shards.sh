@@ -7,11 +7,12 @@
 # Before submitting it: refuses if jobs for this manifest are still queued or running (--force skips the check),
 # runs merge-shards, and runs sync-requests from the incoming copy (--no-sync skips it).
 # Environment: CASA=/path/to/casa (default: casa on PATH), DELETE_ORIGINAL=1 to delete raw downloads after extraction,
-# INCOMING=<local manifest copy>. Default: for .../local/runs/<group>/manifest.json, .../incoming/runs/<group>/manifest.json;
+# INCOMING=<local manifest copy>. Default: for $NRAO_RUNS_ROOT/<group>/manifest.json, $NRAO_INCOMING_ROOT/<group>/manifest.json;
+# for .../local/runs/<group>/manifest.json, .../incoming/runs/<group>/manifest.json;
 # otherwise runs/<group>/incoming/manifest.local.json. A missing incoming copy is an error unless --no-sync.
 # Cluster, account and partition default to NRAO_SLURM_CLUSTER/ACCOUNT/PARTITION from slurm/env.sh when not given.
 set -euo pipefail
-[[ $# -ge 2 ]] || { sed -n '2,13p' "$0" >&2; exit 2; }
+[[ $# -ge 2 ]] || { sed -n '2,14p' "$0" >&2; exit 2; }
 manifest=$1
 shards=$2
 shift 2
@@ -23,7 +24,7 @@ group=$(basename "$group_dir")
 job_name="nrao-$group"
 
 repo=$(cd "$(dirname "$0")/.." && pwd)
-# Cluster/account/partition defaults, storage paths, UV_CACHE_DIR (CHPC only; the file is not in git).
+# Cluster/account/partition defaults, storage paths, UV_CACHE_DIR (CHPC values).
 [[ -f "$repo/slurm/env.sh" ]] && source "$repo/slurm/env.sh"
 
 # Split --force/--no-sync from the sbatch options, and remember the cluster (-M) so squeue looks in the same place.
@@ -72,8 +73,12 @@ fi
 
 # 2. Find the incoming (email import) copy before changing anything.
 if [[ $sync -eq 1 ]]; then
+    runs_root=""
+    [[ -n "${NRAO_RUNS_ROOT:-}" && -d "$NRAO_RUNS_ROOT" ]] && runs_root=$(cd "$NRAO_RUNS_ROOT" && pwd)
     if [[ -n "${INCOMING:-}" ]]; then
         incoming=$INCOMING
+    elif [[ -n "$runs_root" && -n "${NRAO_INCOMING_ROOT:-}" && "$group_dir" == "$runs_root/$group" ]]; then
+        incoming="$NRAO_INCOMING_ROOT/$group/$(basename "$manifest")"
     elif [[ "$group_dir" == */local/runs/"$group" ]]; then
         incoming="${group_dir%/local/runs/$group}/incoming/runs/$group/$(basename "$manifest")"
     else

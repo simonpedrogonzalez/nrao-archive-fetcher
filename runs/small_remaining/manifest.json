@@ -83,7 +83,7 @@
         "C",
         "D"
       ],
-      "request_status": "request_failed",
+      "request_status": "request_submitted",
       "download_command": "",
       "download_root": null,
       "extracted_ms": null,
@@ -96,9 +96,9 @@
         "historical_status": null,
         "historical_error": null
       },
-      "request_error": "No further information found.",
       "request_failed_at": "2026-11-12T03:19:45Z",
-      "request_id": 295697802
+      "request_id": 299176940,
+      "request_submitted_at": "Friday, November 13, 2026 at 3:03:20\u202fPM"
     },
     {
       "entry_id": "0410+769_17A-396_sb33611387_1_1_007.57840.0830209375",
@@ -115,7 +115,7 @@
         "C",
         "D"
       ],
-      "request_status": "request_failed",
+      "request_status": "request_submitted",
       "download_command": "",
       "download_root": null,
       "extracted_ms": null,
@@ -128,9 +128,9 @@
         "historical_status": null,
         "historical_error": null
       },
-      "request_error": "No further information found.",
       "request_failed_at": "2026-11-12T03:19:45Z",
-      "request_id": 295701976
+      "request_id": 299180590,
+      "request_submitted_at": "Friday, November 13, 2026 at 3:04:07\u202fPM"
     },
     {
       "entry_id": "1407+284_18B-316.sb37532172.eb37535740.58806.7596740625",
